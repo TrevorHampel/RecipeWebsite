@@ -12,6 +12,7 @@ include("includes/include.php");
 <body>
     <div id="title-card">
         <h1>Practicing with PHP again</h1>
+        <h2><a href="Login.php">Login</a></h2>
     </div>
     <div id="recipe-card">
         <?php

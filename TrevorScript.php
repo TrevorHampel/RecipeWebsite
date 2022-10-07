@@ -19,4 +19,3 @@
     $sql = "SELECT * FROM user";
     $resultArray = $Database->selectAssc($sql);
     var_dump($resultArray);
-?>

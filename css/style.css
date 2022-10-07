@@ -22,3 +22,17 @@ div#recipe-card {
 h1 {
     text-align: center;
 }
+
+#login-form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 33rem 5rem 33rem;
+    align-items: center;
+    text-align: center;
+    background-color: gray;
+    box-shadow: 5px 5px 5px pink;
+}
+
+a {
+    text-decoration: none;
+}
