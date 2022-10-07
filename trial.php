@@ -13,6 +13,7 @@ include("includes/include.php");
     <div id="title-card">
         <h1>Practicing with PHP again</h1>
         <h2><a href="Login.php">Login</a></h2>
+        <h2><a href="CreateAccount.php">Create Account</a></h2>
     </div>
     <div id="recipe-card">
         <?php

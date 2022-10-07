@@ -26,7 +26,7 @@ h1 {
 #login-form-container {
     display: flex;
     flex-direction: column;
-    margin: 5rem 33rem 5rem 33rem;
+    margin: 5rem 40rem 5rem 40rem;
     align-items: center;
     text-align: center;
     background-color: gray;
