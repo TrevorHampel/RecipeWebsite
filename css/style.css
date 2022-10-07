@@ -1,0 +1,24 @@
+div#recipe-card {
+    display: flex;
+    flex-direction: column;
+    width: 600;
+    margin-right: 33rem;
+    margin-left: 33rem;
+    background-color: goldenrod;
+    text-align: center;
+    box-shadow: 10px 5px 5px plum;
+    border-radius: 5%;
+}
+
+#recipe-card > * {
+    padding: 5px;
+    margin: 10px;
+}
+
+#recipe-card > img {
+    align-self: center;
+}
+
+h1 {
+    text-align: center;
+}
