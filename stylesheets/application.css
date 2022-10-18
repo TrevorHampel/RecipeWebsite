@@ -153,6 +153,16 @@ h5 {
     font-size: 35px;
   }
 
+  .login a{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .login label{
+    font-size: 20px;
+    text-align: left;
+  }
+
   .row{
     margin-left: 5%;
     margin-right: 5%;
@@ -272,10 +282,10 @@ h5 {
     border-radius: 20px;
     height: 30rem;
     color: #2f2f2f;
-    text-align: center;
     margin-bottom: 0rem;
     width: 30rem;
     height: 65vh;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 
@@ -287,11 +297,29 @@ h5 {
   }
   
   .login .row {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: left;
     margin-top: 0rem;
   }
 
   .login h1{
     margin: 0px;
+  }
+
+  .login h2{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .login a{
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .login .submit{
+    margin-left: auto;
+    margin-right: 1rem;
   }
   
   .loginLogo{
@@ -300,11 +328,6 @@ h5 {
     margin-bottom: 5vh;
     margin-top: 5rem;
     font-size: 50px;
-  }
-
-  .row{
-    margin-left: 5%;
-    margin-right: 5%;
   }
 
   .cards{
