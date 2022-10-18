@@ -1,0 +1,412 @@
+@import url(../Bootstrap/css/bootstrap.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.featured{
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.featured2{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.bar{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #2f2f2f;
+}
+
+.gallery h3{
+  margin: 10px;
+}
+
+body{
+  font-size: 20px;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.about p{
+  text-indent: 10%;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.code{
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  height:50rem;
+  background-color: #343a40;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  line-height: 0.75;
+}
+
+.code2{
+  color: white;
+  font-size: 14px;
+  font-family: monaco, Consolas, "Lucida Console", monospace; 
+}
+
+.code3{
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  height:20rem;
+  background-color: #343a40;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  line-height: 0.75;
+}
+
+.space{
+  margin-top: 2rem;
+}
+
+.test{
+  border-style: solid;
+  border-width: 4px;
+  border-color: purple;
+}
+
+@media screen and (max-width: 768px) /*mobile*/
+{ 
+  .main{
+    width: 95%;
+    margin: auto;
+  }
+
+  .jumbotron {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/53b839afe4b07ea978436183/1608506169128-S6KYNEV61LEP5MS1UIH4/traditional-food-around-the-world-Travlinmad.jpg"); 
+    background-position: center 0px;
+    width: 100%;
+    background-size: auto;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0rem;
+  }
+
+  .jumbotron .row {
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+  }
+  
+  .jumbotron .col{
+    background-color: #2f2f2f;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .jumbotron h1{
+    margin: 0px;
+    font-size: 35px;
+  }
+
+  .login {
+    background-position: center 0px;
+    width: 100%;
+    background-size: auto;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0rem;
+  }
+
+  .login .row {
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+  }
+
+  .login .col{
+    background-color: #2f2f2f;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .login h1{
+    margin: 0px;
+    font-size: 35px;
+  }
+
+  .row{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .cards{
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .cover{
+    width: 100%;
+    height: auto;
+  }
+
+  .foot {
+    color: white;
+    margin-top: 3rem;
+  }
+
+  .foot a:link{
+    color: white;
+  } 
+  .foot a:visited{
+    color: white;
+  } 
+  .foot a:hover{
+    color: rgb(167, 167, 167);
+  } 
+  .foot a:active{
+    color: white;
+  } 
+
+  .c{
+    font-size: 15px;
+    margin-right: 5%;
+    display: inline-block;
+    align-self: flex-end;
+  }
+
+  .profile{
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .skills ul{
+    margin-top: 0.5rem;
+  }
+
+  .skills ul li{
+    margin-top: 0.5rem;
+  }
+
+  .work img{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
+  .smallimg{
+    width: 300px;
+  }
+
+  .smalltext{
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (min-width: 768px) /*Desktop*/
+{ 
+  .main{
+    width: 90%;
+    margin: auto;
+  }
+
+  .jumbotron {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/53b839afe4b07ea978436183/1608506169128-S6KYNEV61LEP5MS1UIH4/traditional-food-around-the-world-Travlinmad.jpg");
+    background-position: center 0px;
+    background-size: cover;
+    height: 30rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+  
+  .jumbotron .row {
+    margin-top: 0.0rem;
+  }
+  
+  .jumbotron .col{
+    background-color: #2f2f2f;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .jumbotron h1{
+    margin: 0px;
+  }
+
+  .login {
+    background-color: #f7f8fd;
+    padding: 10px;
+    border-radius: 20px;
+    height: 30rem;
+    color: #2f2f2f;
+    text-align: center;
+    margin-bottom: 0rem;
+    width: 30rem;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*
+    border-color: #2f2f2f;
+    border-width: 5px;
+    border-style: solid;
+    */
+  }
+  
+  .login .row {
+    margin-top: 0rem;
+  }
+
+  .login h1{
+    margin: 0px;
+  }
+  
+  .loginLogo{
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-top: 5rem;
+    font-size: 50px;
+  }
+
+  .row{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .cards{
+    margin-top: 2rem;
+  }
+
+  .cover{
+    width: 100%;
+    height: auto;
+  }
+
+  .foot {
+    color: white;
+    margin-top: 3rem;
+    padding: 1rem;
+  }  
+
+  .foot a:link{
+    color: white;
+  } 
+  .foot a:visited{
+    color: white;
+  } 
+  .foot a:hover{
+    color: rgb(167, 167, 167);
+  } 
+  .foot a:active{
+    color: white;
+  } 
+
+  .c{
+    margin-right: 5%;
+    font-size: 20px;
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .profile{
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  img{
+    width: 425px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .education img{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .work img{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
+  h2{
+    font-size: 36px;
+    margin-top: 1rem;
+  }
+
+  h3{
+    margin-top: 1rem;
+  }
+
+  .skills ul{
+    margin-top: 1rem;
+  }
+
+  .skills ul li{
+    margin-top: 1rem;
+  }
+
+  .smallimg{
+    width: 300px;
+  }
+  
+  .smallvid{
+    width: 482px; 
+    height: 271px;
+  }
+
+  .carousel{
+    width: 100%;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+  }
+
+  .carousel img{
+    width: 70% !important;
+  }
+
+  .midimg{
+    width: 90%;
+  }
+}
