@@ -1,36 +1,54 @@
-<?php
-include_once("TrevorScript.php")
-?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Login to Your Account</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/application.css">
+  <title>RW Login page</title>
+
 </head>
 
 <body>
-    <div id="login-title">
-        <h1>Login to Your Account</h1>
+  <div class="loginLogo row">
+    <div class="col">
+      <h1>Big Logo</h1>
     </div>
+  </div>
 
-    <div id="login-form-container">
-        <form action="" method="post">
-            <p>Enter your username: </p>
-            <input type="text" name="username" placeholder="Username"></input>
-            <p>Enter your password: </p>
-            <input type="password" name="password" placeholder="Password"></input><br><br>
-            <input type="submit" name="submit-login" value="Log In"></input>
-        </form>
+  <div class="card login">
+    <div class="row"> 
+      <h2>Login</h2>
     </div>
-    <?php
-    var_dump($_POST);
-    if (isset($_POST['username']) && isset($_POST['password'])) {
-    }
-    ?>
-    <div id="login-footer">
+    <div class="row">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username">
+          <a href="#">Forgot Email?</a>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </form>
+    </div> 
+    <div class="row btn-group">
+      <div class="card-body flex-column align-items-left">
+        <button type="signup" class="btn btn-block btn-primary mt-auto">Sign up</button>
+      </div>
+      <div class="card-body flex-column align-items-right">
+        <button type="submit" class="btn btn-block btn-primary mt-auto">Submit</button>
+      </div>
+    </div>
+  </div>
 
-    </div>
+  <script src="javascripts/application.js"></script>
+
+
 </body>
 
 </html>
