@@ -17,27 +17,32 @@
     </div>
   </div>
 
-  <div class="login">
+  <div class="card login">
     <div class="row"> 
       <h2>Login</h2>
     </div>
     <div class="row">
-      <div class="col">
-        <form>
-          <div class="mb-3">
+      <form>
+        <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username">
-            <a href="#">Forgot Email?</a>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            <a href="#">Forgot Password?</a>
-          </div>
-          <button type="submit" class="btn btn-primary submit">Submit</button>
-        </form>
-      </div>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username">
+          <a href="#">Forgot Email?</a>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </form>
     </div> 
+    <div class="row btn-group">
+      <div class="card-body flex-column align-items-left">
+        <button type="signup" class="btn btn-block btn-primary mt-auto">Sign up</button>
+      </div>
+      <div class="card-body flex-column align-items-right">
+        <button type="submit" class="btn btn-block btn-primary mt-auto">Submit</button>
+      </div>
+    </div>
   </div>
 
   <script src="javascripts/application.js"></script>
