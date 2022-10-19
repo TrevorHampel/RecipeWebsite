@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +47,7 @@
   </div>
 
   <script src="javascripts/application.js"></script>
+
 
 </body>
 
