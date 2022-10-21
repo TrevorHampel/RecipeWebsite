@@ -25,13 +25,13 @@
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
       </div>
       <div class="col">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="col">
-          <label for="exampleInputPassword1">Confirm Password</label>
-          <input type="confirmPassword" class="form-control" id="exampleInputPassword1" placeholder="Confirm">
-        </div>
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="col">
+        <label for="exampleInputPassword1">Confirm Password</label>
+        <input type="confirmPassword" class="form-control" id="exampleInputPassword1" placeholder="Confirm">
+      </div>
     </div>
     <div class="row">
       <p>Password must use 8 or more characters with a mix of letters, numbers & symbols.</p>
