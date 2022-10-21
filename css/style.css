@@ -1,38 +1,38 @@
 div#recipe-card {
-    display: flex;
-    flex-direction: column;
-    width: 600;
-    margin-right: 33rem;
-    margin-left: 33rem;
-    background-color: goldenrod;
-    text-align: center;
-    box-shadow: 10px 5px 5px plum;
-    border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 33rem;
+  margin-left: 33rem;
+  background-color: goldenrod;
+  text-align: center;
+  box-shadow: 10px 5px 5px plum;
+  border-radius: 5%;
 }
 
 #recipe-card > * {
-    padding: 5px;
-    margin: 10px;
+  padding: 5px;
+  margin: 10px;
 }
 
 #recipe-card > img {
-    align-self: center;
+  align-self: center;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 #login-form-container {
-    display: flex;
-    flex-direction: column;
-    margin: 5rem 40rem 5rem 40rem;
-    align-items: center;
-    text-align: center;
-    background-color: gray;
-    box-shadow: 5px 5px 5px pink;
+  display: flex;
+  flex-direction: column;
+  margin: 33rem 5rem 33rem 5rem;
+  align-items: center;
+  text-align: center;
+  background-color: gray;
+  box-shadow: 5px 5px 5px pink;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
