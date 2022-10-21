@@ -1,43 +1,73 @@
 <?php
 include_once('Database.php');
+include_once('Recipe.php');
 
-function parseJSON($file)
+/**
+ * Uses cURL to retrieve a random recipe from theMealDB 
+ * as an associative array.
+ * 
+ * @return array $recipe_obj['meals']
+ */
+
+function getRecipeFromAPI()
 {
-    $raw_json = file_get_contents($file);
-    $parsed_json = json_decode($raw_json, false);
+    $curl_handle = curl_init();
 
-    echo '<h2>' . $parsed_json->meals[0]->strMeal . '</h2><br>';
-    echo '<h3>' . $parsed_json->meals[0]->strCategory . '</h3><br>';
-    echo '<p>' . $parsed_json->meals[0]->strInstructions . '</p><br>';
-    echo '<ul>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure1 . " - " . $parsed_json->meals[0]->strIngredient1 .  '</li>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure2 . " - " . $parsed_json->meals[0]->strIngredient2 .  '</li>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure3 . " - " . $parsed_json->meals[0]->strIngredient3 .  '</li>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure4 . " - " . $parsed_json->meals[0]->strIngredient4 .  '</li>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure5 . " - " . $parsed_json->meals[0]->strIngredient5 .  '</li>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure6 . " - " . $parsed_json->meals[0]->strIngredient6 .  '</li>';
-    echo '<li>' . $parsed_json->meals[0]->strMeasure7 . " - " . $parsed_json->meals[0]->strIngredient7 .  '</li></ul>';
+    $urlRandom = "https://www.themealdb.com/api/json/v1/1/random.php";
 
+    curl_setopt($curl_handle, CURLOPT_URL, $urlRandom);
+    curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
 
-    displayImage($parsed_json->meals[0]->strMealThumb);
+    $recipe_data = curl_exec($curl_handle);
+
+    curl_close($curl_handle);
+
+    $recipe_obj = json_decode($recipe_data, true);
+
+    return $recipe_obj['meals'];
 }
 
 /**
- * displayImage echo's out an image element in HTML
+ * Takes in an array of json recipes and parses them into Recipe objects to be displayed
  *
- * @param string $path
- * @return void
+ * @param array $recipes
+ * @return array
  */
-function displayImage($path)
+function parseRecipe($recipes)
 {
-    echo '<img src="' . $path . '" width="400" height="400"';
+    $recipe_array = [];
+
+    $ingredients = [];
+    foreach ($recipes as $r) {
+        $Recipe = new Recipe();
+        $Recipe->setId($r['idMeal']);
+        $Recipe->setName($r['strMeal']);
+        $Recipe->setCategory($r['strCategory']);
+        $Recipe->setThumbnail($r['strMealThumb']);
+        $Recipe->setInstructions($r['strInstructions']);
+
+        for ($i = 1; $i < 21; $i++) {
+            $strIng = 'strIngredient' . $i;
+            $strMeas = 'strMeasure' . $i;
+
+            if ($r[$strIng] == "") {
+                break;
+            }
+            $ingredients += [$r[$strIng] => $r[$strMeas]];
+        }
+        $Recipe->setMap($ingredients);
+        $recipe_array += [$Recipe];
+    }
+    var_dump($Recipe);
+    return $recipe_array;
 }
+
 
 /**
  * hashPass hashes the password for a user
  *
- * @param string $uIn
- * @param string $pIn
+ * @param string $uIn username
+ * @param string $pIn password as plain text input
  * @return string
  */
 function hashPass($uIn, $pIn)

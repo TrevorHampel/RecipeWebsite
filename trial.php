@@ -1,5 +1,6 @@
 <?php
 include("includes/include.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +15,14 @@ include("includes/include.php");
         <h1>Practicing with PHP again</h1>
         <h2><a href="Login.php">Login</a></h2>
         <h2><a href="CreateAccount.php">Create Account</a></h2>
-    </div>
-    <div id="recipe-card">
         <?php
-        //hellowWorld();
-        parseJSON('includes/random2.json');
+        parseRecipe(getRecipeFromAPI());
+        //getRecipeFromAPI();
         ?>
     </div>
+    <div id="recipe-card">
+    </div>
+
 </body>
 
 </html>
