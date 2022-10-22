@@ -6,9 +6,10 @@
                 echo $_POST['textToReturn'];
                 break;
             case "GetSecondThing":
-                echo "Number:" . $_POST['number'] . " String" .  $_POST['ThisIsJustAVar'] ;
+                echo "Number:" . $_POST['number'] . " \nString:" .  $_POST['ThisIsJustAVar'] ;
                 break;
         }
+        // always be sure to exit(); or echo exit;
         exit();
     }
 
