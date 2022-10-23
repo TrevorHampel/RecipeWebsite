@@ -5,11 +5,11 @@
 <html lang=en>
 <head>
 <title>View Recipes</title>
-<!-- <link src="\Bootstrap\css"> -->
+<!--  TODO <link src="\Bootstrap\css"> -->
 </head>
 <body>
     <?php
-        $recipesArray = getRecipeFromAPI();
+        $recipesArray = getRecipeFromAPI(); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
         
         $imgThumb = $recipesArray[0]['strMealThumb'];
         $id = $recipesArray[0]['idMeal'];
@@ -17,37 +17,61 @@
         $category = $recipesArray[0]['strCategory'];
         $area = $recipesArray[0]['strArea'];
         $instructions = $recipesArray[0]['strInstructions'];
-        
-        // get ingredients from random //
-        $ing1 = $recipesArray[0]['strIngredient1'];
-        $ing2 = $recipesArray[0]['strIngredient2'];
-        $ing3 = $recipesArray[0]['strIngredient3'];
-        $ing4 = $recipesArray[0]['strIngredient4'];
 
+        $ingredients = [];
+
+        foreach ($recipesArray as $r){
+
+            for ($i = 1; $i < 21; $i++) {
+                $strIng = 'strIngredient' . $i;
+                $strMeas = 'strMeasure' . $i;
+
+                if ($r[$strIng] == "") {
+                    break;
+                } 
+                $ingredients += [$r[$strIng] => $r[$strMeas]];
+            }
+        }
+        // var_dump($ingredients);
         // $allRecipes = parseRecipe($recipesArray);
     ?>
-    <?php
-        // WORKING - EXPERIEMNTS - ETC //
-        // $recipesArray = parseRecipe(getRecipeFromAPI());
-        // $mealID = $recipesArray[0][''];
-        // print_r($recipesArray);
-        // var_dump($recipesArray);
-        // echo "THIS IS THE ID FOR THE MEAL " . $recipesArray[0]["idMeal"];
-        // echo $recipesArray->[]->idMeal;
-        // echo $recipesArray[0]['idMeal'];
-    ?>
+    
+    <!-- surrond all -->
+    <div> 
+        <h1>RANDOM RECIPE</h1>
 
-    <h1>RANDOM RECIPE</h1>
-    <h2>MEAL: <?php echo " ". $meal ?></h2>
-    <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
-    <h2>INGREDIENTS:</h2>
-    <p> <?php echo "" .$ing1 ?></p>
-    <p> <?php echo "" .$ing2 ?></p>
-    <p> <?php echo "" .$ing3 ?></p>
-    <p> <?php echo "" .$ing4 ?></p>
-    <h2>INSTRUCTIONS:</h2>
-    <p> <?php echo "" .$instructions ?></p>
+        <!-- img segment start  -->
+        <div> 
+            <h2>MEAL: <?php echo " ". $meal ?></h2>
+            <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
+        </div>
+        <!-- end img segment  -->
 
+        <!-- ingredients segment start  -->
+        <div> 
+            <h2>INGREDIENTS:</h2>
+            <?php
+                $i = 1;
+                foreach($ingredients as $ing){
+                    echo "<p>" . 
+                    $recipesArray[0]["strIngredient$i"] . " : " . 
+                    $recipesArray[0]["strMeasure$i"] .  
+                    "</p>";
+                $i++;
+                }
+            ?>
+        </div>
+        <!-- end ingredients segment  -->
+            
+        <!-- instructions segment start  -->
+        <div> 
+            <h2>INSTRUCTIONS:</h2>
+            <p> <?php echo "" .$instructions ?></p>
+        </div>
+        <!-- end instructions segment  -->
+
+    </div> 
+    
     <!-- TODO WORK ON STYLING -->
 
 </body>
