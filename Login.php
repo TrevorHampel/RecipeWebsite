@@ -38,7 +38,7 @@
     </div> 
     <div class="row btn-group">
       <div class="card-body flex-column align-items-left">
-        <button type="button" class="btn btn-block btn-primary mt-auto">Sign up</button>
+        <button type="button" class="btn btn-block btn-primary mt-auto" onclick="signUp()">Sign up</button>
       </div>
       <div class="card-body flex-column align-items-right">
         <button type="button" class="btn btn-block btn-primary mt-auto" onclick="login()">Login</button>
