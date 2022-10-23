@@ -15,7 +15,7 @@ function login(){
         }
         else
         {
-            window.location.href = "TrevorScript.php";
+            window.location.href = "viewrecipes.php";
         }
     });
 }
@@ -45,7 +45,7 @@ function CreateAccount(){
         }
         else
         {
-            window.location.href = "TrevorScript.php";
+            window.location.href = "viewrecipes.php";
         }
     });
 }
