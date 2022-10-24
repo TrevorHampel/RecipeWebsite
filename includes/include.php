@@ -55,11 +55,29 @@ function parseRecipe($recipes)
             }
             $ingredients += [$r[$strIng] => $r[$strMeas]];
         }
-        $Recipe->setMap($ingredients);
+        $Recipe->setIngredients($ingredients);
         $recipe_array += [$Recipe];
     }
-    var_dump($Recipe);
+    //var_dump($Recipe);
     return $recipe_array;
+}
+
+/**
+ * returns a single Recipe object by id, or
+ * if param is negative a random Recipe object is returned
+ *
+ * @param [type] $i recipe id or negative for random
+ * @return Recipe
+ */
+function getRecipe($i)
+{
+    $Recipe = new Recipe();
+    if ($i < 0) {
+        $Recipe = parseRecipe(getRecipeFromAPI());
+        return $Recipe[0];
+    } else {
+        //Will retrieve a Recipe based on id
+    }
 }
 
 

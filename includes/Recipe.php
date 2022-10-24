@@ -74,12 +74,12 @@ class Recipe
         return $this->recipeSource;
     }
 
-    public function setMap($map)
+    public function setIngredients($map)
     {
         $this->ingredientMap = $map;
     }
 
-    public function getMap()
+    public function getIngredients()
     {
         return $this->ingredientMap;
     }
