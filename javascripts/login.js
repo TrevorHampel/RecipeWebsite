@@ -21,15 +21,29 @@ function login(){
 }
 
 function signUp(){
-    window.location.href = "CreateAccount.php";
+    window.location.href = "SignUp.php";
+}
+
+function GoToLogin(){
+    window.location.href = "Login.php";
 }
 
 function CreateAccount(){
     var first = $("#first_name_id").val();
     var last = $("#last_name_id").val();   
     var username = $("#username_id").val();
+    var email = $("#email_id").val();
     var password = $("#password_id").val();
+    var confirmPassword = $("#confirm_password_id").val();
+
+    if (confirmPassword != password)
+    {
+        return;
+    }
     
+    // Jared: I wasn't sure how to add the email to the php
+    //        so I left it as is for now but you can add it if you want.
+
     $.post("T_ActionHandler.php", 
     {
         action: "CreateAccount",

@@ -20,17 +20,29 @@
       <h2>Sign Up</h2>
     </div>
     <div class="row">
+      <div class="col">
+        <label for="first_name_id">First Name</label>
+        <input type="text" class="form-control" id="first_name_id" placeholder="First Name">
+      </div>
+      <div class="col">
+        <label for="last_name_id">Last Name</label>
+        <input type="text" class="form-control" id="last_name_id" placeholder="Last Name">
+      </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+        <label for="user_id">Username</label>
+        <input type="text" class="form-control" id="username_id" placeholder="Username">
+      </div>
+      <div class="mb-3">
+        <label for="email_id">Email address</label>
+        <input type="email" class="form-control" id="email_id" aria-describedby="emailHelp" placeholder="Email address">
       </div>
       <div class="col">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="password_id">Password</label>
+        <input type="password" class="form-control" id="password_id" placeholder="Password">
       </div>
       <div class="col">
-        <label for="exampleInputPassword1">Confirm Password</label>
-        <input type="confirmPassword" class="form-control" id="exampleInputPassword1" placeholder="Confirm">
+        <label for="confirm_password_id">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm_password_id" placeholder="Confirm">
       </div>
     </div>
     <div class="row">
@@ -38,14 +50,15 @@
     </div> 
     <div class="row buttons">
       <div class="col text-start">
-        <button type="login" class="btn btn-primary">&nbspLogin&nbsp</button>
+        <button type="login" class="btn btn-primary" onclick="GoToLogin()">&nbspLogin&nbsp</button>
       </div>
       <div class="col text-end">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" onclick="CreateAccount()">Submit</button>
       </div>
     </div>
   </div>
 
-  <script src="javascripts/application.js"></script>
+  <script src="javascripts/login.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>

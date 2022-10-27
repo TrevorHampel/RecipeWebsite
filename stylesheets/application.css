@@ -170,6 +170,10 @@ h5 {
   .login .btn{
     width: auto;
   }
+
+  .login .col{
+    margin-bottom: 1rem;
+  }
   
   .loginLogo{
     text-align: center;
@@ -271,7 +275,7 @@ h5 {
     padding-top: 1rem;
     color: #2f2f2f;
     width: 27rem;
-    height: 30rem;
+    height: 33rem;
     text-align: left;
     margin-bottom: 0rem;
     margin-left: auto;
@@ -311,6 +315,10 @@ h5 {
 
   .login .btn{
     width: auto;
+  }
+
+  .login .col{
+    margin-bottom: 1rem;
   }
   
   .loginLogo{
