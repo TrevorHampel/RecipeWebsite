@@ -1,6 +1,7 @@
 <?php
 
 include_once "Database.php";
+include_once "Session.php";
 $Database = new Database();
 
 class T_Login {
@@ -14,8 +15,9 @@ class T_Login {
         
         if(empty($returnArray)){
             return "false";
-        }
-        else{
+        }else{
+            //Start the session var
+            $this->setSessionUserID($returnArray[0]["user_id"]);
             return "true";
         }
     }
@@ -29,10 +31,17 @@ class T_Login {
         if(!empty($returnArray)){
             return "UserTaken";
         }
+        //Start the session var
+        $this->setSessionUserID($returnArray[0]["user_id"]);
+
         $sql = "INSERT INTO `user` 
         ( `first_name`, `last_name`, `User_name`, `password`) 
         VALUES ('$first', '$last', '$username', '$password')";
         $Database->insert($sql);
         return ;
+    }
+
+    function setSessionUserID($UserID){
+        $_SESSION["UserID"] = $UserID;
     }
 }
