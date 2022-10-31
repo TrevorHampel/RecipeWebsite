@@ -5,8 +5,8 @@
 <!doctype html>
 <html lang=en>
 <head>
-<title>View Recipes</title>
-<!--  TODO <link src="\Bootstrap\css"> -->
+    <title>View Recipes</title>
+    <link rel="stylesheet" href="stylesheets/application.css">
 </head>
 <body>
     <?php
@@ -37,15 +37,25 @@
         // $allRecipes = parseRecipe($recipesArray);
         //echo var_dump($_SESSION);
     ?>
+
+    <div class="loginLogo row">
+        <div class="col">
+        <img src="images/WTF.png" alt="Big WTF Logo">
+        </div>
+    </div>
     
     <!-- surrond all -->
     <div> 
         <h1>RANDOM RECIPE</h1>
 
         <!-- img segment start  -->
-        <div> 
-            <h2>MEAL: <?php echo " ". $meal ?></h2>
-            <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
+        <div class="row"> 
+            <div class="col"> 
+                <h2>MEAL: <?php echo " ". $meal ?></h2>
+            </div>
+            <div class="col"> 
+                <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
+            </div>
         </div>
         <!-- end img segment  -->
 
