@@ -6,8 +6,7 @@ include("includes/include.php");
 
 <head>
     <title>View Recipes</title>
-    <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="stylesheets/application.css">
 </head>
 
 <body>
@@ -43,15 +42,25 @@ include("includes/include.php");
     //echo var_dump($_SESSION);
     ?>
 
+    <div class="loginLogo row">
+        <div class="col">
+            <img src="images/WTF.png" alt="Big WTF Logo">
+        </div>
+    </div>
+
     <!-- surrond all -->
     <div class="container">
         <div class="card bg-light text-center">
             <h1>RANDOM RECIPE</h1>
 
             <!-- img segment start  -->
-            <div class="card-header">
-                <h2 class="card-title">MEAL: <?php echo " " . $meal ?></h2>
-                <img class="card-img-top" style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
+            <div class="row">
+                <div class="col">
+                    <h2>MEAL: <?php echo " " . $meal ?></h2>
+                </div>
+                <div class="col">
+                    <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
+                </div>
             </div>
             <!-- end img segment  -->
 
