@@ -1,5 +1,5 @@
 <?php
-include_once("TrevorScript.php");
+
 include_once('includes/include.php');
 ?>
 <!DOCTYPE html>
@@ -18,27 +18,20 @@ include_once('includes/include.php');
     <div id="login-form-container">
         <form action="" method="post">
             <p>Enter your First Name: </p>
-            <input type="text" name="first-name" placeholder="First Name"></input>
+            <input type="text" id="first_name_id" name="first-name" placeholder="First Name"></input>
             <p>Enter your Last Name: </p>
-            <input type="text" name="last-name" placeholder="Last Name"></input>
+            <input type="text" id="last_name_id" name="last-name" placeholder="Last Name"></input>
             <p>Enter your username: </p>
-            <input type="text" name="username" placeholder="Username"></input>
+            <input type="text"  id="username_id"name="username" placeholder="Username"></input>
             <p>Enter your password: </p>
-            <input type="password" name="password" placeholder="Password"></input><br><br>
-            <input type="submit" name="submit-create-account" value="Create Account"></input>
+            <input type="password" id="password_id" name="password" placeholder="Password"></input><br><br>
+            <input type="button" onclick="CreateAccount()" name="submit-create-account" value="Create Account"></input>
         </form>
     </div>
-    <?php
-    var_dump($_POST);
-    if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first-name']) && isset($_POST['last-name'])) {
-        if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['first-name']) && !empty($_POST['last-name'])) {
-            echo '<br>' . isUsernameAvailable($_POST['username']);
-        }
-    }
-    ?>
     <div id="login-footer">
 
     </div>
 </body>
-
+<script src="javascripts/login.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </html>
