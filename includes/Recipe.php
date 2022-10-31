@@ -13,6 +13,7 @@ class Recipe
     private $thumbnail;
     private $ingredientMap;
     private $recipeSource;
+    private $recipeVideo;
 
     public function setId($id)
     {
@@ -42,6 +43,11 @@ class Recipe
     public function setRecipeSource($source)
     {
         $this->recipeSource = $source;
+    }
+
+    public function setRecipeVideo($url)
+    {
+        $this->recipeVideo = $url;
     }
 
     public function getId()
@@ -82,5 +88,10 @@ class Recipe
     public function getIngredients()
     {
         return $this->ingredientMap;
+    }
+
+    public function getRecipeVideo()
+    {
+        return $this->recipeVideo;
     }
 }
