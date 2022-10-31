@@ -177,7 +177,7 @@ h5 {
   
   .loginLogo{
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 1vh;
     margin-bottom: 5vh;
     font-size: 50px;
   }
@@ -323,9 +323,15 @@ h5 {
   
   .loginLogo{
     text-align: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    --bs-gutter-x: 0rem;
     font-size: 50px;
+  }
+
+  .loginLogo img{
+    width: 250px;
+    height: 250px;
   }
 
   .cards{
