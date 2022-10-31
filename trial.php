@@ -16,8 +16,9 @@ include("includes/include.php");
         <h2><a href="Login.php">Login</a></h2>
         <h2><a href="CreateAccount.php">Create Account</a></h2>
         <?php
-        parseRecipe(getRecipeFromAPI());
-        //getRecipeFromAPI();
+        $recipe = getRecipe(52772);
+        print_r($recipe);
+
         ?>
     </div>
     <div id="recipe-card">
