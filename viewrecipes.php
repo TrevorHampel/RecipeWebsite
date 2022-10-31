@@ -1,5 +1,6 @@
 <?php
     include("includes/include.php");
+    include("Session.php");
 ?>
 <!doctype html>
 <html lang=en>
@@ -34,6 +35,7 @@
         }
         // var_dump($ingredients);
         // $allRecipes = parseRecipe($recipesArray);
+        //echo var_dump($_SESSION);
     ?>
     
     <!-- surrond all -->
