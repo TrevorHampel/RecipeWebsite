@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include_once("includes/include.php"); ?>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,7 @@
 </head>
 
 <body>
+  <?php include_once("includes/nav.php"); ?>
   <div class="loginLogo row">
     <div class="col">
       <h1>Big Logo</h1>
@@ -16,7 +19,7 @@
   </div>
 
   <div class="card login">
-    <div class="row"> 
+    <div class="row">
       <h2>Login</h2>
     </div>
     <div class="row">
@@ -30,7 +33,7 @@
         <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
         <a href="#">Forgot Password?</a>
       </div>
-    </div> 
+    </div>
     <div class="row buttons">
       <div class="col text-start">
         <button type="signup" class="btn btn-primary" onclick="signUp()">Sign up</button>
@@ -43,6 +46,8 @@
 
   <script src="javascripts/login.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
