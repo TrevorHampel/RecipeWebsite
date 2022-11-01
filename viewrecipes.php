@@ -49,44 +49,51 @@ include("includes/include.php");
     </div>
 
     <!-- surrond all -->
-    <div class="container">
-        <div class="card bg-light text-center">
-            <h1>RANDOM RECIPE</h1>
+    <div class="recipe">
+        <h1 class="centerText">RANDOM RECIPE</h1>
 
-            <!-- img segment start  -->
-            <div class="row">
-                <div class="col">
-                    <h2>MEAL: <?php echo " " . $meal ?></h2>
-                </div>
-                <div class="col">
-                    <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
-                </div>
+        <!-- img segment start  -->
+        <div class="row noedge">
+            <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
+        </div>
+        <div class="row noedge">
+            <div class="col">
+                <img src="<?php echo $imgThumb ?>">
             </div>
-            <!-- end img segment  -->
-
             <!-- ingredients segment start  -->
-            <div class="card-body">
-                <h2>INGREDIENTS:</h2>
-                <?php
-                $i = 1;
-                foreach ($ingredients as $ing) {
-                    echo "<p class=>" .
-                        $recipesArray[0]["strIngredient$i"] . " : " .
-                        $recipesArray[0]["strMeasure$i"] .
-                        "</p>";
-                    $i++;
-                }
-                ?>
+            <div class="col">
+                <h3>INGREDIENTS:</h2>
+                    <?php
+                    $i = 1;
+                    foreach ($ingredients as $ing) {
+                        echo '<div class="row checkbox">';
+                        echo '<div class="col-1">';
+                        echo '<input type="checkbox"
+                                name="' . $recipesArray[0]["strIngredient$i"] . '" 
+                                value="' . $recipesArray[0]["strIngredient$i"] . '">';
+                        echo '</div>';
+                        echo '<div class="col-11">';
+                        echo "<p>" .
+                            $recipesArray[0]["strIngredient$i"] . " : " .
+                            $recipesArray[0]["strMeasure$i"] .
+                            "</p>";
+                        echo '</div>';
+                        echo '</div>';
+                        $i++;
+                    }
+                    ?>
             </div>
             <!-- end ingredients segment  -->
-
-            <!-- instructions segment start  -->
-            <div>
-                <h2>INSTRUCTIONS:</h2>
-                <p> <?php echo "" . $instructions ?></p>
-            </div>
-            <!-- end instructions segment  -->
         </div>
+        <!-- end img segment  -->
+
+        <!-- instructions segment start  -->
+        <div>
+            <h2>INSTRUCTIONS:</h2>
+            <p> <?php echo "" . $instructions ?></p>
+        </div>
+        <!-- end instructions segment  -->
+
     </div>
 
     <!-- TODO WORK ON STYLING -->
