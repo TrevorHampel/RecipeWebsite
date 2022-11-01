@@ -16,9 +16,25 @@
 
 
     echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>';
-    echo '<script src="javascripts/ajaxScript.js"></script>';
-    echo '<input type = "button" onclick = "ajaxTest()" value = "Display some text">';
-    echo '<input type = "button" onclick = "ajaxTest2()" value = "Display a number">';
+    // echo '<script src="javascripts/ajaxScript.js"></script>';
+    // echo '<input type = "button" onclick = "ajaxTest()" value = "Display some text">';
+    // echo '<input type = "button" onclick = "ajaxTest2()" value = "Display a number">';
+    include("includes/include.php");
+    $categoryArray = array();
+    for($i = 0; $i <= 1000; $i++){
+        $recipesArray = getRecipeFromAPI();
+        $categoryArray[] = $recipesArray[0]["strCategory"];
+    }
+    $UcategoryArray = array();
+    foreach($categoryArray as $row){
+        if(!in_array($row, $UcategoryArray)){
+            $UcategoryArray[] = $row;
+        }
+    }
+    echo var_dump($UcategoryArray);
+    
+    
+
     // include_once "Database.php";
     // $Database = new Database();
 
