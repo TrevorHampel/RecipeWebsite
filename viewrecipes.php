@@ -45,36 +45,44 @@
     </div>
     
     <!-- surrond all -->
-    <div> 
-        <h1>RANDOM RECIPE</h1>
+    <div class="recipe"> 
+        <h1 class="centerText">RANDOM RECIPE</h1>
 
         <!-- img segment start  -->
-        <div class="row"> 
-            <div class="col"> 
-                <h2>MEAL: <?php echo " ". $meal ?></h2>
+        <div class="row noedge"> 
+            <h2 class="centerText">MEAL: <?php echo " ". $meal ?></h2>
+        </div>
+        <div class="row noedge"> 
+            <div class="col">
+                <img src="<?php echo $imgThumb ?>">
             </div>
+            <!-- ingredients segment start  -->
             <div class="col"> 
-                <img style="height:200px; width:200px" src="<?php echo $imgThumb ?>">
+                <h3>INGREDIENTS:</h2>
+                <?php
+                    $i = 1;
+                    foreach($ingredients as $ing){
+                        echo '<div class="row checkbox">';
+                            echo '<div class="col-1">';
+                                echo '<input type="checkbox"
+                                name="'. $recipesArray[0]["strIngredient$i"] .'" 
+                                value="'. $recipesArray[0]["strIngredient$i"] .'">';
+                            echo '</div>';
+                            echo '<div class="col-11">';
+                                echo "<p>" . 
+                                $recipesArray[0]["strIngredient$i"] . " : " . 
+                                $recipesArray[0]["strMeasure$i"] .  
+                                "</p>";
+                            echo '</div>';
+                        echo '</div>';
+                    $i++;
+                    }
+                ?>
             </div>
+            <!-- end ingredients segment  -->
         </div>
         <!-- end img segment  -->
 
-        <!-- ingredients segment start  -->
-        <div> 
-            <h2>INGREDIENTS:</h2>
-            <?php
-                $i = 1;
-                foreach($ingredients as $ing){
-                    echo "<p>" . 
-                    $recipesArray[0]["strIngredient$i"] . " : " . 
-                    $recipesArray[0]["strMeasure$i"] .  
-                    "</p>";
-                $i++;
-                }
-            ?>
-        </div>
-        <!-- end ingredients segment  -->
-            
         <!-- instructions segment start  -->
         <div> 
             <h2>INSTRUCTIONS:</h2>
