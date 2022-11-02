@@ -5,18 +5,23 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+
         <ul class="navbar-nav">
             <?php
             $navbar = '';
-            if (!session_id()) {
-                $navbar .= '<li class="nav-item"><a class="nav-link" href="SignUp.php">Sign Up</a></li>';
-                $navbar .= '<li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>';
-            } else {
-                $navbar .= '<li class="nav-item"><a class="nav-link" href="SignUp.php">Sign Up</a></li>';
-                $navbar .= '<li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>';
-                $navbar .= '<li class="nav-item"><a class="nav-link" href="viewrecipes.php">Random Recipe</a></li>';
-                $navbar .= '<li class="nav-item"><a class="nav-link" href="">Ten Recipes</a></li>';
-            }
+            // if ($_SESSION["UserID"] == null) {
+            //     $navbar .= '<li class="nav-item"><a class="nav-link" href="SignUp.php">Sign Up</a></li>';
+            //     $navbar .= '<li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>';
+            // } else {
+            //     $navbar .= '<li class="nav-item"><a class="nav-link" href="SignUp.php">Sign Up</a></li>';
+            //     $navbar .= '<li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>';
+            //     $navbar .= '<li class="nav-item"><a class="nav-link" href="viewrecipes.php">Random Recipe</a></li>';
+            //     $navbar .= '<li class="nav-item"><a class="nav-link" href="ListViewRecipes.php">Ten Recipes</a></li>';
+            // }
+            $navbar .= '<li class="nav-item"><a class="nav-link" href="SignUp.php">Sign Up</a></li>';
+            $navbar .= '<li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>';
+            $navbar .= '<li class="nav-item"><a class="nav-link" href="viewrecipes.php">Random Recipe</a></li>';
+            $navbar .= '<li class="nav-item"><a class="nav-link" href="ListViewRecipes.php">Ten Recipes</a></li>';
             echo $navbar;
             ?>
         </ul>
