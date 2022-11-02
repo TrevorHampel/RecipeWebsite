@@ -52,7 +52,7 @@ function getRecipeFromAPI($id)
  */
 function parseRecipe($recipes)
 {
-    $recipe_array[] = new Recipe();
+    //$recipe_array[] = new Recipe();
 
     $ingredients = [];
     foreach ($recipes as $r) {
@@ -63,6 +63,7 @@ function parseRecipe($recipes)
         $Recipe->setThumbnail($r['strMealThumb']);
         $Recipe->setInstructions($r['strInstructions']);
         $Recipe->setRecipeVideo($r['strYoutube']);
+        $Recipe->setRecipeSource($r['strSource']);
 
         for ($i = 1; $i < 21; $i++) {
             $strIng = 'strIngredient' . $i;
