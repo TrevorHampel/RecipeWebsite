@@ -4,47 +4,32 @@
   box-sizing: border-box;
 }
 
-.featured{
-  margin-top: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.featured2{
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
 .bar{
   padding: 10px;
   border-radius: 10px;
   background-color: #2f2f2f;
 }
 
-.gallery h3{
-  margin: 10px;
-}
-
 body{
   font-size: 20px;
 }
 
-.about h1 {
-  text-align: center;
+h1 {
   margin-bottom: .5rem;
 }
 
-.about p{
-  text-indent: 10%;
-}
-
-h5 {
-  font-size: 25px;
+p{
+  text-indent: 5%;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.centerText{
+  text-align: center;
 }
 
 .code{
@@ -77,6 +62,11 @@ h5 {
 
 .space{
   margin-top: 2rem;
+}
+
+.noedge{
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0;
 }
 
 .test{
@@ -177,19 +167,9 @@ h5 {
   
   .loginLogo{
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 1vh;
     margin-bottom: 5vh;
     font-size: 50px;
-  }
-  
-  .cards{
-    width: 100%;
-    margin: 2rem auto;
-  }
-
-  .cover{
-    width: 100%;
-    height: auto;
   }
 
   .foot {
@@ -209,13 +189,6 @@ h5 {
   .foot a:active{
     color: white;
   } 
-
-  .c{
-    font-size: 15px;
-    margin-right: 5%;
-    display: inline-block;
-    align-self: flex-end;
-  }
   
   img{
     width: 100%;
@@ -228,14 +201,6 @@ h5 {
     font-size: 34px;
     text-align: center;
   }
-
-  .smallimg{
-    width: 300px;
-  }
-
-  .smalltext{
-    font-size: 24px !important;
-  }
 }
 
 @media screen and (min-width: 768px) /*Desktop*/
@@ -243,6 +208,11 @@ h5 {
   .main{
     width: 90%;
     margin: auto;
+  }
+
+  .noedge{
+    --bs-gutter-x: 0rem;
+    --bs-gutter-y: 0;
   }
 
   .jumbotron {
@@ -309,8 +279,6 @@ h5 {
   .login .buttons{
     margin-top: auto;
     padding: 0rem;
-    --bs-gutter-x: 0rem;
-    --bs-gutter-y: 0;
   }
 
   .login .btn{
@@ -323,18 +291,41 @@ h5 {
   
   .loginLogo{
     text-align: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    --bs-gutter-x: 0rem;
     font-size: 50px;
   }
 
-  .cards{
-    margin-top: 2rem;
+  .loginLogo img{
+    width: 250px;
+    height: 250px;
   }
 
-  .cover{
-    width: 100%;
-    height: auto;
+  .recipe{
+    background-color: #f7f8fd;
+    padding: 2rem;
+    padding-top: 1rem;
+    color: #2f2f2f;
+    width: 65rem;
+    text-align: left;
+    margin-bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+
+  .recipe p{
+    margin-bottom: 0.25rem;
+  }
+
+  .checkbox{
+    text-indent: 0%;
+  }
+
+  .checkbox p{
+    text-indent: 0%;
   }
 
   .foot {
@@ -354,19 +345,6 @@ h5 {
   } 
   .foot a:active{
     color: white;
-  } 
-
-  .c{
-    margin-right: 5%;
-    font-size: 20px;
-    display: inline-block;
-    align-self: flex-end;
-    margin-bottom: 20px;
-  }
-
-  .profile{
-    padding-top: 5%;
-    padding-bottom: 5%;
   }
   
   img{
@@ -379,32 +357,6 @@ h5 {
   h2{
     font-size: 36px;
     margin-top: 1rem;
-  }
-
-  h3{
-    margin-top: 1rem;
-  }
-
-  .smallimg{
-    width: 300px;
-  }
-  
-  .smallvid{
-    width: 482px; 
-    height: 271px;
-  }
-
-  .carousel{
-    width: 100%;
-    background-color: #2f2f2f;
-    border-radius: 10px;
-  }
-
-  .carousel img{
-    width: 70% !important;
-  }
-
-  .midimg{
-    width: 90%;
+    margin-bottom: 1rem;
   }
 }
