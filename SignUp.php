@@ -11,7 +11,7 @@
 <body>
   <div class="loginLogo row">
     <div class="col">
-      <h1>Big Logo</h1>
+      <img src="images/WTF.png" alt="Big WTF Logo">
     </div>
   </div>
 
