@@ -11,6 +11,8 @@ include("includes/include.php");
 
 <body>
     <?php
+    var_dump($_SESSION);
+    var_dump($_POST);
     include_once("includes/nav.php");
     $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 

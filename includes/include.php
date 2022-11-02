@@ -52,7 +52,7 @@ function getRecipeFromAPI($id)
  */
 function parseRecipe($recipes)
 {
-    $recipe_array = [];
+    $recipe_array[] = new Recipe();
 
     $ingredients = [];
     foreach ($recipes as $r) {
@@ -74,7 +74,7 @@ function parseRecipe($recipes)
             $ingredients += [$r[$strIng] => $r[$strMeas]];
         }
         $Recipe->setIngredients($ingredients);
-        $recipe_array += [$Recipe];
+        $recipe_array[] = $Recipe;
     }
     return $recipe_array;
 }
