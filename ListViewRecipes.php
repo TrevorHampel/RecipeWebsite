@@ -10,6 +10,7 @@
 
 <body>
     <?php include_once("includes/nav.php"); ?>
+    <h1 class="h1 text-center">10 Random Recipes</h1>
     <div class="d-flex align-items-center justify-content-center">
         <?php
         //var_dump($_SESSION);
@@ -22,12 +23,9 @@
             $print_var .= '<div class="card-body">';
             $print_var .= '<h3 class="card-title">' . $recipe->getName() . '</h3>';
             $print_var .= '<p class="card-text">' . $recipe->getCategory() . '</p>';
-            $print_var .= '<button type="button" class="btn btn-primary btn-md">Add to Favorites</button>';
+            $print_var .= '<button type="button" class="btn btn-primary btn-md m-3">Add to Favorites</button>'; //still need to implement favorites
             $print_var .= '<a class="m-3" href="' . $recipe->getRecipeVideo() . '"><button type="button" class="btn btn-secondary btn-md">Recipe Video</button></a>';
             $print_var .= '<a class="m-3" href="' . $recipe->getRecipeSource() . '"><button type="button" class="btn btn-primary btn-md">Recipe Source</button></a>';
-
-
-
             $print_var .= '</div>';
         }
         $print_var .= '</div>';
