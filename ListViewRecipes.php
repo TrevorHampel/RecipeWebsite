@@ -5,11 +5,18 @@
 
 <head>
     <title>10 Random Recipes</title>
-    <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/application.css">
 </head>
 
 <body>
     <?php include_once("includes/nav.php"); ?>
+
+    <div class="loginLogo row">
+        <div class="col">
+            <img src="images/WTFcropped.png" alt="Big WTF Logo">
+        </div>
+    </div>
+
     <h1 class="h1 text-center">10 Random Recipes</h1>
     <div class="d-flex align-items-center justify-content-center">
         <?php
