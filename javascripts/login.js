@@ -1,6 +1,14 @@
 function login(){
-    var password = $("#inputPassword").val();
-    var email = $("#inputEmail").val();
+    var password = $("#inputPassword1").val();
+    if (password === ''){
+        alert("Please Enter a password");
+        return;
+    }
+    var email = $("#inputEmail1").val();
+    if (email === ''){
+        alert("Please Enter a username");
+        return;
+    }
 
     $.post("T_ActionHandler.php", 
     {

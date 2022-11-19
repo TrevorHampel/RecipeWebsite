@@ -14,7 +14,7 @@
   <?php include_once("includes/nav.php"); ?>
   <div class="loginLogo row">
     <div class="col">
-      <img src="images/WTF.png" alt="Big WTF Logo">
+      <img src="images/WTFcropped.png" alt="Big WTF Logo">
     </div>
   </div>
 
@@ -35,10 +35,12 @@
         <label for="user_id">Username</label>
         <input type="text" class="form-control" id="username_id" placeholder="Username">
       </div>
-      <div class="mb-3">
+      <!--
+        <div class="mb-3">
         <label for="email_id">Email address</label>
         <input type="email" class="form-control" id="email_id" aria-describedby="emailHelp" placeholder="Email address">
       </div>
+      -->
       <div class="col">
         <label for="password_id">Password</label>
         <input type="password" class="form-control" id="password_id" placeholder="Password">
