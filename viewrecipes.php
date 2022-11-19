@@ -12,7 +12,6 @@ include("includes/include.php");
 
 <body>
     <?php
-    var_dump($_SESSION);
     $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 
     $imgThumb = $recipesArray[0]['strMealThumb'];
@@ -36,9 +35,6 @@ include("includes/include.php");
             $ingredients += [$r[$strIng] => $r[$strMeas]];
         }
     }
-    // var_dump($ingredients);
-    // $allRecipes = parseRecipe($recipesArray);
-    //echo var_dump($_SESSION);
     ?>
 
     <div class="loginLogo row">
