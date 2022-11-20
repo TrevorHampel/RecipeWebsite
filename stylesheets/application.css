@@ -1,5 +1,13 @@
 @import url(../Bootstrap/css/bootstrap.css);
 
+:root {
+  --GrayX11Gray:   #BFBDC1;
+  --GoldMetallic:  #DEB841;
+  --Gamboge:       #DE9E36;
+  --MauveTaupe:    #86626E;
+  --DarkSlateGray: #384D48;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +15,7 @@
 .bar{
   padding: 10px;
   border-radius: 10px;
-  background-color: #2f2f2f;
+  background-color: var(--DarkSlateGray);
 }
 
 body{
@@ -20,6 +28,24 @@ h1 {
 
 p{
   text-indent: 5%;
+}
+
+.btn-primary{
+  color: #fff;
+  background-color: var(--GoldMetallic);
+  border-color: var(--Gamboge);
+}
+
+.btn-primary:hover,
+.btn-primary.hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open.dropdown-toggle.btn-primary{
+  background-color: var(--Gamboge);
+  border-color: var(--GoldMetallic);
+  box-shadow: 0 0 0 .25rem var(--GoldMetallic);
 }
 
 .center {
@@ -37,7 +63,7 @@ p{
   padding: 1rem;
   border-radius: 10px;
   height:50rem;
-  background-color: #343a40;
+  background-color: var(--DarkSlateGray);
   overflow-x: scroll;
   overflow-y: scroll;
   line-height: 0.75;
@@ -54,7 +80,7 @@ p{
   padding: 1rem;
   border-radius: 10px;
   height:20rem;
-  background-color: #343a40;
+  background-color: var(--DarkSlateGray);
   overflow-x: scroll;
   overflow-y: scroll;
   line-height: 0.75;
@@ -103,7 +129,7 @@ p{
   }
   
   .jumbotron .col{
-    background-color: #2f2f2f;
+    background-color: var(--DarkSlateGray);
     padding: 10px;
     border-radius: 10px;
   }
@@ -172,6 +198,51 @@ p{
     font-size: 50px;
   }
 
+  .loginLogo img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .recipe{
+    background-color: #f7f8fd;
+    padding: 2rem;
+    padding-top: 1rem;
+    color: var(--DarkSlateGray);
+    width: 90%;
+    text-align: left;
+    margin-bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+
+  .recipe p{
+    margin-bottom: 0.25rem;
+  }
+
+  .recipe img{
+    width: 425px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+
+  .recipe h2{
+    font-size: 36px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .checkbox{
+    text-indent: 0%;
+  }
+
+  .checkbox p{
+    text-indent: 0%;
+  }
+
   .foot {
     color: white;
     margin-top: 3rem;
@@ -189,18 +260,6 @@ p{
   .foot a:active{
     color: white;
   } 
-  
-  img{
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  h2 {
-    font-size: 34px;
-    text-align: center;
-  }
 }
 
 @media screen and (min-width: 768px) /*Desktop*/
@@ -230,7 +289,7 @@ p{
   }
   
   .jumbotron .col{
-    background-color: #2f2f2f;
+    background-color: var(--DarkSlateGray);
     padding: 10px;
     border-radius: 10px;
   }
@@ -243,11 +302,11 @@ p{
     background-color: #f7f8fd;
     padding: 2rem;
     padding-top: 1rem;
-    color: #2f2f2f;
+    color: var(--DarkSlateGray);
     width: 27rem;
     height: 33rem;
     text-align: left;
-    margin-bottom: 0rem;
+    margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
     border-width: 0px;
@@ -298,15 +357,15 @@ p{
   }
 
   .loginLogo img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }
 
   .recipe{
     background-color: #f7f8fd;
     padding: 2rem;
     padding-top: 1rem;
-    color: #2f2f2f;
+    color: var(--DarkSlateGray);
     width: 65rem;
     text-align: left;
     margin-bottom: 10rem;
@@ -318,6 +377,19 @@ p{
 
   .recipe p{
     margin-bottom: 0.25rem;
+  }
+
+  .recipe img{
+    width: 425px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .recipe h2{
+    font-size: 36px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .checkbox{
@@ -345,18 +417,5 @@ p{
   } 
   .foot a:active{
     color: white;
-  }
-  
-  img{
-    width: 425px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  h2{
-    font-size: 36px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
 }

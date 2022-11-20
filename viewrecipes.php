@@ -13,8 +13,8 @@ include("includes/include.php");
 
 <body>
     <?php
-    var_dump($_SESSION);
-    $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
+        var_dump($_SESSION);
+        $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 
     $imgThumb = $recipesArray[0]['strMealThumb'];
     $id = $recipesArray[0]['idMeal'];
@@ -24,28 +24,29 @@ include("includes/include.php");
     $instructions = $recipesArray[0]['strInstructions'];
     $UserID = $_SESSION['UserID'];
 
-    $ingredients = [];
 
-    foreach ($recipesArray as $r) {
+        $ingredients = [];
 
-        for ($i = 1; $i < 21; $i++) {
-            $strIng = 'strIngredient' . $i;
-            $strMeas = 'strMeasure' . $i;
+        foreach ($recipesArray as $r) {
 
-            if ($r[$strIng] == "") {
-                break;
+            for ($i = 1; $i < 21; $i++) {
+                $strIng = 'strIngredient' . $i;
+                $strMeas = 'strMeasure' . $i;
+
+                if ($r[$strIng] == "") {
+                    break;
+                }
+                $ingredients += [$r[$strIng] => $r[$strMeas]];
             }
-            $ingredients += [$r[$strIng] => $r[$strMeas]];
         }
-    }
-    // var_dump($ingredients);
-    // $allRecipes = parseRecipe($recipesArray);
-    //echo var_dump($_SESSION);
+        // var_dump($ingredients);
+        // $allRecipes = parseRecipe($recipesArray);
+        //echo var_dump($_SESSION);
     ?>
 
     <div class="loginLogo row">
         <div class="col">
-            <img src="images/WTF.png" alt="Big WTF Logo">
+            <img src="images/WTFcropped.png" alt="Big WTF Logo">
         </div>
     </div>
 

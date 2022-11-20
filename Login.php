@@ -14,7 +14,7 @@
   <?php include_once("includes/nav.php"); ?>
   <div class="loginLogo row">
     <div class="col">
-      <img src="images/WTF.png" alt="Big WTF Logo">
+      <img src="images/WTFcropped.png" alt="Big WTF Logo">
     </div>
   </div>
 
