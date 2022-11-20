@@ -7,6 +7,7 @@ include("includes/include.php");
 <head>
     <title>View Recipes</title>
     <link rel="stylesheet" href="stylesheets/application.css">
+    <link rel="stylesheet" type="text/css" href="css/viewrecipes.css">
     <?php include_once("includes/nav.php"); ?>
 </head>
 
@@ -15,12 +16,14 @@ include("includes/include.php");
         var_dump($_SESSION);
         $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 
-        $imgThumb = $recipesArray[0]['strMealThumb'];
-        $id = $recipesArray[0]['idMeal'];
-        $meal = $recipesArray[0]['strMeal'];
-        $category = $recipesArray[0]['strCategory'];
-        $area = $recipesArray[0]['strArea'];
-        $instructions = $recipesArray[0]['strInstructions'];
+    $imgThumb = $recipesArray[0]['strMealThumb'];
+    $id = $recipesArray[0]['idMeal'];
+    $meal = $recipesArray[0]['strMeal'];
+    $category = $recipesArray[0]['strCategory'];
+    $area = $recipesArray[0]['strArea'];
+    $instructions = $recipesArray[0]['strInstructions'];
+    $UserID = $_SESSION['UserID'];
+
 
         $ingredients = [];
 
@@ -53,7 +56,14 @@ include("includes/include.php");
 
         <!-- img segment start  -->
         <div class="row noedge">
-            <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
+            </div>
+            <div class="col-md-1" style="margin-top:20px;">
+                <?php echo "<button onclick='addToFavoritesList($id, $UserID)' class='favoritesButton'>Favorite</button>"; ?>
+            </div>
         </div>
         <div class="row noedge">
             <div class="col">
@@ -96,9 +106,10 @@ include("includes/include.php");
     </div>
 
     <!-- TODO WORK ON STYLING -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="javascripts/favorites.js"></script>
 </body>
 
 </html>
