@@ -22,7 +22,7 @@
             $navbar .= '<li class="nav-item"><a class="nav-link" href="Login.php">Login</a></li>';
             $navbar .= '<li class="nav-item"><a class="nav-link" href="viewrecipes.php">Random Recipe</a></li>';
             $navbar .= '<li class="nav-item"><a class="nav-link" href="ListViewRecipes.php">Ten Recipes</a></li>';
-            $navbar .= '<li class="nav-item"><a class="nav-link" href="">Favorites</a></li>';
+            $navbar .= '<li class="nav-item"><a class="nav-link" href="favorites.php">Favorites</a></li>';
             echo $navbar;
             ?>
         </ul>
