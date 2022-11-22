@@ -1,6 +1,6 @@
 <?php
 include("includes/include.php");
-$UserID = $_SESSION['UserID'];
+
 ?>
 <!doctype html>
 <html lang=en>
@@ -22,7 +22,7 @@ $UserID = $_SESSION['UserID'];
     $category = $recipesArray[0]['strCategory'];
     $area = $recipesArray[0]['strArea'];
     $instructions = $recipesArray[0]['strInstructions'];
-
+    $UserID = $_SESSION['UserID'];
     $ingredients = [];
 
     foreach ($recipesArray as $r) {
