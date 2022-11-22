@@ -13,13 +13,12 @@
 }
 
 .bar{
-  padding: 3px;
   border-radius: 10px;
   background-color: var(--DarkSlateGray);
   margin-top: 2rem;
   margin-bottom: 1.25rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 
 body{

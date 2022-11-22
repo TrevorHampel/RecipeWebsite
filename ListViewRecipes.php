@@ -17,6 +17,7 @@
         </div>
     </div>
 
+    <!-- Single example card used for testing without the php
     <h1 class="h1 text-center">10 Random Recipes</h1>
     <div class="d-flex align-items-center justify-content-center">
         <div class="card w-50 m-5 p-2 border rounded list">
@@ -35,6 +36,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <div class="d-flex align-items-center justify-content-center">
         <?php
@@ -56,7 +58,7 @@
                 $print_var .= '<a href="' . $recipe->getRecipeSource() . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
             $print_var .= '</div>';
 
-            $print_var .= '<div class="row bar"></div>';
+            $print_var .= '<hr class="row bar">';
         }
         $print_var .= '</div>';
         echo $print_var;
