@@ -45,10 +45,10 @@ $UserID = $_SESSION['UserID'];
         </div>
     </div>
 
+    <h1 class="centerText">RANDOM RECIPE</h1>
+
     <!-- surrond all -->
     <div class="recipe">
-        <h1 class="centerText">RANDOM RECIPE</h1>
-
         <!-- img segment start  -->
         <div class="row noedge">
             <div class="col-md-1">

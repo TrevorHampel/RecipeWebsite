@@ -13,9 +13,12 @@
 }
 
 .bar{
-  padding: 10px;
   border-radius: 10px;
   background-color: var(--DarkSlateGray);
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 
 body{
@@ -235,6 +238,36 @@ p{
     margin-bottom: 1rem;
   }
 
+  .list{
+    background-color: white;
+    padding: 2rem;
+    padding-top: 1rem;
+    color: var(--DarkSlateGray);
+    width: 65rem;
+    text-align: left;
+    margin-bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+
+  .list p{
+    margin-bottom: 0.25rem;
+  }
+
+  .list img{
+    width: 650px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0px;
+  }
+
+  .list button{
+    margin-top: 1.75rem !important;
+  }
+
   .checkbox{
     text-indent: 0%;
   }
@@ -390,6 +423,41 @@ p{
     font-size: 36px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .list{
+    background-color: white;
+    padding: 2rem;
+    padding-top: 1rem;
+    color: var(--DarkSlateGray);
+    width: 65rem;
+    text-align: left;
+    margin-bottom: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+
+  .list p{
+    margin-bottom: 0.25rem;
+  }
+
+  .list img{
+    width: 650px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0px;
+  }
+
+  .list button{
+    margin-top: 1.75rem !important;
+  }
+
+  .list a{
+    color: var(--DarkSlateGray);
+    text-decoration: none;
   }
 
   .checkbox{
