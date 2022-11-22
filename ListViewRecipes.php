@@ -60,6 +60,10 @@
 
             $print_var .= '<hr class="row bar">';
         }
+
+        // Remove last <hr>
+        $print_var = substr($print_var, 0, -20);
+
         $print_var .= '</div>';
         echo $print_var;
         ?>
