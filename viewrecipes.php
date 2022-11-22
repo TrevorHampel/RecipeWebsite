@@ -13,17 +13,16 @@ include("includes/include.php");
 
 <body>
     <?php
-        var_dump($_SESSION);
+        //var_dump($_SESSION);
         $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 
-    $imgThumb = $recipesArray[0]['strMealThumb'];
-    $id = $recipesArray[0]['idMeal'];
-    $meal = $recipesArray[0]['strMeal'];
-    $category = $recipesArray[0]['strCategory'];
-    $area = $recipesArray[0]['strArea'];
-    $instructions = $recipesArray[0]['strInstructions'];
-    $UserID = $_SESSION['UserID'];
-
+        $imgThumb = $recipesArray[0]['strMealThumb'];
+        $id = $recipesArray[0]['idMeal'];
+        $meal = $recipesArray[0]['strMeal'];
+        $category = $recipesArray[0]['strCategory'];
+        $area = $recipesArray[0]['strArea'];
+        $instructions = $recipesArray[0]['strInstructions'];
+        $UserID = $_SESSION['UserID'];
 
         $ingredients = [];
 
@@ -50,10 +49,10 @@ include("includes/include.php");
         </div>
     </div>
 
+    <h1 class="centerText">RANDOM RECIPE</h1>
+
     <!-- surrond all -->
     <div class="recipe">
-        <h1 class="centerText">RANDOM RECIPE</h1>
-
         <!-- img segment start  -->
         <div class="row noedge">
             <div class="col-md-1">
