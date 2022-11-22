@@ -1,5 +1,6 @@
 <?php
 include("includes/include.php");
+$UserID = $_SESSION['UserID'];
 ?>
 <!doctype html>
 <html lang=en>
