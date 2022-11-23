@@ -1,6 +1,7 @@
 {
     "name": "trevor/recipewebsite",
     "description": "trevor repo",
+    "license": "Trevor",
     "scripts": {
         "test": [
             "@php runtest.php"
