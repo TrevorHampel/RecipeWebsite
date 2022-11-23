@@ -3,7 +3,7 @@
     "description": "trevor repo",
     "scripts": {
         "test": [
-            "@php runTest.php"
+            "@php runtest.php"
         ]
     }
 }
