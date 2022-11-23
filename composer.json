@@ -1,4 +1,6 @@
 {
+    "name": "trevor",
+    "description": "trevor repo",
     "scripts": {
         "test": [
             "@php runTest.php"
