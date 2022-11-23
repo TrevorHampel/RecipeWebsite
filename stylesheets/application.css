@@ -259,13 +259,13 @@ p{
   .list img{
     width: 650px;
     display: block;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
     padding: 0px;
   }
 
   .list button{
-    margin-top: 1.75rem !important;
+    margin-top: 0rem !important;
   }
 
   .checkbox{
@@ -446,13 +446,13 @@ p{
   .list img{
     width: 650px;
     display: block;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
     padding: 0px;
   }
 
   .list button{
-    margin-top: 1.75rem !important;
+    margin-top: 0rem !important;
   }
 
   .list a{
