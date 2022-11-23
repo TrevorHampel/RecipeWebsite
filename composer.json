@@ -1,4 +1,6 @@
 {
+    "name": "Run Tests",
+    "Description": "This is to run tests",
     "scripts": {
         "test": [
             "@php runTest.php"
