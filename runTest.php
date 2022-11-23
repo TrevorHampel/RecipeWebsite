@@ -6,7 +6,7 @@ include_once "T_Login.php";
 
 //initializations
 $tests = new tests();
-$T_Login = new T_Login();
+$T_Login = new T_Login(); 
 
 
 
