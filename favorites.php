@@ -80,7 +80,7 @@ if(!isset($_SESSION["UserID"])){
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         function printRecipeCard($recipeNumber){
-            echo "<hr>";
+            echo '<hr class="row bar">';
             $recipesArray = new Recipe();
 
             $recipesArray = getRecipe($recipeNumber); // getRecipe returns a recipe ||| $Recipe = new Recipe(); get recipe is returning an array

@@ -39,6 +39,7 @@ function getRecipeByCategory($catName)
     $url = "https://www.themealdb.com/api/json/v2/" . auth . "/filter.php?c=" . $catName;
 
     $curl_handle = curl_init();
+
     curl_setopt($curl_handle, CURLOPT_URL, $url);
     curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
 
@@ -48,9 +49,21 @@ function getRecipeByCategory($catName)
 
     $categoryArr = json_decode($categoryJSON, true);
 
-    $returnArr = $categoryArr['meals'];
+    return $categoryArr['meals'];
+}
 
-    return $returnArr;
+function convertRecipeByCategory($recipes)
+{
+    $recipe_array = [];
+
+    foreach ($recipes as $r)
+    {
+        $temp_arr = getRecipeFromAPI($r['idMeal']);
+        $temp = $temp_arr[0];
+        array_push($recipe_array, $temp);
+    }
+
+    return $recipe_array;
 }
 
 function printRecipeGrid($catName)
@@ -68,6 +81,37 @@ function printRecipeGrid($catName)
     echo $echoVar;
 }
 
+function printRecipeGrid2($catName)
+{
+    $UserId = $_SESSION['UserID'];
+    $recipe_array_cat = getRecipeByCategory($catName);
+    $recipe_array = parseRecipe(convertRecipeByCategory($recipe_array_cat));
+
+    $print_var = '<div class="card w-50 m-5 p-2 border rounded list">';
+    foreach ($recipe_array as $recipe) {
+        //print_r($recipe);
+        $print_var .= '<div class="row center">';
+            $print_var .= '<a href="!!!TODO route to viewrecipies.php page using this recepie!!!">';
+                $print_var .= '<h3 class="card-title">' . $recipe->getName() . '</h3>';
+
+                $print_var .= '<img class="card-img-top border rounded" src="' . $recipe->getThumbnail() . '" alt="' . $recipe->getName() . '"></a>';
+        $print_var .= '</div>';
+
+        $print_var .= '<div class="row center">';
+            $print_var .= "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $recipe->getId() . ", $UserId)'>Add to Favorites</button></a>";
+            $print_var .= '<a href="' . $recipe->getRecipeVideo() . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
+            $print_var .= '<a href="' . $recipe->getRecipeSource() . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
+        $print_var .= '</div>';
+
+        $print_var .= '<hr class="row bar">';
+    }
+
+    // Remove last <hr>
+    $print_var = substr($print_var, 0, -20);
+
+    $print_var .= '</div>';
+    echo $print_var;
+}
 
 ?>
 
@@ -81,7 +125,14 @@ function printRecipeGrid($catName)
 
 <body>
     <?php include_once("includes/nav.php"); ?>
-    <h2>Search Categories</h2>
+    <div class="loginLogo row">
+        <div class="col">
+            <img src="images/WTFcropped.png" alt="Big WTF Logo">
+        </div>
+    </div>
+
+    <h1 class="centerText">Search Categories</h1>
+
     <div class="d-flex align-items-center justify-content-center">
 
         <form method="post" action="">
@@ -95,18 +146,29 @@ function printRecipeGrid($catName)
             <input type="submit" name="search" value="Search">
         </form>
     </div>
-    <div class="d-flex align-items-center justify-content-center">
-        <div class="card align-items-center justify-content-center m-3">
-            <?php
-            if (isset($_POST['search'])) {
-                if (!empty($_POST['categories'])) {
-                    printRecipeGrid($_POST['categories']);
-                }
+
+    <?php
+        if (isset($_POST['search'])) {
+            if (!empty($_POST['categories'])) {
+                $print_var = '<h1 class="h1 text-center space">';
+                $print_var .= $_POST['categories'];
+                $print_var .= '</h1>';
+                echo $print_var;
             }
-            //printCategories();
-            ?>
-        </div>
+        }
+    ?>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <?php
+        if (isset($_POST['search'])) {
+            if (!empty($_POST['categories'])) {
+                printRecipeGrid2($_POST['categories']);
+            }
+        }
+        //printCategories();
+        ?>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
