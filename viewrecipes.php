@@ -24,6 +24,8 @@ include("includes/include.php");
     $instructions = $recipesArray[0]['strInstructions'];
     $UserID = $_SESSION['UserID'];
     $ingredients = [];
+    $video = $recipesArray[0]['strYoutube'];
+    $source = $recipesArray[0]['strSource'];
 
     foreach ($recipesArray as $r) {
 
@@ -60,6 +62,7 @@ include("includes/include.php");
                 <?php echo "<button onclick='addToFavoritesList($id, $UserID)' class='favoritesButton'>Favorite</button>"; ?>
             </div>
         </div>
+
         <div class="row noedge">
             <div class="col">
                 <img src="<?php echo $imgThumb ?>">
@@ -90,6 +93,14 @@ include("includes/include.php");
             <!-- end ingredients segment  -->
         </div>
         <!-- end img segment  -->
+
+        <div>
+            <?php
+                echo '<a href="' . $source . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
+                echo '<a href="' . $video . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
+                echo "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $id . ", $UserID)'>Add to Favorites</button></a>";
+            ?>
+        </div>
 
         <!-- instructions segment start  -->
         <div>
