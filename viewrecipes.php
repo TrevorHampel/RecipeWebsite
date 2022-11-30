@@ -58,9 +58,6 @@ include("includes/include.php");
             <div class="col-md-10">
                 <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
             </div>
-            <div class="col-md-1" style="margin-top:20px;">
-                <?php echo "<button onclick='addToFavoritesList($id, $UserID)' class='favoritesButton'>Favorite</button>"; ?>
-            </div>
         </div>
 
         <div class="row noedge">
