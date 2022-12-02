@@ -47,6 +47,8 @@ if(!isset($_SESSION["UserID"])){
             </div> 
             ';
 
+            $btnCounter = 0;
+
             foreach($returnArray as $r){
                 // echo "GETTING SOMETHING " . $r["recipe_id"] . "<br>";
     
@@ -54,16 +56,17 @@ if(!isset($_SESSION["UserID"])){
                 // echo "GETTING RECIPE NUMBER: " . $r["recipe_id"] . "<br>";
     
                 // call the print recipe card //
-                printRecipeCard($r["recipe_id"]); // <<< INTEDING to pass that id to print the array from the list of favorite by recipe id >>>>>
+                printRecipeCard($r["recipe_id"], $btnCounter); // <<< INTEDING to pass that id to print the array from the list of favorite by recipe id >>>>>
     
                 // $recipeNumber =  $r["recipe_id"];
                 // $favoriteRecipes = getRecipe($recipeNumber);
                 echo "<br>";
-    
+                $btnCounter++;
             }
+            $numberOfCards = sizeof($returnArray);
+            echo "<h1 id='number_of_cards' style='color:red;' hidden>".strval($numberOfCards)."<h1>";
 
         }
-
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         function printLargeImageLogo(){
@@ -78,9 +81,9 @@ if(!isset($_SESSION["UserID"])){
         
             ';
         }
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        function printRecipeCard($recipeNumber){
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function printRecipeCard($recipeNumber, $btnCounter){
             echo '<hr class="row bar">';
             $recipesArray = new Recipe();
 
@@ -95,7 +98,9 @@ if(!isset($_SESSION["UserID"])){
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <h2 class="centerText">'.$r->getName().'</h2>
+                        
+                        <h2 class="centerText" id="btn'.$btnCounter.'" style="display:block;" onclick="showhidecards(this.id)">'.$r->getName().'
+                        <img src="'.$r->getThumbnail().'" style="border-radius:15%; display:inline-block; width: 100px; height: 100px;">
                     </div>
                     <div class="col-md-1">
                         <button onclick="removeFromFavorites(' . $recipeNumber. ' ,' . $_SESSION["UserID"]. ')" class="favoritesButton">Remove</button>
@@ -105,6 +110,7 @@ if(!isset($_SESSION["UserID"])){
 
                 // ECHO THE IMAGE //
                 echo '
+                <div id="card'.$btnCounter.'" hidden>
                 <div class="row noedge">
                 <div class="col">
                 <img src="'.$r->getThumbnail().'">
@@ -150,11 +156,12 @@ if(!isset($_SESSION["UserID"])){
 
                 echo '
                 <!-- instructions segment start  -->
-                <div>
+                <div id="card'.$btnCounter.'">
                     <h2>INSTRUCTIONS:</h2>
                     <p>'.$r->getInstructions().'</p>
                 </div>
-                <!-- end instructions segment  -->   
+                <!-- end instructions segment  -->
+                </div> <!-- END - showclose div attached to the above -- no row edge -->   
                 <br>
                 ';
 
