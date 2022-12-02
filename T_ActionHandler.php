@@ -16,6 +16,10 @@ if(isset($_POST['action'])){
             $T_Favorites = new T_Favorites();
             echo $T_Favorites->addToFavorites($_POST["recipeID"], $_POST["userID"]);
             break;
+        case "RemoveFromFavorites":
+            $T_Favorites = new T_Favorites();
+            echo $T_Favorites->removeFromFavorites($_POST["recipeID"], $_POST["userID"]);
+            break;    
     }
     // always be sure to exit(); or echo exit;
     exit();
