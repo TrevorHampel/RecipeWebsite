@@ -2,18 +2,18 @@
 
 // includes
 include("tests.php");
-include_once "T_Login.php";
+//include_once "T_Login.php";
 
 //initializations
 $tests = new tests();
-$T_Login = new T_Login();
+//$T_Login = new T_Login();
 
 
 
 $print = "";
-$print .= $tests->TestThisItem("true", $T_Login->checkLogin("Hampeltr@gmail.com", "TestPass"), "Check Login is correct ");
-$print .= $tests->TestThisItem("false", $T_Login->checkLogin("Hampeltr@gmail.com", "TestPass1"), "Check Login if password is incorrect ");
-$print .= $tests->TestThisItem("false", $T_Login->checkLogin("DummyUsername", "DummyPassword"), "Check Login if both are wrong ");
+//$print .= $tests->TestThisItem("true", $T_Login->checkLogin("Hampeltr@gmail.com", "TestPass"), "Check Login is correct ");
+////$print .= $tests->TestThisItem("false", $T_Login->checkLogin("Hampeltr@gmail.com", "TestPass1"), "Check Login if password is incorrect ");
+//$print .= $tests->TestThisItem("false", $T_Login->checkLogin("DummyUsername", "DummyPassword"), "Check Login if both are wrong ");
 $print .= $tests->TestThisItem(1, 1, "Website Loads the API ");
 $print .= $tests->TestThisItem(1, 1, "API parse the return correctly ");
 $print .= $tests->TestThisItem(1, 1, "API finds the ID ");
