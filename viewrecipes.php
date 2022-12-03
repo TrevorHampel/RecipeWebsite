@@ -45,7 +45,11 @@ include("includes/include.php");
         </div>
     </div>
 
-    <h1 class="centerText">RANDOM RECIPE</h1>
+    <h1 class="centerText">
+        <button class="button-random-recipe">
+            <a class="button-random-recipe-anchor-text" href="./viewrecipes.php" ">CLICK FOR NEW RANDOM RECIPE</a>
+        </button>
+    </h1>
 
     <!-- surrond all -->
     <div class="recipe">
