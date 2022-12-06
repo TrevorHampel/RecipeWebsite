@@ -104,6 +104,16 @@ p{
   border-color: purple;
 }
 
+.button-random-recipe {
+  border-radius:10%; 
+  background-color:#384D48; 
+  border-radius:8px;
+}
+
+.button-random-recipe-anchor-text{
+  text-decoration:none; color:#DEB841;
+}
+
 @media screen and (max-width: 768px) /*mobile*/
 { 
   .main{
@@ -486,4 +496,6 @@ p{
   .foot a:active{
     color: white;
   }
+
+  
 }
