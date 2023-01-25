@@ -72,16 +72,28 @@ function printRecipeGrid($catName)
 
     $UserId = $_SESSION['UserID'];
     $recipes = getRecipeByCategory($catName);
-    $echoVar = "";
-    $echoVar .= "<div class='card-body w-50'>";
+    $print_var = "";
+    $print_var .= '<div class="card w-50 m-5 p-2 border rounded list">';
     foreach ($recipes as $r) {
+        $print_var .= '<div class="row center">';
+        $print_var .= '<a href="!!!TODO route to viewrecipies.php page using this recepie!!!">';
+        $print_var .= '<h3 class="card-title">' . $r['strMeal'] . '</h3>';
 
-        $echoVar .= "<img class='card-img-top border rounded' src='" . $r['strMealThumb'] . "/preview' height='150px' width='150px'>";
-        $echoVar .= "<h3 class='card-title'>" . $r['strMeal'] . "</h3>";
-        $echoVar .= "<button type='button' class='btn btn-primary btn-md' onclick='addToFavoritesList(" . $r['idMeal'] . ", $UserId)'>Add to Favorites</button>";
+        $print_var .= '<img class="card-img-top border rounded" src="' . $r['strMealThumb'] . '" alt="' . $r['strMeal'] . '"></a>';
+        $print_var .= '</div>';
+
+        $print_var .= '<div class="row center">';
+        $print_var .= "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $r['idMeal'] . ", $UserId)'>Add to Favorites</button></a>";
+        $print_var .= '</div>';
+
+        $print_var .= '<hr class="row bar">';
     }
-    $echoVar .= "</div>";
-    echo $echoVar;
+
+    // Remove last <hr>
+    $print_var = substr($print_var, 0, -20);
+
+    $print_var .= "</div>";
+    echo $print_var;
 }
 
 function printRecipeGrid2($catName)
@@ -168,7 +180,7 @@ function printRecipeGrid2($catName)
         <?php
         if (isset($_POST['search'])) {
             if (!empty($_POST['categories'])) {
-                printRecipeGrid2($_POST['categories']);
+                printRecipeGrid($_POST['categories']);
             }
         }
         //printCategories();

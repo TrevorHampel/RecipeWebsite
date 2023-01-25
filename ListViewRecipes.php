@@ -57,8 +57,6 @@
         
             $print_var .= '<div class="row center">';
                 $print_var .= "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $recipe->getId() . ", $UserId)'>Add to Favorites</button></a>";
-                $print_var .= '<a href="' . $recipe->getRecipeVideo() . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
-                $print_var .= '<a href="' . $recipe->getRecipeSource() . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
             $print_var .= '</div>';
 
             $print_var .= '<hr class="row bar">';

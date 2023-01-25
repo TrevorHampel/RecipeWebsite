@@ -24,6 +24,8 @@ include("includes/include.php");
     $instructions = $recipesArray[0]['strInstructions'];
     $UserID = $_SESSION['UserID'];
     $ingredients = [];
+    $video = $recipesArray[0]['strYoutube'];
+    $source = $recipesArray[0]['strSource'];
 
     foreach ($recipesArray as $r) {
 
@@ -45,7 +47,11 @@ include("includes/include.php");
         </div>
     </div>
 
-    <h1 class="centerText">RANDOM RECIPE</h1>
+    <h1 class="centerText">
+        <button class="button-random-recipe">
+            <a class="button-random-recipe-anchor-text" href="./viewrecipes.php" ">CLICK FOR NEW RANDOM RECIPE</a>
+        </button>
+    </h1>
 
     <!-- surrond all -->
     <div class="recipe">
@@ -56,10 +62,8 @@ include("includes/include.php");
             <div class="col-md-10">
                 <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
             </div>
-            <div class="col-md-1" style="margin-top:20px;">
-                <?php echo "<button onclick='addToFavoritesList($id, $UserID)' class='favoritesButton'>Favorite</button>"; ?>
-            </div>
         </div>
+
         <div class="row noedge">
             <div class="col">
                 <img src="<?php echo $imgThumb ?>">
@@ -90,6 +94,14 @@ include("includes/include.php");
             <!-- end ingredients segment  -->
         </div>
         <!-- end img segment  -->
+
+        <div>
+            <?php
+                echo '<a href="' . $source . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
+                echo '<a href="' . $video . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
+                echo "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $id . ", $UserID)'>Add to Favorites</button></a>";
+            ?>
+        </div>
 
         <!-- instructions segment start  -->
         <div>
