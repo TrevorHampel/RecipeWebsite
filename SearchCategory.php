@@ -1,5 +1,5 @@
 <?php
-include_once("includes/include.php"); 
+include_once("includes/include.php");
 
 function getCategories()
 {
@@ -55,9 +55,10 @@ function getRecipeByCategory($catName)
 function convertRecipeByCategory($recipes)
 {
     $recipe_array = [];
-
-    foreach ($recipes as $r)
-    {
+    $limit = 0;
+    foreach ($recipes as $r) {
+        if ($limit > 9) break;
+        $limit++;
         $temp_arr = getRecipeFromAPI($r['idMeal']);
         $temp = $temp_arr[0];
         array_push($recipe_array, $temp);
@@ -68,11 +69,13 @@ function convertRecipeByCategory($recipes)
 
 function printRecipeGrid($catName)
 {
+
     $UserId = $_SESSION['UserID'];
     $recipes = getRecipeByCategory($catName);
     $echoVar = "";
     $echoVar .= "<div class='card-body w-50'>";
     foreach ($recipes as $r) {
+
         $echoVar .= "<img class='card-img-top border rounded' src='" . $r['strMealThumb'] . "/preview' height='150px' width='150px'>";
         $echoVar .= "<h3 class='card-title'>" . $r['strMeal'] . "</h3>";
         $echoVar .= "<button type='button' class='btn btn-primary btn-md' onclick='addToFavoritesList(" . $r['idMeal'] . ", $UserId)'>Add to Favorites</button>";
@@ -86,21 +89,24 @@ function printRecipeGrid2($catName)
     $UserId = $_SESSION['UserID'];
     $recipe_array_cat = getRecipeByCategory($catName);
     $recipe_array = parseRecipe(convertRecipeByCategory($recipe_array_cat));
+    # $limit = 0;
 
     $print_var = '<div class="card w-50 m-5 p-2 border rounded list">';
     foreach ($recipe_array as $recipe) {
         //print_r($recipe);
+        #if ($limit > 9) break;
+        #$limit++;
         $print_var .= '<div class="row center">';
-            $print_var .= '<a href="!!!TODO route to viewrecipies.php page using this recepie!!!">';
-                $print_var .= '<h3 class="card-title">' . $recipe->getName() . '</h3>';
+        $print_var .= '<a href="!!!TODO route to viewrecipies.php page using this recepie!!!">';
+        $print_var .= '<h3 class="card-title">' . $recipe->getName() . '</h3>';
 
-                $print_var .= '<img class="card-img-top border rounded" src="' . $recipe->getThumbnail() . '" alt="' . $recipe->getName() . '"></a>';
+        $print_var .= '<img class="card-img-top border rounded" src="' . $recipe->getThumbnail() . '" alt="' . $recipe->getName() . '"></a>';
         $print_var .= '</div>';
 
         $print_var .= '<div class="row center">';
-            $print_var .= "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $recipe->getId() . ", $UserId)'>Add to Favorites</button></a>";
-            $print_var .= '<a href="' . $recipe->getRecipeVideo() . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
-            $print_var .= '<a href="' . $recipe->getRecipeSource() . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
+        $print_var .= "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $recipe->getId() . ", $UserId)'>Add to Favorites</button></a>";
+        $print_var .= '<a href="' . $recipe->getRecipeVideo() . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
+        $print_var .= '<a href="' . $recipe->getRecipeSource() . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
         $print_var .= '</div>';
 
         $print_var .= '<hr class="row bar">';
@@ -148,14 +154,14 @@ function printRecipeGrid2($catName)
     </div>
 
     <?php
-        if (isset($_POST['search'])) {
-            if (!empty($_POST['categories'])) {
-                $print_var = '<h1 class="h1 text-center space">';
-                $print_var .= $_POST['categories'];
-                $print_var .= '</h1>';
-                echo $print_var;
-            }
+    if (isset($_POST['search'])) {
+        if (!empty($_POST['categories'])) {
+            $print_var = '<h1 class="h1 text-center space">';
+            $print_var .= $_POST['categories'];
+            $print_var .= '</h1>';
+            echo $print_var;
         }
+    }
     ?>
 
     <div class="d-flex align-items-center justify-content-center">
