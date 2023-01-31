@@ -99,7 +99,7 @@ if(!isset($_SESSION["UserID"])){
                     </div>
                     <div class="col-md-10">
                         
-                        <h2 class="centerText" id="btn'.$btnCounter.'" style="display:block;" onclick="showhidecards(this.id)">'.$r->getName().'
+                        <h2 class="centerText recipe-title" id="btn'.$btnCounter.'" style="display:block;" onclick="showhidecards(this.id)">'.$r->getName().'
                         <img src="'.$r->getThumbnail().'" style="border-radius:15%; display:inline-block; width: 100px; height: 100px;">
                     </div>
                     <div class="col-md-1">
