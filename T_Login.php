@@ -1,34 +1,40 @@
 <?php
-
+include_once "T_Hash.php";
 include_once "Database.php";
 include_once "Session.php";
 $Database = new Database();
 
-class T_Login {
-    function checkLogin($username, $password){
+class T_Login
+{
+    function checkLogin($username, $password)
+    {
         $Database = new Database();
+
         $sql = "SELECT * 
         FROM user 
         WHERE User_name LIKE '" . $username . "'
         AND password LIKE '" . $password . "'";
         $returnArray = $Database->selectAssc($sql);
-        
-        if(empty($returnArray)){
+
+        if (empty($returnArray)) {
             return "false";
-        }else{
+        } else {
             //Start the session var
             $this->setSessionUserID($returnArray[0]["user_id"]);
             return "true";
         }
     }
 
-    function createAccount($username, $password, $first, $last){
+    function createAccount($username, $password, $first, $last)
+    {
         $Database = new Database();
+        $T_Hash = new T_Hash();
+        $newPass = $T_Hash->hashPass($password);
         $sql = "SELECT * 
         FROM user 
         WHERE User_name LIKE '" . $username . "'";
         $returnArray = $Database->selectAssc($sql);
-        if(!empty($returnArray)){
+        if (!empty($returnArray)) {
             return "UserTaken";
         }
         //Start the session var
@@ -36,12 +42,13 @@ class T_Login {
 
         $sql = "INSERT INTO `user` 
         ( `first_name`, `last_name`, `User_name`, `password`) 
-        VALUES ('$first', '$last', '$username', '$password')";
+        VALUES ('$first', '$last', '$username', '$newPass')";
         $Database->insert($sql);
-        return ;
+        return;
     }
 
-    function setSessionUserID($UserID){
+    function setSessionUserID($UserID)
+    {
         $_SESSION["UserID"] = $UserID;
     }
 }
