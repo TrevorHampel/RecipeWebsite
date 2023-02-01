@@ -32,14 +32,13 @@ class T_Login
         $newPass = $T_Hash->hashPass($password);
         $sql = "SELECT * 
         FROM user 
-        WHERE User_name LIKE '" . $username . "'";
+        WHERE User_name = '" . $username . "'";
         $returnArray = $Database->selectAssc($sql);
         if (!empty($returnArray)) {
             return "UserTaken";
         }
         //Start the session var
         $this->setSessionUserID($returnArray[0]["user_id"]);
-
         $sql = "INSERT INTO `user` 
         ( `first_name`, `last_name`, `User_name`, `password`) 
         VALUES ('$first', '$last', '$username', '$newPass')";

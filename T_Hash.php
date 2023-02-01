@@ -22,6 +22,6 @@ class T_Hash
         $saltedP = $salt3 . $pIn . $salt4;
         $saltedP = hash('sha512', $saltedP);
 
-        echo $saltedP;
+        return $saltedP;
     }
 }
