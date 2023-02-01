@@ -1,4 +1,8 @@
 .favoritesButton{
-    background-color: darkslateblue;
-    color: white;
-  }
+  background-color: darkslateblue;
+  color: white;
+}
+
+.recipe-title{
+  cursor: pointer;
+}
