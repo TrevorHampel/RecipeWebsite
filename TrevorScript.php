@@ -1,37 +1,40 @@
 <?php
 
-    if(isset($_POST['action'])){
-        switch ($_POST['action']) {
-            case "GetText":
-                echo $_POST['textToReturn'];
-                break;
-            case "GetSecondThing":
-                echo "Number:" . $_POST['number'] . " \nString:" .  $_POST['ThisIsJustAVar'] ;
-                break;
-        }
-        // always be sure to exit(); or echo exit;
-        exit();
-    }
+ob_start();
+var_dump("Trevor"); // output txt here
+error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt');
+    // if(isset($_POST['action'])){
+    //     switch ($_POST['action']) {
+    //         case "GetText":
+    //             echo $_POST['textToReturn'];
+    //             break;
+    //         case "GetSecondThing":
+    //             echo "Number:" . $_POST['number'] . " \nString:" .  $_POST['ThisIsJustAVar'] ;
+    //             break;
+    //     }
+    //     // always be sure to exit(); or echo exit;
+    //     exit();
+    // }
 
 
 
-    echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>';
-    // echo '<script src="javascripts/ajaxScript.js"></script>';
-    // echo '<input type = "button" onclick = "ajaxTest()" value = "Display some text">';
-    // echo '<input type = "button" onclick = "ajaxTest2()" value = "Display a number">';
-    include("includes/include.php");
-    $categoryArray = array();
-    for($i = 0; $i <= 1000; $i++){
-        $recipesArray = getRecipeFromAPI();
-        $categoryArray[] = $recipesArray[0]["strCategory"];
-    }
-    $UcategoryArray = array();
-    foreach($categoryArray as $row){
-        if(!in_array($row, $UcategoryArray)){
-            $UcategoryArray[] = $row;
-        }
-    }
-    echo var_dump($UcategoryArray);
+    // echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>';
+    // // echo '<script src="javascripts/ajaxScript.js"></script>';
+    // // echo '<input type = "button" onclick = "ajaxTest()" value = "Display some text">';
+    // // echo '<input type = "button" onclick = "ajaxTest2()" value = "Display a number">';
+    // include("includes/include.php");
+    // $categoryArray = array();
+    // for($i = 0; $i <= 1000; $i++){
+    //     $recipesArray = getRecipeFromAPI();
+    //     $categoryArray[] = $recipesArray[0]["strCategory"];
+    // }
+    // $UcategoryArray = array();
+    // foreach($categoryArray as $row){
+    //     if(!in_array($row, $UcategoryArray)){
+    //         $UcategoryArray[] = $row;
+    //     }
+    // }
+    // echo var_dump($UcategoryArray);
     
     
 
