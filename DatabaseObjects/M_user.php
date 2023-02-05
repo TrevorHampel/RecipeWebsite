@@ -4,7 +4,7 @@ include_once("DatabaseObject.php");
 
 
 
-class user extends DatabaseObject{
+class M_user extends DatabaseObject{
 
     public ?int $user_id = null;
     public ?string $first_name = null;

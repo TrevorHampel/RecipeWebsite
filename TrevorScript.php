@@ -1,18 +1,18 @@
 <?php
 
-include_once "DatabaseObjects/user.php";
-//use DatabaseObjects\user;
+include_once "DatabaseObjects/M_user.php";
+//use DatabaseObjects\M_user;
 
 
-$userObj = new user(23);
-$userObj->first_name = "Trevor";
-$userObj->last_name = "Hampel";
-$userObj->user_name = "User";
-$userObj->password = "Name";
-$userObj->update_obj();
+$userObj = new M_user(23);
+// $userObj->first_name = "Trevor";
+// $userObj->last_name = "Hampel";
+// $userObj->user_name = "User";
+// $userObj->password = "Name";
+
 
 ob_start();
-var_dump("Done"); // output txt here
+var_dump($userObj); // output txt here
 error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt');
 
 

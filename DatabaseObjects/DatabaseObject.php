@@ -12,11 +12,11 @@ abstract class DatabaseObject{
 
         if($objectVars[$arrayKeys[0]] === null)
         {
-            throw new Exception('Need to set a primary key to search for a database object');
+            //throw new Exception('Need to set a primary key to search for a database object');
             return;
         }
         $Database = new Database();
-        $sql = "SELECT * FROM " . get_class($this) . " WHERE " . $arrayKeys[0] . " = " .  $objectVars[$arrayKeys[0]];
+        $sql = "SELECT * FROM " . trim(get_class($this), "M_") . " WHERE " . $arrayKeys[0] . " = " .  $objectVars[$arrayKeys[0]];
 
         $returnedArray = array();
         $returnedArray = $Database->selectAssc($sql);
@@ -42,7 +42,7 @@ abstract class DatabaseObject{
             return;
         }
         $Database = new Database();
-        $sql = "UPDATE " . get_class($this) . " set ";
+        $sql = "UPDATE " . trim(get_class($this), "M_") . " set ";
         $counter = 0;
         $tempLength = count($objectVars);
         foreach($this as $key => $value) 
@@ -82,7 +82,7 @@ abstract class DatabaseObject{
             return;
         }
         $Database = new Database();
-        $sql = "DELETE FROM " . get_class($this) . " WHERE " . $arrayKeys[0] . " = " .  $objectVars[$arrayKeys[0]];
+        $sql = "DELETE FROM " . trim(get_class($this), "M_") . " WHERE " . $arrayKeys[0] . " = " .  $objectVars[$arrayKeys[0]];
         $Database->delete($sql);
     }
 
@@ -96,7 +96,7 @@ abstract class DatabaseObject{
             return;
         }
         $Database = new Database();
-        $sql = "INSERT INTO " . get_class($this) . "(";
+        $sql = "INSERT INTO " . trim(get_class($this), "M_") . "(";
         $counter = 0;
         $tempLength = count($objectVars);
         $val = "";
