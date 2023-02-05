@@ -1,8 +1,24 @@
 <?php
 
+include_once "DatabaseObjects/user.php";
+//use DatabaseObjects\user;
+
+
+$userObj = new user(23);
+$userObj->first_name = "Trevor";
+$userObj->last_name = "Hampel";
+$userObj->user_name = "User";
+$userObj->password = "Name";
+$userObj->update_obj();
+
 ob_start();
-var_dump("Trevor"); // output txt here
+var_dump("Done"); // output txt here
 error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt');
+
+
+// ob_start();
+// var_dump($returnedArray); // output txt here
+// error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt');
     // if(isset($_POST['action'])){
     //     switch ($_POST['action']) {
     //         case "GetText":
