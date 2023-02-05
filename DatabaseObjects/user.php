@@ -18,18 +18,18 @@ class user extends DatabaseObject{
         parent::search();
     }
 
-    public function search()
-    {
-        parent::search();
-    }
+    // public function search()
+    // {
+    //     parent::search();
+    // }
     
-    public function update_obj()
-    {
-        parent::update_obj();
-    }
+    // public function update_obj()
+    // {
+    //     parent::update_obj();
+    // }
 
-    public function delete_obj()
-    {
-        parent::delete_obj();
-    }
+    // public function delete_obj()
+    // {
+    //     parent::delete_obj();
+    // }
 }
