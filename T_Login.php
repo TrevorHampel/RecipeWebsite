@@ -12,7 +12,7 @@ class T_Login
 
         $sql = "SELECT * 
         FROM user 
-        WHERE User_name LIKE '" . $username . "'
+        WHERE user_name LIKE '" . $username . "'
         AND password LIKE '" . $password . "'";
         $returnArray = $Database->selectAssc($sql);
 
@@ -32,7 +32,7 @@ class T_Login
         $newPass = $T_Hash->hashPass($password);
         $sql = "SELECT * 
         FROM user 
-        WHERE User_name = '" . $username . "'";
+        WHERE user_name = '" . $username . "'";
         $returnArray = $Database->selectAssc($sql);
         if (!empty($returnArray)) {
             return "UserTaken";
@@ -40,7 +40,7 @@ class T_Login
         //Start the session var
         $this->setSessionUserID($returnArray[0]["user_id"]);
         $sql = "INSERT INTO `user` 
-        ( `first_name`, `last_name`, `User_name`, `password`) 
+        ( `first_name`, `last_name`, `user_name`, `password`) 
         VALUES ('$first', '$last', '$username', '$newPass')";
         $Database->insert($sql);
         return;
@@ -50,4 +50,5 @@ class T_Login
     {
         $_SESSION["UserID"] = $UserID;
     }
+    
 }
