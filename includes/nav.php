@@ -17,6 +17,7 @@
                 $navbar .= '<li class="nav-item"><a class="nav-link" href="ListViewRecipes.php">Ten Recipes</a></li>';
                 $navbar .= '<li class="nav-item"><a class="nav-link" href="SearchCategory.php">Categories</a></li>';
                 $navbar .= '<li class="nav-item"><a class="nav-link" href="favorites.php">Favorites</a></li>';
+                $navbar .= '<li class="nav-item"><a class="nav-link" href="AddRecipe.php">Add a New Recipe</a></li>';
             }
             echo $navbar;
             ?>
