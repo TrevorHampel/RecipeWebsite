@@ -32,7 +32,13 @@ class Database
 
     function insert($sql)
     {
-        $this->connection->query($sql);
+        $resultat = $this->connection->query($sql);
+        
+        if (!$resultat) {
+            return false;
+        } else {
+            return $conn->insert_id; // function will now return the ID instead of true. 
+        }
     }
 
     function delete($sql)
