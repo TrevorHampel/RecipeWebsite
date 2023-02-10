@@ -90,11 +90,11 @@ abstract class DatabaseObject{
     {
         $objectVars = get_object_vars($this);
         $arrayKeys = array_keys($objectVars);
-        if($objectVars[$arrayKeys[0]] !== null) //if primary key not set cannot update
-        {
-            throw new Exception('Cannot have a primary key set to insert a database object');
-            return;
-        }
+        // if($objectVars[$arrayKeys[0]] !== null) //if primary key not set cannot update
+        // {
+        //     throw new Exception('Cannot have a primary key set to insert a database object');
+        //     return;
+        // }
         $Database = new Database();
         $sql = "INSERT INTO " . trim(get_class($this), "M_") . "(";
         $counter = 0;
@@ -127,7 +127,11 @@ abstract class DatabaseObject{
             }
         }
         $sql .= $col . ") values(" . $val . ")";
-        $Database->insert($sql);
+        $insertID = $Database->insert($sql);
+        if($insertID !== false)
+        {
+            $this->$arrayKeys[0] = $insertID;
+        }
     }
 }
 

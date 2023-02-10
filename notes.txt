@@ -1,3 +1,5 @@
 ob_start();
 var_dump($temp); // output txt here
 error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt'); // your path to the output file should go here
+
+
