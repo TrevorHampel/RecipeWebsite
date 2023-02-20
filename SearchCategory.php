@@ -79,7 +79,7 @@ function printRecipeGrid($catName)
         $print_var .= '<a href="!!!TODO route to viewrecipies.php page using this recepie!!!">';
         $print_var .= '<h3 class="card-title">' . $r['strMeal'] . '</h3>';
 
-        $print_var .= '<img class="card-img-top border rounded" src="' . $r['strMealThumb'] . '" alt="' . $r['strMeal'] . '"></a>';
+        $print_var .= '<img class="card-img-top border rounded img-fluid" src="' . $r['strMealThumb'] . '" alt="' . $r['strMeal'] . '"></a>';
         $print_var .= '</div>';
 
         $print_var .= '<div class="row center">';
