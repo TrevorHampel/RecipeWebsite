@@ -12,8 +12,8 @@ class M_recipe extends DatabaseObject{
 
     public ?int $recipe_id = null;
     public ?string $recipe_name = null;
-    public $recipe_type_id = null;
-    public $recipe_area_id = null; //M_recipe_area object
+    public ?string $recipe_type = null;
+    public ?string $recipe_area = null;
     public ?string $image = null;
     public ?string $source_url = null;
     public ?string $youtube_url = null;
@@ -26,8 +26,8 @@ class M_recipe extends DatabaseObject{
         parent::search();
         if($this->recipe_id !== null)
         {
-            $this->recipe_area_id = new M_recipe_area($this->recipe_area_id);
-            $this->recipe_type_id = new M_recipe_type($this->recipe_type_id);
+            // $this->recipe_area_id = new M_recipe_area($this->recipe_area_id);
+            // $this->recipe_type_id = new M_recipe_type($this->recipe_type_id);
             $this->getAllRecipeIngredients();
             $this->getAllRecipeTags();
         }
@@ -65,7 +65,7 @@ class M_recipe extends DatabaseObject{
 
     public function setRecipeTypeId($recipeTypeId)
     {
-        $this-> $recipeTypeId = new M_recipe_type($this->recipe_type_id);
+        $this-> $recipeTypeId = new M_recipe_type($this->recipe_type);
     }
 
 }

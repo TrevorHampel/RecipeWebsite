@@ -1,2 +1,308 @@
-int(29)
+object(M_recipe_ingredient_link)#4 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(33)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#5 (2) {
+    ["ingredient_id"]=>
+    int(103)
+    ["ingredient_value"]=>
+    string(9) "Olive Oil"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#6 (3) {
+    ["measurement_id"]=>
+    int(33)
+    ["measurement_value"]=>
+    string(1) "2"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#7 (2) {
+      ["measurement_unit_id"]=>
+      int(33)
+      ["measurement_unit_value"]=>
+      string(3) "tbs"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#8 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(34)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#9 (2) {
+    ["ingredient_id"]=>
+    int(104)
+    ["ingredient_value"]=>
+    string(13) "Spring Onions"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#10 (3) {
+    ["measurement_id"]=>
+    int(34)
+    ["measurement_value"]=>
+    string(1) "8"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#11 (2) {
+      ["measurement_unit_id"]=>
+      int(34)
+      ["measurement_unit_value"]=>
+      string(0) ""
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#12 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(35)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#13 (2) {
+    ["ingredient_id"]=>
+    int(105)
+    ["ingredient_value"]=>
+    string(7) "Spinach"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#14 (3) {
+    ["measurement_id"]=>
+    int(35)
+    ["measurement_value"]=>
+    string(3) "200"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#15 (2) {
+      ["measurement_unit_id"]=>
+      int(35)
+      ["measurement_unit_value"]=>
+      string(1) "g"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#16 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(36)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#17 (2) {
+    ["ingredient_id"]=>
+    int(106)
+    ["ingredient_value"]=>
+    string(11) "Filo Pastry"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#18 (3) {
+    ["measurement_id"]=>
+    int(36)
+    ["measurement_value"]=>
+    string(1) "4"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#19 (2) {
+      ["measurement_unit_id"]=>
+      int(36)
+      ["measurement_unit_value"]=>
+      string(0) ""
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#20 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(37)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#21 (2) {
+    ["ingredient_id"]=>
+    int(107)
+    ["ingredient_value"]=>
+    string(4) "Tuna"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#22 (3) {
+    ["measurement_id"]=>
+    int(37)
+    ["measurement_value"]=>
+    string(1) "1"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#23 (2) {
+      ["measurement_unit_id"]=>
+      int(37)
+      ["measurement_unit_value"]=>
+      string(3) "can"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#24 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(38)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#25 (2) {
+    ["ingredient_id"]=>
+    int(108)
+    ["ingredient_value"]=>
+    string(4) "Eggs"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#26 (3) {
+    ["measurement_id"]=>
+    int(38)
+    ["measurement_value"]=>
+    string(1) "2"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#27 (2) {
+      ["measurement_unit_id"]=>
+      int(38)
+      ["measurement_unit_value"]=>
+      string(0) ""
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#28 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(39)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#29 (2) {
+    ["ingredient_id"]=>
+    int(109)
+    ["ingredient_value"]=>
+    string(8) "Hotsauce"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#30 (3) {
+    ["measurement_id"]=>
+    int(39)
+    ["measurement_value"]=>
+    string(0) ""
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#31 (2) {
+      ["measurement_unit_id"]=>
+      int(39)
+      ["measurement_unit_value"]=>
+      string(4) "Dash"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#32 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(40)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#33 (2) {
+    ["ingredient_id"]=>
+    int(110)
+    ["ingredient_value"]=>
+    string(8) "Tomatoes"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#34 (3) {
+    ["measurement_id"]=>
+    int(40)
+    ["measurement_value"]=>
+    string(1) "4"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#35 (2) {
+      ["measurement_unit_id"]=>
+      int(40)
+      ["measurement_unit_value"]=>
+      string(7) "Chopped"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#36 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(41)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#37 (2) {
+    ["ingredient_id"]=>
+    int(111)
+    ["ingredient_value"]=>
+    string(8) "Cucumber"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#38 (3) {
+    ["measurement_id"]=>
+    int(41)
+    ["measurement_value"]=>
+    string(2) "14"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#39 (2) {
+      ["measurement_unit_id"]=>
+      int(41)
+      ["measurement_unit_value"]=>
+      string(1) "/"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#40 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(42)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#41 (2) {
+    ["ingredient_id"]=>
+    int(112)
+    ["ingredient_value"]=>
+    string(11) "Lemon Juice"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#42 (3) {
+    ["measurement_id"]=>
+    int(42)
+    ["measurement_value"]=>
+    string(1) "1"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#43 (2) {
+      ["measurement_unit_id"]=>
+      int(42)
+      ["measurement_unit_value"]=>
+      string(3) "tbs"
+    }
+  }
+}
+
+object(M_recipe_ingredient_link)#44 (4) {
+  ["recipe_ingredient_link_id"]=>
+  int(43)
+  ["recipe_id"]=>
+  int(52975)
+  ["ingredient_id"]=>
+  object(M_ingredient)#45 (2) {
+    ["ingredient_id"]=>
+    int(113)
+    ["ingredient_value"]=>
+    string(11) "Apricot Jam"
+  }
+  ["measurement_id"]=>
+  object(M_measurement)#46 (3) {
+    ["measurement_id"]=>
+    int(43)
+    ["measurement_value"]=>
+    string(1) "4"
+    ["measurement_unit_id"]=>
+    object(M_measurement_unit)#47 (2) {
+      ["measurement_unit_id"]=>
+      int(43)
+      ["measurement_unit_value"]=>
+      string(3) "tbs"
+    }
+  }
+}
 

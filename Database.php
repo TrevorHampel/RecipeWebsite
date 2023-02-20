@@ -37,7 +37,7 @@ class Database
         if (!$resultat) {
             return false;
         } else {
-            return $conn->insert_id; // function will now return the ID instead of true. 
+            return $this->connection->insert_id; // function will now return the ID instead of true. 
         }
     }
 
