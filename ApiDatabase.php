@@ -3,12 +3,16 @@
 include_once "DatabaseObjects/M_recipe.php";
 include_once "DatabaseObjects/M_recipe_ingredient_link.php";
 include_once "DatabaseObjects/M_ingredient.php";
+include_once "DatabaseObjects/M_measurement_unit.php";
+include_once "DatabaseObjects/M_measurement.php";
+include_once "DatabaseObjects/M_recipe_tag.php";
+include_once "Database.php";
 include("includes/include.php"); 
 //use DatabaseObjects\M_user;
 
 
 
-$recipesArray = getRecipeFromAPI(52830); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
+$recipesArray = getRecipeFromAPI(52777); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 
 $imgThumb = $recipesArray[0]['strMealThumb'];
 $id = $recipesArray[0]['idMeal'];
@@ -43,6 +47,9 @@ $userObj->youtube_url = $video;
 $date = new \DateTime('now');
 $userObj->date_created  = $date->format('Y/m/d H:i:s');
 $userObj->recipe_instructions  = $instructions;
+$userObj->recipe_type = $category;
+$userObj->recipe_area = $area;
+$userObj->insert_obj();
 
 foreach ($recipesArray as $r) {
 
@@ -57,18 +64,50 @@ foreach ($recipesArray as $r) {
     }
 }
 
+$i = 0;
+$Database = new Database();
 foreach($ingredients as $row)
 {
+    $i++;
     $ingredients = new M_ingredient();
-    $ingredients->
-    $recipesArray[0]["strIngredient$i"];
-    $recipesArray[0]["strMeasure$i"];
+    $ingredients->ingredient_value = $recipesArray[0]["strIngredient$i"];
+    $ingredients->insert_obj();
+
+    $measurement = preg_replace('/[0-9]+/', '', $recipesArray[0]["strMeasure$i"]);
+    $M_measurement_unit = new M_measurement_unit();
+    $M_measurement_unit->measurement_unit_value = $measurement;
+    $M_measurement_unit->insert_obj();
+
+    $measurement_value = preg_replace('/[^0-9]/', '', $recipesArray[0]["strMeasure$i"]);
+
+    $sql = "INSERT INTO measurement (measurement_value, measurement_unit_id)
+            VALUES ('" . $measurement_value . "', " . $M_measurement_unit->measurement_unit_id .")";
+
+    $insertID = $Database->insert($sql);
+
+    $sql = "INSERT INTO recipe_ingredient_link (recipe_id, ingredient_id, measurement_id)
+    VALUES (" . $userObj->recipe_id  . ", " . $ingredients->ingredient_id .", " . $insertID.")";
+
+    $insertID = $Database->insert($sql);
+}
+
+$explode = explode(',',$recipesArray[0]['strTags']);
+foreach ($explode as $row)
+{
+    $M_recipe_tag = new M_recipe_tag();
+    $M_recipe_tag->recipe_tag_value = $row;
+    $M_recipe_tag->insert_obj();
+
+    $sql = "INSERT INTO recipe_tag_link (recipe_id, recipe_tag_id)
+    VALUES (" . $userObj->recipe_id  . ", " . $M_recipe_tag->recipe_tag_id .")";
+
+    $insertID = $Database->insert($sql);
 }
 
 
-ob_start();
-var_dump($userObj); // output txt here
-error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt');
+// ob_start();
+// var_dump($userObj); // output txt here
+// error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt');
 
 
 

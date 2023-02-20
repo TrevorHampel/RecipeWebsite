@@ -8,6 +8,56 @@ include("includes/include.php");
 
 
 
+
+$test = new M_recipe(52777);
+echo $test->recipe_id;
+echo "<br>";
+echo $test->recipe_name;
+echo "<br>";
+echo $test->image;
+echo "<br>";
+echo $test->source_url;
+echo "<br>";
+echo $test->youtube_url;
+echo "<br>";
+echo $test->date_created;
+echo "<br>";
+echo $test->recipe_instructions;
+echo "<br>";
+echo $test->recipe_type;
+echo "<br>";
+echo $test->recipe_area;
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+echo "TAGS:";
+echo "<br>";
+foreach($test->recipe_tag_link as $row)
+{
+    echo $row->recipe_tag_id->recipe_tag_value;
+    echo "<br>";
+}
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+foreach($test->recipe_ingredient_link as $row)
+{
+    echo $row->ingredient_id->ingredient_value;
+    echo "<br>";
+    echo $row->measurement_id->measurement_value;
+    echo " ";
+    echo $row->measurement_id->measurement_unit_id->measurement_unit_value;
+    echo "<br>";
+    echo "<br>";
+}
+
+//echo var_dump($test);
+exit();
+
+
 // $recipesArray = getRecipeFromAPI(52830); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
 
 // $imgThumb = $recipesArray[0]['strMealThumb'];
@@ -96,11 +146,11 @@ include("includes/include.php");
     
     
 
-    include_once "Database.php";
-    $Database = new Database();
+    // include_once "Database.php";
+    // $Database = new Database();
 
-    $sql = "INSERT INTO `user`(`user_id`, `first_name`, `last_name`, `user_name`, `password`) VALUES (null,'a','a','a','a')";
-    $Database->insert($sql);
+    // $sql = "INSERT INTO `user`(`user_id`, `first_name`, `last_name`, `user_name`, `password`) VALUES (null,'a','a','a','a')";
+    // $Database->insert($sql);
 
     // // $sql = "UPDATE user set last_name = 'Something' WHERE user_id = 6";
     // // $Database->update($sql);

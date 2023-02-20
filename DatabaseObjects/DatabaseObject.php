@@ -127,10 +127,13 @@ abstract class DatabaseObject{
             }
         }
         $sql .= $col . ") values(" . $val . ")";
+
         $insertID = $Database->insert($sql);
         if($insertID !== false)
         {
-            $this->$arrayKeys[0] = $insertID;
+            $temp = strval($arrayKeys[0]); 
+
+            $this->$temp = $insertID;
         }
     }
 }
