@@ -50,9 +50,9 @@
             $print_var .= '<div class="row center">';
                 $print_var .= '<a href="!!!TODO route to viewrecipies.php page using this recepie!!!">';
                     $print_var .= '<h3 class="card-title">' . $recipe->getName() . '</h3>';
-                    $print_var .= '<p class="card-text">Recepie type: ' . $recipe->getCategory() . '</p>';
+                    $print_var .= '<p class="card-text">Recipe type: ' . $recipe->getCategory() . '</p>';
 
-                    $print_var .= '<img class="card-img-top border rounded" src="' . $recipe->getThumbnail() . '" alt="' . $recipe->getName() . '"></a>';
+                    $print_var .= '<img class="card-img-top border rounded img-fluid" src="' . $recipe->getThumbnail() . '" alt="' . $recipe->getName() . '"></a>';
             $print_var .= '</div>';
         
             $print_var .= '<div class="row center">';
