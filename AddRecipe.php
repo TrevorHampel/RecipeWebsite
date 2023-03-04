@@ -1,5 +1,17 @@
 <?php
-include("includes/include.php");
+//include("includes/include.php");
+include_once "DatabaseObjects/M_recipe.php";
+include_once "DatabaseObjects/M_recipe_ingredient_link.php";
+include_once "DatabaseObjects/M_ingredient.php";
+include_once "DatabaseObjects/M_measurement_unit.php";
+include_once "DatabaseObjects/M_measurement.php";
+include_once "DatabaseObjects/M_recipe_tag.php";
+include_once "Database.php";
+
+$databaseObj = new Database();
+$sql = "SELECT * FROM recipe_types";
+$typeList = $databaseObj->selectAssc($sql);
+
 
 ?>
 
@@ -36,10 +48,11 @@ include("includes/include.php");
                         </div>
                         <div class="col-7">
                             <select multiple type="text" class="form-control" id="recipe-type">
-                                <option>Chicken</option>
-                                <option>Beef</option>
-                                <option>Appetizer</option>
-                                <option>Dessert</option>
+                                <?php
+                                foreach ($typeList as $type) {
+                                    echo "<option value='" . $type["recipe_type_id"] . "'>" . $type["recipe_type"] . "</option>";
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -69,7 +82,7 @@ include("includes/include.php");
                     <!-- Recipe Source -->
                     <div class="row form-group p-3">
                         <div class="col-3">
-                            <label for="recipe-source">Recipe Name</label>
+                            <label for="recipe-source">Recipe Website/Source</label>
                         </div>
                         <div class="col-7">
                             <input type="text" class="form-control" id="recipe-source" placeholder="Recipe Website">

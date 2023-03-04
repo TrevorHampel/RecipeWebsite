@@ -2,6 +2,7 @@
 include_once "T_Hash.php";
 include_once "T_Login.php";
 include_once "T_Favorites.php";
+include_once "T_AddRecipe.php";
 
 
 if (isset($_POST['action'])) {
@@ -23,6 +24,10 @@ if (isset($_POST['action'])) {
         case "RemoveFromFavorites":
             $T_Favorites = new T_Favorites();
             echo $T_Favorites->removeFromFavorites($_POST["recipeID"], $_POST["userID"]);
+            break;
+        case "AddRecipe":
+            $T_AddRecipe = new T_AddRecipe();
+            echo $T_AddRecipe->addRecipe($_POST["recipe-name"], $_POST["recipe-type"], $_POST["recipe-area"], $_POST["recipe-image"], $_POST["recipe-source"], $_POST["recipe-video"], $_POST["textarea"]);
             break;
     }
     // always be sure to exit(); or echo exit;
