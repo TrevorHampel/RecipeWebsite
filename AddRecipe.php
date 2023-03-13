@@ -56,23 +56,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $ingredientList += [$_POST[$strI] => $_POST[$strM]];
     }
 
-    $i = 0;
+    $int = 0;
     foreach ($ingredientList as $ing) {
-        $i++;
-        $ing = new M_ingredient();
-        $ing->ingredient_value = key($ingredientList);
-        $ing->insert_obj();
+        $int++;
+        $ingredient = new M_ingredient();
+        $ingredient->ingredient_value = $_POST["ingredient-$int"];
+        $ingredient->insert_obj();
 
-        $measurement = preg_replace('/[0-9]+/', '', $ingredientList[$ing->ingredient_value]);
+
+        $measurement = preg_replace('/[0-9]+/', '', $_POST["measure-$int"]);
         $M_measurement_unit = new M_measurement_unit();
         $M_measurement_unit->measurement_unit_value = $measurement;
         $M_measurement_unit->insert_obj();
 
-        echo "Measurement after regex: " . $measurement . '<br/>';
-
-        $measurement_value = preg_replace('/[^0-9]/', '', $ingredientList[key($ingredientList)]);
-
-        echo "Measurement Value after regex: " . $measurement_value . '<br/>';
+        $measurement_value = preg_replace('/[^0-9]/', '', $_POST["measure-$int"]);
 
         $sql = "INSERT INTO measurement (measurement_value, measurement_unit_id)
             VALUES ('" . $measurement_value . "', " . $M_measurement_unit->measurement_unit_id . ")";
@@ -80,10 +77,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $insertID = $Database->insert($sql);
 
         $sql = "INSERT INTO recipe_ingredient_link (recipe_id, ingredient_id, measurement_id)
-                    VALUES (" . $recipeObj->recipe_id  . ", " . $ing->ingredient_id . ", " . $insertID . ")";
+                    VALUES (" . $recipeObj->recipe_id  . ", " . $ingredient->ingredient_id . ", " . $insertID . ")";
 
         $insertID = $Database->insert($sql);
     }
+    echo "<script>
+            alert('Your Recipe, $recipeObj->recipe_name has been successfully added!');</script>";
 }
 
 
