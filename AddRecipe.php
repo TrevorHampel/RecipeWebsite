@@ -11,75 +11,81 @@ include_once "Database.php";
 $databaseObj = new Database();
 $sql = "SELECT * FROM recipe_types";
 $typeList = $databaseObj->selectAssc($sql);
+$ingCount = 1;
+$name = $image = $source = $youtube = $instructions = $type = $area = $strI = $strM = "";
 
-
-
-function validateInput()
+function validateInput($data)
 {
-    if (!isset($_POST["recipe-name"])) {
-        return;
-    }
-    $name = $_POST["recipe-name"];
-    $image = $_POST["recipe-image"];
-    $source = $_POST["recipe-source"];
-    $youtube = $_POST["recipe-video"];
-    $instructions = $_POST["textarea"];
-    $type = $_POST["recipe-type"];
-    $area = $_POST["recipe-area"];
-
-    if ($name == "") {
-        echo "<span class='text-danger'>Please enter a name</span>";
-        return false;
-    }
-    if ($image == "") {
-        echo "<span class='text-danger'>Please upload an image</span>";
-        return false;
-    }
-    if ($source == "") {
-        echo "<span class='text-danger'>Please enter a source site</span>";
-        return false;
-    }
-    if ($youtube == "") {
-        echo "<span class='text-danger'>Please enter a recipe video</span>";
-        return false;
-    }
-    if ($instructions == "") {
-        echo "<span class='text-danger'>Please enter instructions for the recipe</span>";
-        return false;
-    }
-    if ($type == "") {
-        echo "<span class='text-danger'>Please enter a recipe type</span>";
-        return false;
-    }
-    if ($area == "") {
-        echo "<span class='text-danger'>Please enter a recipe area</span>";
-        return false;
-    }
-
-    return true;
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 
-function addRecipe()
-{
-    if (validateInput()) {
-        $id = rand(500, 1000);
-        $_POST["recipe-id"] = $id;
 
-        $recipeObj = new M_recipe();
-        //$recipeObj->recipe_id = $_POST["recipe-id"];
-        $recipeObj->recipe_id = $id;
-        $recipeObj->recipe_name = $_POST["recipe-name"];
-        $recipeObj->image = $_POST["recipe-image"];
-        $recipeObj->source_url = $_POST["recipe-source"];
-        $recipeObj->youtube_url = $_POST["recipe-video"];
-        $date = new \DateTime('now');
-        $recipeObj->date_created = $date->format('Y/m/d H:i:s');
-        $recipeObj->recipe_instructions = $_POST["textarea"];
-        $recipeObj->recipe_area = $_POST["recipe-area"];
-        $recipeObj->recipe_type = $_POST["recipe-type"];
-        $recipeObj->insert_obj();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = validateInput($_POST["recipe-name"]);
+    $image = validateInput($_POST["recipe-image"]);
+    $source = validateInput($_POST["recipe-source"]);
+    $youtube = validateInput($_POST["recipe-video"]);
+    $instructions = validateInput($_POST["textarea"]);
+    $type = validateInput($_POST["recipe-type"]);
+    $area = validateInput($_POST["recipe-area"]);
+    $Database = new Database();
+    $ingredientList = [];
+
+    $recipeObj = new M_recipe();
+    $recipeObj->recipe_name = $name;
+    $recipeObj->image = $image;
+    $recipeObj->source_url = $source;
+    $recipeObj->youtube_url = $youtube;
+    $date = new \DateTime('now');
+    $recipeObj->date_created = $date->format('Y/m/d H:i:s');
+    $recipeObj->recipe_instructions = $instructions;
+    $recipeObj->recipe_area = $area;
+    $recipeObj->recipe_type = $type;
+    $recipeObj->insert_obj();
+
+
+    for ($i = 1; $i < 21; $i++) {
+        $strM = "measure-" . $i;
+        $strI = "ingredient-" . $i;
+        if ($_POST[$strI] == "") {
+            break;
+        }
+        $ingredientList += [$_POST[$strI] => $_POST[$strM]];
+    }
+
+    $i = 0;
+    foreach ($ingredientList as $ing) {
+        $i++;
+        $ing = new M_ingredient();
+        $ing->ingredient_value = key($ingredientList);
+        $ing->insert_obj();
+
+        $measurement = preg_replace('/[0-9]+/', '', $ingredientList[$ing->ingredient_value]);
+        $M_measurement_unit = new M_measurement_unit();
+        $M_measurement_unit->measurement_unit_value = $measurement;
+        $M_measurement_unit->insert_obj();
+
+        echo "Measurement after regex: " . $measurement . '<br/>';
+
+        $measurement_value = preg_replace('/[^0-9]/', '', $ingredientList[key($ingredientList)]);
+
+        echo "Measurement Value after regex: " . $measurement_value . '<br/>';
+
+        $sql = "INSERT INTO measurement (measurement_value, measurement_unit_id)
+            VALUES ('" . $measurement_value . "', " . $M_measurement_unit->measurement_unit_id . ")";
+
+        $insertID = $Database->insert($sql);
+
+        $sql = "INSERT INTO recipe_ingredient_link (recipe_id, ingredient_id, measurement_id)
+                    VALUES (" . $recipeObj->recipe_id  . ", " . $ing->ingredient_id . ", " . $insertID . ")";
+
+        $insertID = $Database->insert($sql);
     }
 }
+
 
 ?>
 
@@ -108,7 +114,7 @@ function addRecipe()
                             <label for="recipe-name">Recipe Name</label>
                         </div>
                         <div class="col-7">
-                            <input type="text" name="recipe-name" class="form-control" id="recipe-name" placeholder="Enter a Recipe Name" />
+                            <input type="text" name="recipe-name" class="form-control" id="recipe-name" placeholder="Enter a Recipe Name" required />
                         </div>
                     </div>
                     <!-- Recipe Type -->
@@ -117,7 +123,7 @@ function addRecipe()
                             <label for="recipe-type">Recipe Type</label>
                         </div>
                         <div class="col-7">
-                            <select multiple type="text" name="recipe-type" class="form-control" id="recipe-type">
+                            <select multiple type="text" name="recipe-type" class="form-control" id="recipe-type" required>
                                 <?php
                                 foreach ($typeList as $type) {
                                     echo "<option value='" . $type["recipe_type"] . "'>" . $type["recipe_type"] . "</option>";
@@ -132,7 +138,7 @@ function addRecipe()
                             <label for="recipe-area">Recipe Area</label>
                         </div>
                         <div class="col-7">
-                            <select multiple type="text" name="recipe-area" class="form-control" id="recipe-area">
+                            <select multiple type="text" name="recipe-area" class="form-control" id="recipe-area" required>
                                 <option>Middle Eastern</option>
                                 <option>Mediterranean</option>
                                 <option>African</option>
@@ -146,7 +152,7 @@ function addRecipe()
                             <label for="recipe-image">Recipe Image</label>
                         </div>
                         <div class="col-7">
-                            <input type="file" class="form-control-file" name="recipe-image" id="recipe-image">
+                            <input type="file" class="form-control-file" name="recipe-image" id="recipe-image" required>
                         </div>
                     </div>
                     <!-- Recipe Source -->
@@ -176,11 +182,35 @@ function addRecipe()
                             <textarea name="textarea" type="text" class="form-control" id="textarea" placeholder="Recipe Instructions"></textarea>
                         </div>
                     </div>
+                    <!--Ingredient List-->
                     <div class="row form-group p-3">
-                        <div class="col-6">
-                            <button type="submit" class="btn btn-success" onclick="<?php addRecipe() ?>">Add Recipe</button>
+                        <div class="col-3">
+                            <label class="my-3" for="ingredient-list">Ingredients</label>
+                            <a class="btn btn-primary" type="button" data-toggle="collapse" href="#ingredient-list" role="button" aria-expanded="false" style="width: 150px">
+                                Add Ingredients
+                            </a>
+                        </div>
+
+                        <div class="col-7 border rounded collapse" id="ingredient-list">
+                            <?php
+                            $listVar = "";
+                            for ($i = 1; $i < 21; $i++) {
+                                $listVar .= '<label for="ingredient-' . $i . '">Ingredient ' . $i . ':</label>
+                                            <input class="mt-3 form-control" type="text" name="measure-' . $i . '" placeholder="Measurement" />
+                                            <input class="my-3 form-control" type="text" name="ingredient-' . $i . '" placeholder="Ingredient" />';
+                            }
+                            echo $listVar;
+                            ?>
 
                         </div>
+
+                    </div>
+
+                </div>
+                <div class="row form-group p-3">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success">Add Recipe</button>
+
                     </div>
                 </div>
             </div>
