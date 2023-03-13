@@ -7,6 +7,7 @@ include_once "DatabaseObjects/M_measurement_unit.php";
 include_once "DatabaseObjects/M_measurement.php";
 include_once "DatabaseObjects/M_recipe_tag.php";
 include_once "Database.php";
+include_once "Session.php";
 
 $databaseObj = new Database();
 $sql = "SELECT * FROM recipe_types";

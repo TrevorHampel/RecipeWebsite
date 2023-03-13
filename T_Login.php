@@ -9,7 +9,6 @@ class T_Login
     function checkLogin($username, $password)
     {
         $Database = new Database();
-
         $sql = "SELECT * 
         FROM user 
         WHERE user_name LIKE '" . $username . "'
@@ -50,5 +49,4 @@ class T_Login
     {
         $_SESSION["UserID"] = $UserID;
     }
-    
 }
