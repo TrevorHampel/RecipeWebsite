@@ -45,8 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recipeObj->recipe_instructions = $instructions;
     $recipeObj->recipe_area = $area;
     $recipeObj->recipe_type = $type;
+    $recipeObj->user_id = $_SESSION["UserID"];
     $recipeObj->insert_obj();
-
+    
 
     for ($i = 1; $i < 21; $i++) {
         $strM = "measure-" . $i;
@@ -82,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $insertID = $Database->insert($sql);
     }
+
     echo "<script>
             alert('Your Recipe, $recipeObj->recipe_name has been successfully added!');</script>";
 }
