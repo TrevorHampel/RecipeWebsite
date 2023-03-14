@@ -306,3 +306,2658 @@ object(M_recipe_ingredient_link)#44 (4) {
   }
 }
 
+object(Recipe)#1 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52870"
+  ["name":"Recipe":private]=>
+  string(16) "Chickpea Fajitas"
+  ["category":"Recipe":private]=>
+  string(10) "Vegetarian"
+  ["instructions":"Recipe":private]=>
+  string(920) "Heat oven to 200C/180C fan/gas 6 and line a baking tray with foil. Drain the chickpeas, pat dry and tip onto the prepared baking tray. Add the oil and paprika, toss to coat, then roast for 20-25 mins until browned and crisp, shaking halfway through cooking.
+
+Meanwhile, put the tomatoes and onion in a small bowl with the vinegar and set aside to pickle. Put the avocado in another bowl and mash with a fork, leaving some larger chunks. Stir in the lime juice and season well. Mix the soured cream with the harissa and set aside until ready to serve.
+
+Heat a griddle pan until nearly smoking. Add the tortillas , one at a time, charring each side until hot with griddle lines. 
+
+Put everything on the table and build the fajitas : spread a little of the harissa cream over the tortilla, top with roasted chickpeas, guacamole, pickled salsa and coriander, if you like. Serve with the lime wedges for squeezing over."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/tvtxpq1511464705.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(12) {
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(8) "1 tblsp "
+    ["Paprika"]=>
+    string(5) "pinch"
+    ["Tomatoes"]=>
+    string(18) "2 small cut chunks"
+    ["Red Onions"]=>
+    string(15) "1 finely sliced"
+    ["Red Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Avocado"]=>
+    string(1) "1"
+    ["Lime"]=>
+    string(10) "Juice of 1"
+    ["Sour Cream"]=>
+    string(5) "100g "
+    ["Harissa Spice"]=>
+    string(5) "2 tsp"
+    ["Corn Tortillas"]=>
+    string(1) "4"
+    ["Coriander"]=>
+    string(8) "to serve"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(52) "https://www.bbcgoodfood.com/recipes/chickpea-fajitas"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=LGY3V7EGpT0"
+}
+
+object(Recipe)#1 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52861"
+  ["name":"Recipe":private]=>
+  string(24) "Peanut Butter Cheesecake"
+  ["category":"Recipe":private]=>
+  string(7) "Dessert"
+  ["instructions":"Recipe":private]=>
+  string(1124) "Oil and line a 20cm round loose- bottomed cake tin with cling film, making it as smooth as possible. Melt the butter in a pan. Crush the biscuits by bashing them in a bag with a rolling pin, then stir them into the butter until very well coated. Press the mixture firmly into the base of the tin and chill.
+Soak the gelatine in water while you make the filling. Tip the ricotta into a bowl, then beat in the peanut butter and syrup. Ricotta has a slightly grainy texture so blitz until smooth with a stick blender for a smoother texture if you prefer.
+Take the soaked gelatine from the water and squeeze dry. Put it into a pan with the milk and heat very gently until the gelatine dissolves. Beat into the peanut mixture, then tip onto the biscuit base. Chill until set.
+To freeze, leave in the tin and as soon as it is solid, cover the surface with cling film, then wrap the tin with cling film and foil.
+To defrost, thaw in the fridge overnight.
+To serve, carefully remove from the tin. Whisk the cream with the sugar until it holds its shape, then spread on top of the cheesecake and scatter with the peanut brittle."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/qtuuys1511387068.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(10) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(68) "https://www.bbcgoodfood.com/recipes/1759649/peanut-butter-cheesecake"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=QSTsturcyL0"
+}
+
+object(Recipe)#2 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "53013"
+  ["name":"Recipe":private]=>
+  string(7) "Big Mac"
+  ["category":"Recipe":private]=>
+  string(4) "Beef"
+  ["instructions":"Recipe":private]=>
+  string(1017) "For the Big Mac sauce, combine all the ingredients in a bowl, season with salt and chill until ready to use.
+2. To make the patties, season the mince with salt and pepper and form into 4 balls using about 1/3 cup mince each. Place each onto a square of baking paper and flatten to form into four x 15cm circles. Heat oil in a large frypan over high heat. In 2 batches, cook beef patties for 1-2 minutes each side until lightly charred and cooked through. Remove from heat and keep warm. Repeat with remaining two patties.
+3. Carefully slice each burger bun into three acrossways, then lightly toast.
+4. To assemble the burgers, spread a little Big Mac sauce over the bottom base. Top with some chopped onion, shredded lettuce, slice of cheese, beef patty and some pickle slices. Top with the middle bun layer, and spread with more Big Mac sauce, onion, lettuce, pickles, beef patty and then finish with more sauce. Top with burger lid to serve.
+5. After waiting half an hour for your food to settle, go for a jog."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(24) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(122) "https://www.delicious.com.au/recipes/finally-recipe-worlds-top-selling-burger-big-mac/5221ee4a-279e-4a0b-8629-f442dc46822e"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=C5J39YnnPsg"
+}
+
+object(Recipe)#3 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52811"
+  ["name":"Recipe":private]=>
+  string(9) "Ribollita"
+  ["category":"Recipe":private]=>
+  string(10) "Vegetarian"
+  ["instructions":"Recipe":private]=>
+  string(1116) "Put 2 tablespoons of the oil in a large pot over medium heat. When it’s hot, add onion, carrot, celery and garlic; sprinkle with salt and pepper and cook, stirring occasionally, until vegetables are soft, 5 to 10 minutes.
+Heat the oven to 500 degrees. Drain the beans; if they’re canned, rinse them as well. Add them to the pot along with tomatoes and their juices and stock, rosemary and thyme. Bring to a boil, then reduce heat so the soup bubbles steadily; cover and cook, stirring once or twice to break up the tomatoes, until the flavors meld, 15 to 20 minutes.
+Fish out and discard rosemary and thyme stems, if you like, and stir in kale. Taste and adjust seasoning. Lay bread slices on top of the stew so they cover the top and overlap as little as possible. Scatter red onion slices over the top, drizzle with the remaining 3 tablespoons oil and sprinkle with Parmesan.
+Put the pot in the oven and bake until the bread, onions and cheese are browned and crisp, 10 to 15 minutes. (If your pot fits under the broiler, you can also brown the top there.) Divide the soup and bread among 4 bowls and serve."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(36) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(53) "https://cooking.nytimes.com/recipes/1016052-ribollita"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=BiQUYTBb6eQ"
+}
+
+object(Recipe)#4 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52956"
+  ["name":"Recipe":private]=>
+  string(14) "Chicken Congee"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(975) "STEP 1 - MARINATING THE CHICKEN
+In a bowl, add chicken, salt, white pepper, ginger juice and then mix it together well.
+Set the chicken aside.
+STEP 2 - RINSE THE WHITE RICE
+Rinse the rice in a metal bowl or pot a couple times and then drain the water.
+STEP 2 - BOILING THE WHITE RICE
+Next add 8 cups of water and then set the stove on high heat until it is boiling. Once rice porridge starts to boil, set the stove on low heat and then stir it once every 8-10 minutes for around 20-25 minutes.
+After 25 minutes, this is optional but you can add a little bit more water to make rice porridge to make it less thick or to your preference.
+Next add the marinated chicken to the rice porridge and leave the stove on low heat for another 10 minutes.
+After an additional 10 minutes add the green onions, sliced ginger, 1 pinch of salt, 1 pinch of white pepper and stir for 10 seconds.
+Serve the rice porridge in a bowl
+Optional: add Coriander on top of the rice porridge."
+  ["thumbnail":"Recipe":private]=>
+  string(59) "https://www.themealdb.com/images/media/meals/1529446352.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(43) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(44) "https://sueandgambo.com/pages/chicken-congee"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=kqEfk801E94"
+}
+
+object(Recipe)#5 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52940"
+  ["name":"Recipe":private]=>
+  string(18) "Brown Stew Chicken"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(832) "Squeeze lime over chicken and rub well. Drain off excess lime juice.
+Combine tomato, scallion, onion, garlic, pepper, thyme, pimento and soy sauce in a large bowl with the chicken pieces. Cover and marinate at least one hour.
+Heat oil in a dutch pot or large saucepan. Shake off the seasonings as you remove each piece of chicken from the marinade. Reserve the marinade for sauce.
+Lightly brown the chicken a few pieces at a time in very hot oil. Place browned chicken pieces on a plate to rest while you brown the remaining pieces.
+Drain off excess oil and return the chicken to the pan. Pour the marinade over the chicken and add the carrots. Stir and cook over medium heat for 10 minutes.
+Mix flour and coconut milk and add to stew, stirring constantly. Turn heat down to minimum and cook another 20 minutes or until tender."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(54) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tomato"]=>
+    string(9) "1 chopped"
+    ["Onions"]=>
+    string(9) "2 chopped"
+    ["Garlic Clove"]=>
+    string(9) "2 chopped"
+    ["Red Pepper"]=>
+    string(9) "1 chopped"
+    ["Carrots"]=>
+    string(9) "1 chopped"
+    ["Lime"]=>
+    string(1) "1"
+    ["Allspice"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(5) "2 tbs"
+    ["Cornstarch"]=>
+    string(5) "2 tsp"
+    ["Coconut Milk"]=>
+    string(7) "2 cups "
+    ["Vegetable Oil"]=>
+    string(5) "1 tbs"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(80) "http://www.geniuskitchen.com/recipe/authentic-jamaican-brown-stew-chicken-347996"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=_gFB1fkNhXs"
+}
+
+object(Recipe)#6 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52850"
+  ["name":"Recipe":private]=>
+  string(16) "Chicken Couscous"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(620) "Heat the olive oil in a large frying pan and cook the onion for 1-2 mins just until softened. Add the chicken and fry for 7-10 mins until cooked through and the onions have turned golden. Grate over the ginger, stir through the harissa to coat everything and cook for 1 min more.
+
+Tip in the apricots, chickpeas and couscous, then pour over the stock and stir once. Cover with a lid or tightly cover the pan with foil and leave for about 5 mins until the couscous has soaked up all the stock and is soft. Fluff up the couscous with a fork and scatter over the coriander to serve. Serve with extra harissa, if you like."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(60) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tomato"]=>
+    string(9) "1 chopped"
+    ["Onions"]=>
+    string(9) "2 chopped"
+    ["Garlic Clove"]=>
+    string(9) "2 chopped"
+    ["Red Pepper"]=>
+    string(9) "1 chopped"
+    ["Carrots"]=>
+    string(9) "1 chopped"
+    ["Lime"]=>
+    string(1) "1"
+    ["Allspice"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(5) "2 tbs"
+    ["Cornstarch"]=>
+    string(5) "2 tsp"
+    ["Coconut Milk"]=>
+    string(7) "2 cups "
+    ["Vegetable Oil"]=>
+    string(5) "1 tbs"
+    ["Chicken Breast"]=>
+    string(4) "200g"
+    ["Harissa Spice"]=>
+    string(8) "2 tblsp "
+    ["Dried Apricots"]=>
+    string(2) "10"
+    ["Chickpeas"]=>
+    string(4) "220g"
+    ["Couscous"]=>
+    string(4) "200g"
+    ["Chicken Stock"]=>
+    string(5) "200ml"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(65) "https://www.bbcgoodfood.com/recipes/13139/onepan-chicken-couscous"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=GZQGy9oscVk"
+}
+
+object(Recipe)#7 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52938"
+  ["name":"Recipe":private]=>
+  string(21) "Jamaican Beef Patties"
+  ["category":"Recipe":private]=>
+  string(4) "Beef"
+  ["instructions":"Recipe":private]=>
+  string(3081) "Make the Pastry Dough
+
+To a large bowl, add flour, 1 teaspoon salt, and turmeric and mix thoroughly.
+Rub shortening into flour until there are small pieces of shortening completely covered with flour.
+Pour in 1/2 cup of the ice water and mix with your hands to bring the dough together. Keep adding ice water 2 to 3 tablespoons at a time until the mixture forms a dough.
+At this stage, you can cut the dough into 2 large pieces, wrap in plastic and refrigerate for 30 minutes before using it.
+Alternatively, cut the dough into 10 to 12 equal pieces, place on a platter or baking sheet, cover securely with plastic wrap and let chill for 30 minutes while you make the filling.
+Make the Filling
+
+Add ground beef to a large bowl. Sprinkle in allspice and black pepper. Mix together and set aside.
+Heat oil in a skillet until hot.
+Add onions and sauté until translucent. Add hot pepper, garlic and thyme and continue to sauté for another minute. Add 1/4 teaspoon salt.
+Add seasoned ground beef and toss to mix, breaking up any clumps, and let cook until the meat is no longer pink.
+Add ketchup and more salt to taste.
+Pour in 2 cups of water and stir. Bring the mixture to a boil then reduce heat and let simmer until most of the liquid has evaporated and whatever is remaining has reduced to a thick sauce.
+Fold in green onions. Remove from heat and let cool completely.
+Assemble the Patties
+
+Beat the egg and water together to make an egg wash. Set aside.
+Now you can prepare the dough in two ways.
+First Method: Flour the work surface and rolling pin. If you had cut it into 2 large pieces, then take one of the large pieces and roll it out into a very large circle. Take a bowl with a wide rim (about 5 inches) and cut out three circles.
+
+Place about 3 heaping tablespoons of the filling onto 1/2 of each circle. Dip a finger into the water and moisten the edges of the pastry. Fold over the other half and press to seal. 
+
+Take a fork and crimp the edges. Cut off any extra to make it look neat and uniform. Place on a parchment-lined baking sheet and continue to work until you have rolled all the dough and filled the patties.
+Second Method: If you had pre-cut the dough into individual pieces, work with one piece of dough at a time. Roll it out on a floured surface into a 5-inch circle or a little larger. Don’t worry if the edges are not perfect.
+
+Place 3 heaping tablespoons of the filling on one side of the circle. Dip a finger into the water and moisten the edges of the pastry. Fold over the other half and press to seal.
+
+Take a fork and crimp the edges. Cut off any extra to make it look neat and uniform. Place on a parchment-lined baking sheet and continue work until you have rolled all the dough and filled the patties.
+
+Frying and Serving the Patties
+
+After forming the patties, place the pans in the refrigerator while you heat the oven to 350 F.
+Just before adding the pans with the patties to the oven, brush the patties with egg wash.
+Bake patties for 30 minutes or until golden brown.
+Cool on wire racks.
+Serve warm."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/wsqqsw1515364068.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(65) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tomato"]=>
+    string(9) "1 chopped"
+    ["Onions"]=>
+    string(9) "2 chopped"
+    ["Garlic Clove"]=>
+    string(9) "2 chopped"
+    ["Red Pepper"]=>
+    string(9) "1 chopped"
+    ["Carrots"]=>
+    string(9) "1 chopped"
+    ["Lime"]=>
+    string(1) "1"
+    ["Allspice"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(5) "2 tbs"
+    ["Cornstarch"]=>
+    string(5) "2 tsp"
+    ["Coconut Milk"]=>
+    string(7) "2 cups "
+    ["Vegetable Oil"]=>
+    string(5) "1 tbs"
+    ["Chicken Breast"]=>
+    string(4) "200g"
+    ["Harissa Spice"]=>
+    string(8) "2 tblsp "
+    ["Dried Apricots"]=>
+    string(2) "10"
+    ["Chickpeas"]=>
+    string(4) "220g"
+    ["Couscous"]=>
+    string(4) "200g"
+    ["Chicken Stock"]=>
+    string(5) "200ml"
+    ["Plain Flour"]=>
+    string(7) "4 cups "
+    ["Curry Powder"]=>
+    string(6) "1 tsp "
+    ["Black Pepper"]=>
+    string(7) "1/2 tsp"
+    ["Tomato Ketchup"]=>
+    string(5) "2 tbs"
+    ["Egg"]=>
+    string(8) "1 beaten"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(62) "https://www.thespruce.com/jamaican-beef-patties-recipe-2137762"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=ypQjoiZiTac"
+}
+
+object(Recipe)#8 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52904"
+  ["name":"Recipe":private]=>
+  string(16) "Beef Bourguignon"
+  ["category":"Recipe":private]=>
+  string(4) "Beef"
+  ["instructions":"Recipe":private]=>
+  string(2164) "Heat a large casserole pan and add 1 tbsp goose fat. Season the beef and fry until golden brown, about 3-5 mins, then turn over and fry the other side until the meat is browned all over, adding more fat if necessary. Do this in 2-3 batches, transferring the meat to a colander set over a bowl when browned.
+In the same pan, fry the bacon, shallots or pearl onions, mushrooms, garlic and bouquet garni until lightly browned. Mix in the tomato purée and cook for a few mins, stirring into the mixture. This enriches the bourguignon and makes a great base for the stew. Then return the beef and any drained juices to the pan and stir through.
+Pour over the wine and about 100ml water so the meat bobs up from the liquid, but isn’t completely covered. Bring to the boil and use a spoon to scrape the caramelised cooking juices from the bottom of the pan – this will give the stew more flavour.
+Heat oven to 150C/fan 130C/gas 2. Make a cartouche: tear off a square of foil slightly larger than the casserole, arrange it in the pan so it covers the top of the stew and trim away any excess foil. Then cook for 3 hrs. If the sauce looks watery, remove the beef and veg with a slotted spoon, and set aside. Cook the sauce over a high heat for a few mins until the sauce has thickened a little, then return the beef and vegetables to the pan.
+To make the celeriac mash, peel the celeriac and cut into cubes. Heat the olive oil in a large frying pan. Tip in the celeriac and fry for 5 mins until it turns golden. Season well with salt and pepper. Stir in the rosemary, thyme, bay and cardamom pods, then pour over 200ml water, enough to nearly cover the celeriac. Turn the heat to low, partially cover the pan and leave to simmer for 25-30 mins.
+After 25-30 mins, the celeriac should be soft and most of the water will have evaporated. Drain away any remaining water, then remove the herb sprigs, bay and cardamom pods. Lightly crush with a potato masher, then finish with a glug of olive oil and season to taste. Spoon the beef bourguignon into serving bowls and place a large spoonful of the celeriac mash on top. Garnish with one of the bay leaves, if you like."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/vtqxtu1511784197.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(76) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tomato"]=>
+    string(9) "1 chopped"
+    ["Onions"]=>
+    string(9) "2 chopped"
+    ["Garlic Clove"]=>
+    string(9) "2 chopped"
+    ["Red Pepper"]=>
+    string(9) "1 chopped"
+    ["Carrots"]=>
+    string(9) "1 chopped"
+    ["Lime"]=>
+    string(1) "1"
+    ["Allspice"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(5) "2 tbs"
+    ["Cornstarch"]=>
+    string(5) "2 tsp"
+    ["Coconut Milk"]=>
+    string(7) "2 cups "
+    ["Vegetable Oil"]=>
+    string(5) "1 tbs"
+    ["Chicken Breast"]=>
+    string(4) "200g"
+    ["Harissa Spice"]=>
+    string(8) "2 tblsp "
+    ["Dried Apricots"]=>
+    string(2) "10"
+    ["Chickpeas"]=>
+    string(4) "220g"
+    ["Couscous"]=>
+    string(4) "200g"
+    ["Chicken Stock"]=>
+    string(5) "200ml"
+    ["Plain Flour"]=>
+    string(7) "4 cups "
+    ["Curry Powder"]=>
+    string(6) "1 tsp "
+    ["Black Pepper"]=>
+    string(7) "1/2 tsp"
+    ["Tomato Ketchup"]=>
+    string(5) "2 tbs"
+    ["Egg"]=>
+    string(8) "1 beaten"
+    ["Goose Fat"]=>
+    string(5) "3 tsp"
+    ["Beef Shin"]=>
+    string(4) "600g"
+    ["Bacon"]=>
+    string(5) "100g "
+    ["Challots"]=>
+    string(4) "350g"
+    ["Chestnut Mushroom"]=>
+    string(4) "250g"
+    ["Bouquet Garni"]=>
+    string(1) "1"
+    ["Tomato Puree"]=>
+    string(5) "1 tbs"
+    ["Red Wine"]=>
+    string(7) "750 ml "
+    ["Celeriac"]=>
+    string(4) "600g"
+    ["Bay Leaf"]=>
+    string(1) "2"
+    ["Cardamom"]=>
+    string(1) "4"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(57) "https://www.bbcgoodfood.com/recipes/5032/beef-bourguignon"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=SQnr4Z-7rok"
+}
+
+object(Recipe)#9 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52907"
+  ["name":"Recipe":private]=>
+  string(11) "Duck Confit"
+  ["category":"Recipe":private]=>
+  string(13) "Miscellaneous"
+  ["instructions":"Recipe":private]=>
+  string(1658) "The day before you want to make the dish, scatter half the salt, half the garlic and half of the herbs over the base of a small shallow dish. Lay the duck legs, skin-side up, on top, then scatter over the remaining salt, garlic and herbs. Cover the duck and refrigerate overnight. This can be done up to 2 days ahead.
+Pour the wine into a saucepan that will snugly fit the duck legs in a single layer. Brush the salt off the duck legs and place them, skin-side down, in the wine. Cover the pan with a lid and place over a medium heat. As soon as the wine starts to bubble, turn the heat down to the lowest setting and cook for 2 hours, checking occasionally that the liquid is just barely simmering. (If you own a heat diffuser, it would be good to use it here.) After 2 hours, the duck legs should be submerged in their own fat and the meat should feel incredibly tender when prodded. Leave to cool.
+The duck legs are now cooked and can be eaten immediately – or you can follow the next step if you like them crisp. If you are preparing ahead, pack the duck legs tightly into a plastic container or jar and pour over the fat, but not the liquid at the bottom of the pan. Cover and leave in the fridge for up to a month, or freeze for up to 3 months. The liquid you are left with makes a tasty gravy, which can be chilled or frozen until needed.
+To reheat and crisp up the duck legs, heat oven to 220C/fan 200C/gas 7. Remove the legs from the fat and place them, skin-side down, in an ovenproof frying pan. Roast for 30-40 mins, turning halfway through, until brown and crisp. Serve with the reheated gravy, a crisp salad and some crisp golden ptoatoes."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/wvpvsu1511786158.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(79) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tomato"]=>
+    string(9) "1 chopped"
+    ["Onions"]=>
+    string(9) "2 chopped"
+    ["Garlic Clove"]=>
+    string(9) "2 chopped"
+    ["Red Pepper"]=>
+    string(9) "1 chopped"
+    ["Carrots"]=>
+    string(9) "1 chopped"
+    ["Lime"]=>
+    string(1) "1"
+    ["Allspice"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(5) "2 tbs"
+    ["Cornstarch"]=>
+    string(5) "2 tsp"
+    ["Coconut Milk"]=>
+    string(7) "2 cups "
+    ["Vegetable Oil"]=>
+    string(5) "1 tbs"
+    ["Chicken Breast"]=>
+    string(4) "200g"
+    ["Harissa Spice"]=>
+    string(8) "2 tblsp "
+    ["Dried Apricots"]=>
+    string(2) "10"
+    ["Chickpeas"]=>
+    string(4) "220g"
+    ["Couscous"]=>
+    string(4) "200g"
+    ["Chicken Stock"]=>
+    string(5) "200ml"
+    ["Plain Flour"]=>
+    string(7) "4 cups "
+    ["Curry Powder"]=>
+    string(6) "1 tsp "
+    ["Black Pepper"]=>
+    string(7) "1/2 tsp"
+    ["Tomato Ketchup"]=>
+    string(5) "2 tbs"
+    ["Egg"]=>
+    string(8) "1 beaten"
+    ["Goose Fat"]=>
+    string(5) "3 tsp"
+    ["Beef Shin"]=>
+    string(4) "600g"
+    ["Bacon"]=>
+    string(5) "100g "
+    ["Challots"]=>
+    string(4) "350g"
+    ["Chestnut Mushroom"]=>
+    string(4) "250g"
+    ["Bouquet Garni"]=>
+    string(1) "1"
+    ["Tomato Puree"]=>
+    string(5) "1 tbs"
+    ["Red Wine"]=>
+    string(7) "750 ml "
+    ["Celeriac"]=>
+    string(4) "600g"
+    ["Bay Leaf"]=>
+    string(1) "2"
+    ["Cardamom"]=>
+    string(1) "4"
+    ["Sea Salt"]=>
+    string(7) "Handful"
+    ["Duck Legs"]=>
+    string(1) "4"
+    ["White Wine"]=>
+    string(5) "100ml"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(63) "https://www.bbcgoodfood.com/recipes/2085/barneys-confit-of-duck"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=MHhLJqghY-o"
+}
+
+object(Recipe)#10 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52774"
+  ["name":"Recipe":private]=>
+  string(10) "Pad See Ew"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(467) "Mix Sauce in small bowl.
+Mince garlic into wok with oil. Place over high heat, when hot, add chicken and Chinese broccoli stems, cook until chicken is light golden.
+Push to the side of the wok, crack egg in and scramble. Don't worry if it sticks to the bottom of the wok - it will char and which adds authentic flavour.
+Add noodles, Chinese broccoli leaves and sauce. Gently mix together until the noodles are stained dark and leaves are wilted. Serve immediately!"
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/uuuspp1468263334.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(89) {
+    ["Butter"]=>
+    string(3) "50g"
+    ["Peanut Cookies"]=>
+    string(4) "175g"
+    ["Gelatine Leafs"]=>
+    string(1) "5"
+    ["Ricotta"]=>
+    string(4) "500g"
+    ["Peanut Butter"]=>
+    string(4) "175g"
+    ["Golden Syrup"]=>
+    string(4) "175g"
+    ["Milk"]=>
+    string(5) "150ml"
+    ["Double Cream"]=>
+    string(5) "275ml"
+    ["Light Brown Soft Sugar"]=>
+    string(8) "2 tblsp "
+    ["Peanut Brittle"]=>
+    string(7) "Crushed"
+    ["Minced Beef"]=>
+    string(4) "400g"
+    ["Olive Oil"]=>
+    string(5) "2 tbs"
+    ["Sesame Seed Burger Buns"]=>
+    string(1) "2"
+    ["Onion"]=>
+    string(7) "Chopped"
+    ["Iceberg Lettuce"]=>
+    string(4) "1/4 "
+    ["Cheese"]=>
+    string(8) "2 sliced"
+    ["Dill Pickles"]=>
+    string(7) "2 large"
+    ["Mayonnaise"]=>
+    string(6) "1 cup "
+    ["White Wine Vinegar"]=>
+    string(5) "2 tsp"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Mustard"]=>
+    string(5) "2 tsp"
+    ["Onion Salt"]=>
+    string(10) "1 1/2 tsp "
+    ["Garlic Powder"]=>
+    string(10) "1 1/2 tsp "
+    ["Paprika"]=>
+    string(7) "1/2 tsp"
+    ["Carrot"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(15) "1 stalk chopped"
+    ["Garlic"]=>
+    string(19) "1 tablespoon minced"
+    ["Cannellini Beans"]=>
+    string(6) "2 cups"
+    ["Canned tomatoes"]=>
+    string(1) "1"
+    ["Water"]=>
+    string(6) "4 cups"
+    ["Rosemary"]=>
+    string(13) "1 fresh sprig"
+    ["Thyme"]=>
+    string(13) "1 fresh sprig"
+    ["Kale"]=>
+    string(15) "1 pound chopped"
+    ["Wholegrain Bread"]=>
+    string(14) "4 thick slices"
+    ["Red Onion"]=>
+    string(15) "1 thinly sliced"
+    ["Parmesan"]=>
+    string(21) "½ cup freshly grated"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Salt"]=>
+    string(5) "pinch"
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tomato"]=>
+    string(9) "1 chopped"
+    ["Onions"]=>
+    string(9) "2 chopped"
+    ["Garlic Clove"]=>
+    string(9) "2 chopped"
+    ["Red Pepper"]=>
+    string(9) "1 chopped"
+    ["Carrots"]=>
+    string(9) "1 chopped"
+    ["Lime"]=>
+    string(1) "1"
+    ["Allspice"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(5) "2 tbs"
+    ["Cornstarch"]=>
+    string(5) "2 tsp"
+    ["Coconut Milk"]=>
+    string(7) "2 cups "
+    ["Vegetable Oil"]=>
+    string(5) "1 tbs"
+    ["Chicken Breast"]=>
+    string(4) "200g"
+    ["Harissa Spice"]=>
+    string(8) "2 tblsp "
+    ["Dried Apricots"]=>
+    string(2) "10"
+    ["Chickpeas"]=>
+    string(4) "220g"
+    ["Couscous"]=>
+    string(4) "200g"
+    ["Chicken Stock"]=>
+    string(5) "200ml"
+    ["Plain Flour"]=>
+    string(7) "4 cups "
+    ["Curry Powder"]=>
+    string(6) "1 tsp "
+    ["Black Pepper"]=>
+    string(7) "1/2 tsp"
+    ["Tomato Ketchup"]=>
+    string(5) "2 tbs"
+    ["Egg"]=>
+    string(8) "1 beaten"
+    ["Goose Fat"]=>
+    string(5) "3 tsp"
+    ["Beef Shin"]=>
+    string(4) "600g"
+    ["Bacon"]=>
+    string(5) "100g "
+    ["Challots"]=>
+    string(4) "350g"
+    ["Chestnut Mushroom"]=>
+    string(4) "250g"
+    ["Bouquet Garni"]=>
+    string(1) "1"
+    ["Tomato Puree"]=>
+    string(5) "1 tbs"
+    ["Red Wine"]=>
+    string(7) "750 ml "
+    ["Celeriac"]=>
+    string(4) "600g"
+    ["Bay Leaf"]=>
+    string(1) "2"
+    ["Cardamom"]=>
+    string(1) "4"
+    ["Sea Salt"]=>
+    string(7) "Handful"
+    ["Duck Legs"]=>
+    string(1) "4"
+    ["White Wine"]=>
+    string(5) "100ml"
+    ["rice stick noodles"]=>
+    string(8) "6oz/180g"
+    ["dark soy sauce"]=>
+    string(6) "2 tbsp"
+    ["oyster sauce"]=>
+    string(6) "2 tbsp"
+    ["soy sauce"]=>
+    string(5) "2 tsp"
+    ["white vinegar"]=>
+    string(5) "2 tsp"
+    ["sugar"]=>
+    string(5) "2 tsp"
+    ["water"]=>
+    string(6) "2 tbsp"
+    ["peanut oil"]=>
+    string(6) "2 tbsp"
+    ["garlic"]=>
+    string(8) "2 cloves"
+    ["Chinese broccoli"]=>
+    string(6) "4 cups"
+  }
+  ["recipeSource":"Recipe":private]=>
+  NULL
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=Ohy1DELF4is"
+}
+
+object(Recipe)#1 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52972"
+  ["name":"Recipe":private]=>
+  string(18) "Tunisian Lamb Soup"
+  ["category":"Recipe":private]=>
+  string(4) "Lamb"
+  ["instructions":"Recipe":private]=>
+  string(584) "Add the lamb to a casserole and cook over high heat. When browned, remove from the heat and set aside.
+Keep a tablespoon of fat in the casserole and discard the rest. Reduce to medium heat then add the garlic, onion and spinach and cook until the onion is translucent and the spinach wilted or about 5 minutes.
+Return the lamb to the casserole with the onion-spinach mixture, add the tomato puree, cumin, harissa, chicken, chickpeas, lemon juice, salt and pepper in the pan. Simmer over low heat for about 20 minutes.
+Add the pasta and cook for 15 minutes or until pasta is cooked."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(13) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(60) "http://allrecipes.co.uk/recipe/16694/tunisian-lamb-soup.aspx"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=w1qgTQmLRe4"
+}
+
+object(Recipe)#2 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52993"
+  ["name":"Recipe":private]=>
+  string(54) "Honey Balsamic Chicken with Crispy Broccoli & Potatoes"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(1714) "2 Servings
+
+1. Preheat oven to 425 degrees. Wash and dry all produce. Cut potatoes into 1/2-inch-thick wedges. Toss on one side of a baking sheet with a drizzle of oil, salt, and pepper. (For 4 servings, spread potatoes out across entire sheet.) Roast on top rack for 5 minutes (we'll add the broccoli then). 
+
+2. Meanwhile, cut broccoli florets into bite-size pieces, if necessary. Peel and finely chop garlic. In a small microwave-safe bowl, combine 1 TBSP olive oil (2 TBSP for 4 servings) and half the garlic. Microwave until garlic sizzles, 30 seconds. 
+
+3. Once potatoes have roasted 5 minutes, remove sheet from oven and add broccoli to empty side; carefully toss with garlic oil, salt, and pepper. (For 4 servings, add broccoli to a second sheet.) Continue roasting until potatoes and broccoli are browned and crispy, 15-20 minutes more. 
+
+4. While veggies roast, pat chicken dry with paper towels; season all over with salt and pepper. Heat a drizzle of oil in a large pan over medium-high heat. Add chicken and cook until browned and cooked through, 5-6 minutes per side. (If chicken browns too quickly, reduce heat to medium.) Turn off heat; set chicken aside to rest. Wash out pan. 
+
+5. Heat pan used for chicken over medium-high heat. Add a drizzle of oil and remaining garlic; cook until fragrant, 30 seconds. Stir in vinegar, honey, stock concentrate, and 1/4 cup water (1/3 cup for 4 servings). Simmer until thick and glossy, 2-3 minutes. Remove from heat and stir in 1 TBSP butter (2 TBSP for 4). Season with salt and pepper. 
+
+6. Return chicken to pan and turn to coat in glaze. Divide chicken, broccoli, and potatoes between plates. Spoon any remaining glaze over chicken and serve. "
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/kvbotn1581012881.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(21) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(0) ""
+  ["recipeVideo":"Recipe":private]=>
+  string(0) ""
+}
+
+object(Recipe)#3 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52923"
+  ["name":"Recipe":private]=>
+  string(21) "Canadian Butter Tarts"
+  ["category":"Recipe":private]=>
+  string(7) "Dessert"
+  ["instructions":"Recipe":private]=>
+  string(1074) "Preheat the oven to fan 170C/ conventional 190C/gas 5. Roll out the pastry on a lightly floured surface so it’s slightly thinner than straight from the pack. Then cut out 18-20 rounds with a 7.5cm fluted cutter, re-rolling the trimmings. Use the rounds to line two deep 12-hole tart tins (not muffin tins). If you only have a regular-sized, 12-hole tart tin you will be able to make a few more slightly shallower tarts.
+Beat the eggs in a large bowl and combine with the rest of the ingredients except the walnuts. Tip this mixture into a pan and stir continuously for 3-4 minutes until the butter melts, and the mixture bubbles and starts to thicken. It should be thick enough to coat the back of a wooden spoon. Don’t overcook, and be sure to stir all the time as the mixture can easily burn. Remove from the heat and stir in the nuts.
+Spoon the filling into the unbaked tart shells so it’s level with the pastry. Bake for 15-18 minutes until set and pale golden. Leave in the tin to cool for a few minutes before lifting out on to a wire rack. Serve warm or cold."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/wpputp1511812960.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(28) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(62) "https://www.bbcgoodfood.com/recipes/1837/canadian-butter-tarts"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=WUpaOGghOdo"
+}
+
+object(Recipe)#4 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52952"
+  ["name":"Recipe":private]=>
+  string(12) "Beef Lo Mein"
+  ["category":"Recipe":private]=>
+  string(4) "Beef"
+  ["instructions":"Recipe":private]=>
+  string(883) "STEP 1 - MARINATING THE BEEF
+In a bowl, add the beef, salt, 1 pinch white pepper, 1 Teaspoon sesame seed oil, 1/2 egg, corn starch,1 Tablespoon of oil and mix together.
+STEP 2 - BOILING THE THE NOODLES
+In a 6 qt pot add your noodles to boiling water until the noodles are submerged and boil on high heat for 10 seconds. After your noodles is done boiling strain and cool with cold water.
+STEP 3 - STIR FRY
+Add 2 Tablespoons of oil, beef and cook on high heat untill beef is medium cooked.
+Set the cooked beef aside
+In a wok add 2 Tablespoon of oil, onions, minced garlic, minced ginger, bean sprouts, mushrooms, peapods and 1.5 cups of water or until the vegetables are submerged in water.
+Add the noodles to wok
+To make the sauce, add oyster sauce, 1 pinch white pepper, 1 teaspoon sesame seed oil, sugar, and 1 Teaspoon of soy sauce.
+Next add the beef to wok and stir-fry"
+  ["thumbnail":"Recipe":private]=>
+  string(59) "https://www.themealdb.com/images/media/meals/1529444830.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(42) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(42) "https://sueandgambo.com/pages/beef-lo-mein"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=ZT9LSsNXXe0"
+}
+
+object(Recipe)#5 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52877"
+  ["name":"Recipe":private]=>
+  string(19) "Lamb and Potato pie"
+  ["category":"Recipe":private]=>
+  string(4) "Lamb"
+  ["instructions":"Recipe":private]=>
+  string(792) "Dust the meat with flour to lightly coat.
+Heat enough vegetable oil in a large saucepan to fill the base, and fry the onion and meat until lightly browned. Season with salt and pepper.
+Add the carrots, stock and more seasoning to taste.
+Bring to the boil, cover and reduce the heat to a simmer. Simmer for at least an hour or until the meat is tender. Take your time cooking the meat, the longer you leave it to cook, the better the flavour will be.
+Preheat the oven to 180C/350F/Gas 4.
+Add the drained potato cubes to the lamb.
+Turn the mixture into a pie dish or casserole and cover with the shortcrust pastry. Make three slits in the top of the pastry to release any steam while cooking.
+Brush with beaten egg and bake for about 40 minutes, until the pastry is golden brown.
+Serve."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/sxrpws1511555907.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(46) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+    ["Lamb Shoulder"]=>
+    string(4) "500g"
+    ["Flour"]=>
+    string(6) "1 tbls"
+    ["Carrots"]=>
+    string(8) "2 sliced"
+    ["Vegetable Stock"]=>
+    string(10) "350ml/12fl"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(57) "https://www.bbc.co.uk/food/recipes/lambandpotatopie_83913"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=NCyPaaUNYUk"
+}
+
+object(Recipe)#6 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52956"
+  ["name":"Recipe":private]=>
+  string(14) "Chicken Congee"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(975) "STEP 1 - MARINATING THE CHICKEN
+In a bowl, add chicken, salt, white pepper, ginger juice and then mix it together well.
+Set the chicken aside.
+STEP 2 - RINSE THE WHITE RICE
+Rinse the rice in a metal bowl or pot a couple times and then drain the water.
+STEP 2 - BOILING THE WHITE RICE
+Next add 8 cups of water and then set the stove on high heat until it is boiling. Once rice porridge starts to boil, set the stove on low heat and then stir it once every 8-10 minutes for around 20-25 minutes.
+After 25 minutes, this is optional but you can add a little bit more water to make rice porridge to make it less thick or to your preference.
+Next add the marinated chicken to the rice porridge and leave the stove on low heat for another 10 minutes.
+After an additional 10 minutes add the green onions, sliced ginger, 1 pinch of salt, 1 pinch of white pepper and stir for 10 seconds.
+Serve the rice porridge in a bowl
+Optional: add Coriander on top of the rice porridge."
+  ["thumbnail":"Recipe":private]=>
+  string(59) "https://www.themealdb.com/images/media/meals/1529446352.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(51) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+    ["Lamb Shoulder"]=>
+    string(4) "500g"
+    ["Flour"]=>
+    string(6) "1 tbls"
+    ["Carrots"]=>
+    string(8) "2 sliced"
+    ["Vegetable Stock"]=>
+    string(10) "350ml/12fl"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(44) "https://sueandgambo.com/pages/chicken-congee"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=kqEfk801E94"
+}
+
+object(Recipe)#7 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52947"
+  ["name":"Recipe":private]=>
+  string(10) "Ma Po Tofu"
+  ["category":"Recipe":private]=>
+  string(4) "Beef"
+  ["instructions":"Recipe":private]=>
+  string(1413) "Add a small pinch of salt and sesame oil to minced beef. Mix well and set aside.
+Mix 1 tablespoon of cornstarch with 2 and ½ tablespoons of water in a small bowl to make water starch.
+Cut tofu into square cubes (around 2cms). Bring a large amount of water to a boil and then add a pinch of salt. Slide the tofu in and cook for 1 minute. Move out and drain.
+Get a wok and heat up around 2 tablespoons of oil, fry the minced meat until crispy. Transfer out beef out and leave the oil in.
+Fry doubanjiang for 1 minute over slow fire and then add garlic, scallion white, ginger and fermented black beans to cook for 30 seconds until aroma. Then mix pepper flakes in.
+Add water to the seasonings and bring to boil over high fire. Gently slide the tofu cubes. Add light soy sauce and beef.Slow the heat after boiling and then simmer for 6-8 minutes. Then add chopped garlic greens.
+Stir the water starch and then pour half of the mixture to the simmering pot. Wait for around 30 seconds and then pour the other half. You can slightly taste the tofu and add pinch of salt if not salty enough. By the way, if you feel it is too spicy, add some sugar can milder the taste. But be carefully as the broth is very hot at this point.
+Transfer out when almost all the seasonings stick to tofu cubes. Sprinkle Szechuan peppercorn powder (to taste)and chopped garlic greens if using.
+Serve immediately with steamed rice."
+  ["thumbnail":"Recipe":private]=>
+  string(59) "https://www.themealdb.com/images/media/meals/1525874812.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(58) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+    ["Lamb Shoulder"]=>
+    string(4) "500g"
+    ["Flour"]=>
+    string(6) "1 tbls"
+    ["Carrots"]=>
+    string(8) "2 sliced"
+    ["Vegetable Stock"]=>
+    string(10) "350ml/12fl"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tofu"]=>
+    string(4) "450g"
+    ["Minced Beef"]=>
+    string(5) "100g "
+    ["Doubanjiang"]=>
+    string(10) "1 1/2 tsp "
+    ["Fermented Black Beans"]=>
+    string(7) "1/2 tsp"
+    ["Sichuan pepper"]=>
+    string(7) "1/2 tsp"
+    ["Scallions"]=>
+    string(9) "2 chopped"
+    ["Cornstarch"]=>
+    string(5) "1 tbs"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(50) "https://www.chinasichuanfood.com/mapo-tofu-recipe/"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=IhwPQL9dFYc"
+}
+
+object(Recipe)#8 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "53020"
+  ["name":"Recipe":private]=>
+  string(29) "Rosół (Polish Chicken Soup)"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(769) "Add chicken to a large Dutch oven or stock pot 
+Cover with water
+Bring to a boil and simmer for 2 to 2 1/2 hours, skimming any impurities off the top to insure a clear broth
+If your pot is big enough, add the vegetables and spices for the last hour of the cooking time
+My Dutch oven wasn’t big enough to hold everything, just the chicken and other bones filled the pot, so I cooked the meat/bones for the full cooking time, then removed them, and cooked the vegetables and spices separately
+Strain everything out of the broth
+Bone the chicken, pulling the meat into large chunks
+Slice the carrots
+Return the chicken and carrots to the broth
+Cook noodles according to package instructions if you’re using them
+Add noodles to bowl and then top with hot soup"
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/lx1kkj1593349302.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(68) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+    ["Lamb Shoulder"]=>
+    string(4) "500g"
+    ["Flour"]=>
+    string(6) "1 tbls"
+    ["Carrots"]=>
+    string(8) "2 sliced"
+    ["Vegetable Stock"]=>
+    string(10) "350ml/12fl"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tofu"]=>
+    string(4) "450g"
+    ["Minced Beef"]=>
+    string(5) "100g "
+    ["Doubanjiang"]=>
+    string(10) "1 1/2 tsp "
+    ["Fermented Black Beans"]=>
+    string(7) "1/2 tsp"
+    ["Sichuan pepper"]=>
+    string(7) "1/2 tsp"
+    ["Scallions"]=>
+    string(9) "2 chopped"
+    ["Cornstarch"]=>
+    string(5) "1 tbs"
+    ["Chicken Legs"]=>
+    string(9) "4 Chopped"
+    ["Onions"]=>
+    string(7) "2 large"
+    ["Leek"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(7) "1 small"
+    ["Cabbage"]=>
+    string(4) "1/4 "
+    ["Cloves"]=>
+    string(7) "1 whole"
+    ["Allspice"]=>
+    string(4) "1tsp"
+    ["Bay Leaf"]=>
+    string(1) "2"
+    ["Parsley"]=>
+    string(8) "4 sprigs"
+    ["Dill"]=>
+    string(8) "4 sprigs"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(54) "https://polishhousewife.com/rosol-polish-chicken-soup/"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=AU60fxyxXGw"
+}
+
+object(Recipe)#9 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52878"
+  ["name":"Recipe":private]=>
+  string(19) "Beef and Oyster pie"
+  ["category":"Recipe":private]=>
+  string(4) "Beef"
+  ["instructions":"Recipe":private]=>
+  string(2136) "Season the beef cubes with salt and black pepper. Heat a tablespoon of oil in the frying pan and fry the meat over a high heat. Do this in three batches so that you don’t overcrowd the pan, transferring the meat to a large flameproof casserole dish once it is browned all over. Add extra oil if the pan seems dry.
+In the same pan, add another tablespoon of oil and cook the shallots for 4-5 minutes, then add the garlic and fry for 30 seconds. Add the bacon and fry until slightly browned. Transfer the onion and bacon mixture to the casserole dish and add the herbs.
+Preheat the oven to 180C/350F/Gas 4.
+Pour the stout into the frying pan and bring to the boil, stirring to lift any stuck-on browned bits from the bottom of the pan. Pour the stout over the beef in the casserole dish and add the stock. Cover the casserole and place it in the oven for 1½-2 hours, or until the beef is tender and the sauce is reduced.
+Skim off any surface fat, taste and add salt and pepper if necessary, then stir in the cornflour paste. Put the casserole dish on the hob – don’t forget that it will be hot – and simmer for 1-2 minutes, stirring, until thickened. Leave to cool.
+Increase the oven to 200C/400F/Gas 6. To make the pastry, put the flour and salt in a very large bowl. Grate the butter and stir it into the flour in three batches. Gradually add 325ml/11fl oz cold water – you may not need it all – and stir with a round-bladed knife until the mixture just comes together. Knead the pastry lightly into a ball on a lightly floured surface and set aside 250g/9oz for the pie lid.
+Roll the rest of the pastry out until about 2cm/¾in larger than the dish you’re using. Line the dish with the pastry then pile in the filling, tucking the oysters in as well. Brush the edge of the pastry with beaten egg.
+Roll the remaining pastry until slightly larger than your dish and gently lift over the filling, pressing the edges firmly to seal, then trim with a sharp knife. Brush with beaten egg to glaze. Put the dish on a baking tray and bake for 25-30 minutes, or until the pastry is golden-brown and the filling is bubbling."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/wrssvt1511556563.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(76) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+    ["Lamb Shoulder"]=>
+    string(4) "500g"
+    ["Flour"]=>
+    string(6) "1 tbls"
+    ["Carrots"]=>
+    string(8) "2 sliced"
+    ["Vegetable Stock"]=>
+    string(10) "350ml/12fl"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tofu"]=>
+    string(4) "450g"
+    ["Minced Beef"]=>
+    string(5) "100g "
+    ["Doubanjiang"]=>
+    string(10) "1 1/2 tsp "
+    ["Fermented Black Beans"]=>
+    string(7) "1/2 tsp"
+    ["Sichuan pepper"]=>
+    string(7) "1/2 tsp"
+    ["Scallions"]=>
+    string(9) "2 chopped"
+    ["Cornstarch"]=>
+    string(5) "1 tbs"
+    ["Chicken Legs"]=>
+    string(9) "4 Chopped"
+    ["Onions"]=>
+    string(7) "2 large"
+    ["Leek"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(7) "1 small"
+    ["Cabbage"]=>
+    string(4) "1/4 "
+    ["Cloves"]=>
+    string(7) "1 whole"
+    ["Allspice"]=>
+    string(4) "1tsp"
+    ["Bay Leaf"]=>
+    string(1) "2"
+    ["Parsley"]=>
+    string(8) "4 sprigs"
+    ["Dill"]=>
+    string(8) "4 sprigs"
+    ["Shallots"]=>
+    string(1) "3"
+    ["Bacon"]=>
+    string(4) "125g"
+    ["Thyme"]=>
+    string(13) "1 tbs chopped"
+    ["Stout"]=>
+    string(5) "330ml"
+    ["Beef Stock"]=>
+    string(5) "400ml"
+    ["Corn Flour"]=>
+    string(5) "2 tbs"
+    ["Oysters"]=>
+    string(1) "8"
+    ["Plain Flour"]=>
+    string(4) "400g"
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(60) "https://www.bbc.co.uk/food/recipes/beef_and_oyster_pie_65230"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=ONX74yP6JnI"
+}
+
+object(Recipe)#10 (8) {
+  ["id":"Recipe":private]=>
+  string(5) "52934"
+  ["name":"Recipe":private]=>
+  string(17) "Chicken Basquaise"
+  ["category":"Recipe":private]=>
+  string(7) "Chicken"
+  ["instructions":"Recipe":private]=>
+  string(1300) "Preheat the oven to 180°C/Gas mark 4. Have the chicken joints ready to cook. Heat the butter and 3 tbsp olive oil in a flameproof casserole or large frying pan. Brown the chicken pieces in batches on both sides, seasoning them with salt and pepper as you go. Don't crowd the pan - fry the chicken in small batches, removing the pieces to kitchen paper as they are done.
+
+Add a little more olive oil to the casserole and fry the onions over a medium heat for 10 minutes, stirring frequently, until softened but not browned. Add the rest of the oil, then the peppers and cook for another 5 minutes.
+
+Add the chorizo, sun-dried tomatoes and garlic and cook for 2-3 minutes. Add the rice, stirring to ensure it is well coated in the oil. Stir in the tomato paste, paprika, bay leaves and chopped thyme. Pour in the stock and wine. When the liquid starts to bubble, turn the heat down to a gentle simmer. Press the rice down into the liquid if it isn't already submerged and place the chicken on top. Add the lemon wedges and olives around the chicken.
+
+Cover and cook in the oven for 50 minutes. The rice should be cooked but still have some bite, and the chicken should have juices that run clear when pierced in the thickest part with a knife. If not, cook for another 5 minutes and check again."
+  ["thumbnail":"Recipe":private]=>
+  string(65) "https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg"
+  ["ingredientMap":"Recipe":private]=>
+  array(86) {
+    ["Lamb Mince"]=>
+    string(4) "500g"
+    ["Garlic"]=>
+    string(15) "2 cloves minced"
+    ["Onion"]=>
+    string(1) "1"
+    ["Spinach"]=>
+    string(4) "300g"
+    ["Tomato Puree"]=>
+    string(5) "3 tbs"
+    ["Cumin"]=>
+    string(5) "1 tbs"
+    ["Chicken Stock"]=>
+    string(7) "1 Litre"
+    ["Harissa Spice"]=>
+    string(5) "3 tsp"
+    ["Chickpeas"]=>
+    string(4) "400g"
+    ["Lemon Juice"]=>
+    string(4) "1/2 "
+    ["Macaroni"]=>
+    string(4) "150g"
+    ["Salt"]=>
+    string(5) "Pinch"
+    ["Pepper"]=>
+    string(5) "Pinch"
+    ["Potatoes"]=>
+    string(1) "5"
+    ["Broccoli"]=>
+    string(1) "1"
+    ["Chicken Breast"]=>
+    string(1) "2"
+    ["Balsamic Vinegar"]=>
+    string(1) " "
+    ["Honey"]=>
+    string(1) " "
+    ["Butter"]=>
+    string(6) "1 tbsp"
+    ["Vegetable Oil"]=>
+    string(6) "1 tbsp"
+    ["Olive Oil"]=>
+    string(6) "1 tbsp"
+    ["Shortcrust Pastry"]=>
+    string(4) "375g"
+    ["Eggs"]=>
+    string(7) "2 large"
+    ["Muscovado Sugar"]=>
+    string(4) "175g"
+    ["Raisins"]=>
+    string(5) "100g "
+    ["Vanilla Extract"]=>
+    string(6) "1 tsp "
+    ["Single Cream"]=>
+    string(5) "4 tsp"
+    ["Walnuts"]=>
+    string(3) "50g"
+    ["Beef"]=>
+    string(6) "1/2 lb"
+    ["Sesame Seed Oil"]=>
+    string(5) "2 tsp"
+    ["Egg"]=>
+    string(4) "1/2 "
+    ["Starch"]=>
+    string(5) "3 tbs"
+    ["Oil"]=>
+    string(5) "5 tbs"
+    ["Noodles"]=>
+    string(6) "1/4 lb"
+    ["Minced Garlic"]=>
+    string(6) "1 tsp "
+    ["Ginger"]=>
+    string(6) "1 tsp "
+    ["Bean Sprouts"]=>
+    string(6) "1 cup "
+    ["Mushrooms"]=>
+    string(6) "1 cup "
+    ["Water"]=>
+    string(6) "1 cup "
+    ["Oyster Sauce"]=>
+    string(5) "1 tbs"
+    ["Sugar"]=>
+    string(6) "1 tsp "
+    ["Soy Sauce"]=>
+    string(6) "1 tsp "
+    ["Lamb Shoulder"]=>
+    string(4) "500g"
+    ["Flour"]=>
+    string(6) "1 tbls"
+    ["Carrots"]=>
+    string(8) "2 sliced"
+    ["Vegetable Stock"]=>
+    string(10) "350ml/12fl"
+    ["Chicken"]=>
+    string(5) "8 oz "
+    ["Ginger Cordial"]=>
+    string(6) "1 tsp "
+    ["Spring Onions"]=>
+    string(5) "1 tbs"
+    ["Rice"]=>
+    string(8) "1/2 cup "
+    ["Coriander"]=>
+    string(5) "2 oz "
+    ["Tofu"]=>
+    string(4) "450g"
+    ["Minced Beef"]=>
+    string(5) "100g "
+    ["Doubanjiang"]=>
+    string(10) "1 1/2 tsp "
+    ["Fermented Black Beans"]=>
+    string(7) "1/2 tsp"
+    ["Sichuan pepper"]=>
+    string(7) "1/2 tsp"
+    ["Scallions"]=>
+    string(9) "2 chopped"
+    ["Cornstarch"]=>
+    string(5) "1 tbs"
+    ["Chicken Legs"]=>
+    string(9) "4 Chopped"
+    ["Onions"]=>
+    string(7) "2 large"
+    ["Leek"]=>
+    string(9) "1 chopped"
+    ["Celery"]=>
+    string(7) "1 small"
+    ["Cabbage"]=>
+    string(4) "1/4 "
+    ["Cloves"]=>
+    string(7) "1 whole"
+    ["Allspice"]=>
+    string(4) "1tsp"
+    ["Bay Leaf"]=>
+    string(1) "2"
+    ["Parsley"]=>
+    string(8) "4 sprigs"
+    ["Dill"]=>
+    string(8) "4 sprigs"
+    ["Shallots"]=>
+    string(1) "3"
+    ["Bacon"]=>
+    string(4) "125g"
+    ["Thyme"]=>
+    string(13) "1 tbs chopped"
+    ["Stout"]=>
+    string(5) "330ml"
+    ["Beef Stock"]=>
+    string(5) "400ml"
+    ["Corn Flour"]=>
+    string(5) "2 tbs"
+    ["Oysters"]=>
+    string(1) "8"
+    ["Plain Flour"]=>
+    string(4) "400g"
+    ["Red Onions"]=>
+    string(8) "2 sliced"
+    ["Red Pepper"]=>
+    string(7) "3 Large"
+    ["Chorizo"]=>
+    string(4) "130g"
+    ["Sun-Dried Tomatoes"]=>
+    string(1) "8"
+    ["Basmati Rice"]=>
+    string(4) "300g"
+    ["Paprika"]=>
+    string(6) "½ tsp"
+    ["Bay Leaves"]=>
+    string(1) "4"
+    ["Dry White Wine"]=>
+    string(4) "180g"
+    ["Lemons"]=>
+    string(1) "2"
+    ["Black Olives"]=>
+    string(5) "100g "
+  }
+  ["recipeSource":"Recipe":private]=>
+  string(54) "https://www.rivercottage.net/recipes/chicken-basquaise"
+  ["recipeVideo":"Recipe":private]=>
+  string(43) "https://www.youtube.com/watch?v=emfm6TwsVhg"
+}
+
