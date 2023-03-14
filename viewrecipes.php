@@ -1,6 +1,10 @@
 <?php
-include("includes/include.php");
+// include_once("includes/include.php");
 include_once "Session.php";
+include_once "T_RandomRecipe.php";
+include_once "DatabaseObjects/M_recipe.php";
+// include_once "DatabaseObjects/M_recipe_ingredient_link.php";
+// include_once "DatabaseObjects/M_ingredient.php";
 
 ?>
 <!doctype html>
@@ -15,31 +19,19 @@ include_once "Session.php";
 
 <body>
     <?php
-    $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
-
-    $imgThumb = $recipesArray[0]['strMealThumb'];
-    $id = $recipesArray[0]['idMeal'];
-    $meal = $recipesArray[0]['strMeal'];
-    $category = $recipesArray[0]['strCategory'];
-    $area = $recipesArray[0]['strArea'];
-    $instructions = $recipesArray[0]['strInstructions'];
+    $randId = T_RandomRecipe::getRandomRecipeID();
+    $recipe = new M_recipe($randId);
+    $imgThumb = $recipe->image;
+    $id = $recipe->recipe_id;
+    $meal = $recipe->recipe_name;
+    $category = $recipe->recipe_type;
+    $area = $recipe->recipe_area;
+    $instructions = $recipe->recipe_instructions;
     $UserID = $_SESSION['UserID'];
     $ingredients = [];
-    $video = $recipesArray[0]['strYoutube'];
-    $source = $recipesArray[0]['strSource'];
+    $video = $recipe->youtube_url;
+    $source = $recipe->source_url;
 
-    foreach ($recipesArray as $r) {
-
-        for ($i = 1; $i < 21; $i++) {
-            $strIng = 'strIngredient' . $i;
-            $strMeas = 'strMeasure' . $i;
-
-            if ($r[$strIng] == "") {
-                break;
-            }
-            $ingredients += [$r[$strIng] => $r[$strMeas]];
-        }
-    }
     ?>
 
     <div class="loginLogo row">
@@ -74,22 +66,24 @@ include_once "Session.php";
                         <h3>INGREDIENTS:</h2>
                             <?php
                             $i = 1;
-                            foreach ($ingredients as $ing) {
+                            foreach($recipe->recipe_ingredient_link as $row)
+                            {
                                 echo '<div class="row checkbox">';
                                 echo '<div class="col-1">';
                                 echo '<input type="checkbox"
-                                name="' . $recipesArray[0]["strIngredient$i"] . '" 
-                                value="' . $recipesArray[0]["strIngredient$i"] . '">';
+                                name="' . $row->ingredient_id->ingredient_value . '" 
+                                value="' . $row->ingredient_id->ingredient_value . '">';
                                 echo '</div>';
                                 echo '<div class="col-11">';
                                 echo "<p>" .
-                                    $recipesArray[0]["strIngredient$i"] . " : " .
-                                    $recipesArray[0]["strMeasure$i"] .
+                                    $row->ingredient_id->ingredient_value . " : " .
+                                    $row->measurement_id->measurement_value . " " . $row->measurement_id->measurement_unit_id->measurement_unit_value .
                                     "</p>";
                                 echo '</div>';
                                 echo '</div>';
                                 $i++;
                             }
+
                             ?>
                     </div>
                     <!-- end ingredients segment  -->

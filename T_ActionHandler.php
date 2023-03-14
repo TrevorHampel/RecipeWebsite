@@ -2,8 +2,7 @@
 include_once "T_Hash.php";
 include_once "T_Login.php";
 include_once "T_Favorites.php";
-include_once "T_AddRecipe.php";
-include_once "T_CreateAccount";
+include_once "T_CreateAccount.php";
 
 
 if (isset($_POST['action'])) {

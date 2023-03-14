@@ -43,6 +43,27 @@ function getRecipeFromAPI($id)
     return $recipe_obj['meals'];
 }
 
+function getRecipeFromLetter($letter)
+{
+    $key = auth;
+    $urlRandom = "https://www.themealdb.com/api/json/v2/" . $key . "/search.php?f=" . $letter;
+
+
+    $curl_handle = curl_init();
+
+    curl_setopt($curl_handle, CURLOPT_URL, $urlRandom);
+    curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+
+    $recipe_data = curl_exec($curl_handle);
+
+    curl_close($curl_handle);
+
+    $recipe_obj = json_decode($recipe_data, true);
+
+    return $recipe_obj['meals'];
+}
+
+
 /**
  * Takes in an array of json recipes and parses them into Recipe objects to be displayed
  * Returns an array of Recipe objects
