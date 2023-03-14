@@ -39,7 +39,7 @@
         <button type="signup" class="btn btn-primary" onclick="signUp()">Sign up</button>
       </div>
       <div class="col text-end">
-        <button type="submit" class="btn btn-primary" onclick="login()">Submit</button>
+        <button type="submit" class="btn btn-primary" id="btnLogin" onclick="login()">Submit</button>
       </div>
     </div>
   </div>
