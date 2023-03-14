@@ -2,6 +2,8 @@
 include_once "T_Hash.php";
 include_once "T_Login.php";
 include_once "T_Favorites.php";
+include_once "T_AddRecipe.php";
+include_once "T_CreateAccount";
 
 
 if (isset($_POST['action'])) {
@@ -13,8 +15,8 @@ if (isset($_POST['action'])) {
             echo $T_Login->checkLogin($_POST['username'], $newHashPass);
             break;
         case "CreateAccount":
-            $T_Login = new T_Login();
-            echo $T_Login->createAccount($_POST['username'], $_POST['password'], $_POST['first'], $_POST['last']);
+            $T_CreateAccount = new T_CreateAccount();
+            echo $T_CreateAccount->createAccount($_POST['username'], $_POST['password'], $_POST['first'], $_POST['last']);
             break;
         case "AddToFavorites":
             $T_Favorites = new T_Favorites();

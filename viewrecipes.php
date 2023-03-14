@@ -1,5 +1,6 @@
 <?php
-include("includes/include.php"); 
+include("includes/include.php");
+include_once "Session.php";
 
 ?>
 <!doctype html>
@@ -54,69 +55,69 @@ include("includes/include.php");
     </h1>
 
     <!-- surrond all -->
-    <div class="recipe">
-        <!-- img segment start  -->
-        <div class="row noedge">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
-            </div>
-        </div>
+    <div class=" recipe">
+                <!-- img segment start  -->
+                <div class="row noedge">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10">
+                        <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
+                    </div>
+                </div>
 
-        <div class="row noedge">
-            <div class="col">
-                <img src="<?php echo $imgThumb ?>">
-            </div>
-            <!-- ingredients segment start  -->
-            <div class="col">
-                <h3>INGREDIENTS:</h2>
-                    <?php
-                    $i = 1;
-                    foreach ($ingredients as $ing) {
-                        echo '<div class="row checkbox">';
-                        echo '<div class="col-1">';
-                        echo '<input type="checkbox"
+                <div class="row noedge">
+                    <div class="col">
+                        <img src="<?php echo $imgThumb ?>">
+                    </div>
+                    <!-- ingredients segment start  -->
+                    <div class="col">
+                        <h3>INGREDIENTS:</h2>
+                            <?php
+                            $i = 1;
+                            foreach ($ingredients as $ing) {
+                                echo '<div class="row checkbox">';
+                                echo '<div class="col-1">';
+                                echo '<input type="checkbox"
                                 name="' . $recipesArray[0]["strIngredient$i"] . '" 
                                 value="' . $recipesArray[0]["strIngredient$i"] . '">';
-                        echo '</div>';
-                        echo '<div class="col-11">';
-                        echo "<p>" .
-                            $recipesArray[0]["strIngredient$i"] . " : " .
-                            $recipesArray[0]["strMeasure$i"] .
-                            "</p>";
-                        echo '</div>';
-                        echo '</div>';
-                        $i++;
-                    }
+                                echo '</div>';
+                                echo '<div class="col-11">';
+                                echo "<p>" .
+                                    $recipesArray[0]["strIngredient$i"] . " : " .
+                                    $recipesArray[0]["strMeasure$i"] .
+                                    "</p>";
+                                echo '</div>';
+                                echo '</div>';
+                                $i++;
+                            }
+                            ?>
+                    </div>
+                    <!-- end ingredients segment  -->
+                </div>
+                <!-- end img segment  -->
+
+                <div>
+                    <?php
+                    echo '<a href="' . $source . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
+                    echo '<a href="' . $video . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
+                    echo "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $id . ", $UserID)'>Add to Favorites</button></a>";
                     ?>
-            </div>
-            <!-- end ingredients segment  -->
-        </div>
-        <!-- end img segment  -->
+                </div>
 
-        <div>
-            <?php
-                echo '<a href="' . $source . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
-                echo '<a href="' . $video . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
-                echo "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $id . ", $UserID)'>Add to Favorites</button></a>";
-            ?>
-        </div>
+                <!-- instructions segment start  -->
+                <div>
+                    <h2>INSTRUCTIONS:</h2>
+                    <p> <?php echo "" . $instructions ?></p>
+                </div>
+                <!-- end instructions segment  -->
 
-        <!-- instructions segment start  -->
-        <div>
-            <h2>INSTRUCTIONS:</h2>
-            <p> <?php echo "" . $instructions ?></p>
-        </div>
-        <!-- end instructions segment  -->
+                </div>
 
-    </div>
-
-    <!-- TODO WORK ON STYLING -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="javascripts/favorites.js"></script>
+                <!-- TODO WORK ON STYLING -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script src="javascripts/favorites.js"></script>
 </body>
 
 </html>
