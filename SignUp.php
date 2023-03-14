@@ -33,7 +33,7 @@
       </div>
       <div class="mb-3">
         <label for="user_id">Username</label>
-        <input type="text" class="form-control" id="username_id" placeholder="Username">
+        <input type="text" class="form-control" id="username_id" placeholder="Username" max="64">
       </div>
       <!--
         <div class="mb-3">
