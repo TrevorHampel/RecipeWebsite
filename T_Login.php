@@ -14,7 +14,6 @@ class T_Login
         WHERE user_name LIKE '" . $username . "'
         AND password LIKE '" . $password . "'";
         $returnArray = $Database->selectAssc($sql);
-
         if (empty($returnArray)) {
             return "false";
         } else {
