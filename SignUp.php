@@ -55,10 +55,10 @@
     </div>
     <div class="row buttons">
       <div class="col text-start">
-        <button type="login" class="btn btn-primary" onclick="GoToLogin()">&nbspLogin&nbsp</button>
+        <button type="login" class="btn btn-primary" onclick="GoToLogin()">Back to Login</button>
       </div>
       <div class="col text-end">
-        <button type="submit" class="btn btn-primary" onclick="CreateAccount()">Submit</button>
+        <button type="submit" class="btn btn-primary" id="btnCreateAccount" onclick="CreateAccount()">Create Account</button>
       </div>
     </div>
   </div>

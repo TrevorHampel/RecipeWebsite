@@ -40,7 +40,7 @@ function CreateAccount(){
     var first = $("#first_name_id").val();
     var last = $("#last_name_id").val();   
     var username = $("#username_id").val();
-    var email = $("#email_id").val();
+    //var email = $("#email_id").val();  // commented this variable out since it isn't used
     var password = $("#password_id").val();
     var confirmPassword = $("#confirm_password_id").val();
 
@@ -67,7 +67,34 @@ function CreateAccount(){
         }
         else
         {
-            window.location.href = "viewrecipes.php";
+            GoToLogin();
         }
     });
 }
+
+// The following code let's the user press enter to login or create an account after entering their password on the login page or the signup page
+// check which page it is
+if (document.getElementById("inputPassword1") != null)
+{
+    inputid = "inputPassword1";
+    btnid = "btnLogin";
+}
+else if (document.getElementById("confirm_password_id") != null)
+{
+    inputid = "confirm_password_id";
+    btnid = "btnCreateAccount";
+}
+
+// assign the input variable to the correct input field
+var input = document.getElementById(inputid);
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById(btnid).click();
+  }
+}); 
