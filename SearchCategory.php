@@ -1,5 +1,10 @@
-<?php
-include_once("includes/include.php");
+<?php 
+include("includes/include.php"); 
+// redirect the user to the login page if there user id is not in session
+if(!isset($_SESSION["UserID"])){
+    header("Location: Login.php");
+}
+
 
 function getCategories()
 {
@@ -139,6 +144,7 @@ function printRecipeGrid2($catName)
 <head>
     <title>Search Categories</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/application.css">
+    <link rel="stylesheet" type="text/css" href="css/viewrecipes.css">
 </head>
 
 <body>
