@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recipeObj->youtube_url = $youtube;
     $date = new \DateTime('now');
     $recipeObj->date_created = $date->format('Y/m/d H:i:s');
-    $recipeObj->recipe_instructions = $instructions;
+    $recipeObj->recipe_instructions = Strip_tags($instructions);
     $recipeObj->recipe_area = $area;
     $recipeObj->recipe_type = $type;
     $recipeObj->insert_obj();
