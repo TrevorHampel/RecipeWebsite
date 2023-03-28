@@ -1,5 +1,5 @@
 <?php
-require "Database.php";
+include_once "Database.php";
 
 abstract class DatabaseObject{
 
@@ -45,6 +45,7 @@ abstract class DatabaseObject{
         $sql = "UPDATE " . trim(get_class($this), "M_") . " set ";
         $counter = 0;
         $tempLength = count($objectVars);
+        $mysqli = new mysqli($dbhost = 'localhost', $dbuser = 'root', $dbpass = '', $dbname = 'recipedatabase');
         foreach($this as $key => $value) 
         {
             if($value !== null)
@@ -55,11 +56,11 @@ abstract class DatabaseObject{
                 }
                 if(gettype($value) === "string")
                 {
-                    $sql .= ' ' . $key . ' = "'.$value.'" ';
+                    $sql .= ' ' . $key . ' = "'.$mysqli->real_escape_string($value).'" ';
                 }
                 else
                 {
-                    $sql .= " $key  = $value ";
+                    $sql .= " $key  = " . $mysqli->real_escape_string($value)." ";
                 }
                 $counter++;
             }
@@ -68,7 +69,7 @@ abstract class DatabaseObject{
                 $tempLength--;
             }
         }
-        $sql .= "WHERE " . $arrayKeys[0] . " = " . $objectVars[$arrayKeys[0]];
+        $sql .= "WHERE " . $arrayKeys[0] . " = " . $mysqli->real_escape_string($objectVars[$arrayKeys[0]]);
         $Database->update($sql);
     }
 
@@ -88,6 +89,7 @@ abstract class DatabaseObject{
 
     function insert_obj()
     {
+        $mysqli = new mysqli($dbhost = 'localhost', $dbuser = 'root', $dbpass = '', $dbname = 'recipedatabase');
         $objectVars = get_object_vars($this);
         $arrayKeys = array_keys($objectVars);
         // if($objectVars[$arrayKeys[0]] !== null) //if primary key not set cannot update
@@ -113,11 +115,11 @@ abstract class DatabaseObject{
                 $col .= $key;
                 if(gettype($value) === "string")
                 {
-                    $val .= "'$value'";
+                    $val .= "'".$mysqli->real_escape_string($value)."'";
                 }
                 else
                 {
-                    $val .= "$value";
+                    $val .= $mysqli->real_escape_string($value);
                 }
                 $counter++;
             }

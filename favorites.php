@@ -56,7 +56,10 @@ if(!isset($_SESSION["UserID"])){
                 // echo "GETTING RECIPE NUMBER: " . $r["recipe_id"] . "<br>";
     
                 // call the print recipe card //
-                printRecipeCard($r["recipe_id"], $btnCounter); // <<< INTEDING to pass that id to print the array from the list of favorite by recipe id >>>>>
+                include_once 'T_RecipeHelper.php';
+                $recipe = new T_RecipeHelper();
+                echo $recipe->printRecipeCard($r["recipe_id"], $btnCounter);
+                
     
                 // $recipeNumber =  $r["recipe_id"];
                 // $favoriteRecipes = getRecipe($recipeNumber);
@@ -83,91 +86,7 @@ if(!isset($_SESSION["UserID"])){
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        function printRecipeCard($recipeNumber, $btnCounter){
-            echo '<hr class="row bar">';
-            $recipesArray = new Recipe();
 
-            $recipesArray = getRecipe($recipeNumber); // getRecipe returns a recipe ||| $Recipe = new Recipe(); get recipe is returning an array
-
-            foreach ($recipesArray as $r) {
-                // PORTION THAT CONSIST OF THE OUTER SEGMENT OF THE CARDS //
-                
-                // ECHO NAME OF RECIPE //
-                echo ' 
-                <div class="row noedge">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-10">
-                        
-                        <h2 class="centerText recipe-title" id="btn'.$btnCounter.'" style="display:block;" onclick="showhidecards(this.id)">'.$r->getName().'
-                        <img src="'.$r->getThumbnail().'" style="border-radius:15%; display:inline-block; width: 100px; height: 100px;">
-                    </div>
-                    <div class="col-md-1">
-                        <button onclick="removeFromFavorites(' . $recipeNumber. ' ,' . $_SESSION["UserID"]. ')" class="favoritesButton">Remove</button>
-                    </div>
-                </div> 
-                ';
-
-                // ECHO THE IMAGE //
-                echo '
-                <div id="card'.$btnCounter.'" hidden>
-                <div class="row noedge">
-                <div class="col">
-                <img src="'.$r->getThumbnail().'">
-                </div>
-                ';
-
-                $ingredients = $r->getIngredients();
-                
-                // <<< INGREDIENTS PRINTING SEGEMENT >>> //
-                // ECHO LIST OF INGREDIENTS //
-
-                echo '
-                <div class="col">
-                <h3>INGREDIENTS:</h2>
-                ';
-
-                foreach($ingredients as $k => $v)  {
-                    echo '<div class="row checkbox">';
-                    echo '<div class="col-1">';
-                    echo '
-                        <input type="checkbox" 
-                            name="'.$k.'" 
-                            value="'.$v.'">
-                             
-                    ';
-                    echo '</div>';
-                        echo '<div class="col-11">';
-                            echo 
-                                "<p>" .
-                                    $k . " : " .
-                                    $v .
-                                "</p>";
-                        echo '</div>';
-                    echo '</div>';
-                }
-
-
-                echo'
-                </div>
-                <!-- end ingredients segment  -->
-                </div>
-                ';
-
-                echo '
-                <!-- instructions segment start  -->
-                <div id="card'.$btnCounter.'">
-                    <h2>INSTRUCTIONS:</h2>
-                    <p>'.$r->getInstructions().'</p>
-                </div>
-                <!-- end instructions segment  -->
-                </div> <!-- END - showclose div attached to the above -- no row edge -->   
-                <br>
-                ';
-
-            }
-
-        }
   
     ?>
 

@@ -25,7 +25,7 @@
     <div class="row">
       <div class="mb-3">
         <label for="einputEmail1">Email address</label>
-        <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Email address or username">
+        <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Email address or username" max="64">
         <a href="#">Forgot Email?</a>
       </div>
       <div class="mb-3">
