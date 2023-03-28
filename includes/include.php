@@ -1,6 +1,6 @@
 <?php
 include_once('Session.php');
-include_once('Database.php');
+//include_once('Database.php');
 include_once('Recipe.php');
 include_once('auth.php');
 
