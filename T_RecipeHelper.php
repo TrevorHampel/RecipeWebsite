@@ -7,7 +7,9 @@ $Database = new Database();
 class T_RecipeHelper {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        function printRecipeCard($recipeNumber, $btnCounter){
+
+        function printRecipeCard($recipeNumber, $btnCounter, $favOrNot){
+
             $txt = '<hr class="row bar">';
             $recipesArray = new Recipe();
 
@@ -27,7 +29,20 @@ class T_RecipeHelper {
                         <img src="'.$r->getThumbnail().'" style="border-radius:15%; display:inline-block; width: 100px; height: 100px;">
                     </div>
                     <div class="col-md-1">
+
+                ';
+                if ($favOrNot == true) {
+                    $txt .= '
                         <button onclick="removeFromFavorites(' . $recipeNumber. ' ,' . $_SESSION["UserID"]. ')" class="favoritesButton">Remove</button>
+                    ';
+                }
+                else {
+                    $txt .= '
+                        <a><button type="button" class="btn btn-primary btn-md m-3" onclick="addToFavoritesList(' . $recipeNumber . ', $UserId)">Add to Favorites</button></a>
+                    ';
+                }
+                $txt .= '
+
                     </div>
                 </div> 
                 ';
