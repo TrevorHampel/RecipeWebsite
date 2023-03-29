@@ -74,19 +74,21 @@ function CreateAccount(){
 
 // The following code let's the user press enter to login or create an account after entering their password on the login page or the signup page
 // check which page it is
-if (document.getElementById("inputPassword1") != null)
-{
-    inputid = "inputPassword1";
-    btnid = "btnLogin";
-}
-else if (document.getElementById("confirm_password_id") != null)
-{
-    inputid = "confirm_password_id";
-    btnid = "btnCreateAccount";
-}
+$( document ).ready(function() {
+    console.log( "ready!" );
+    if (document.getElementById("inputPassword1") != null)
+    {
+        inputid = "inputPassword1";
+        btnid = "btnLogin";
+    }
+    else if (document.getElementById("confirm_password_id") != null)
+    {
+        inputid = "confirm_password_id";
+        btnid = "btnCreateAccount";
+    }
 
-// assign the input variable to the correct input field
-var input = document.getElementById(inputid);
+    // assign the input variable to the correct input field
+    var input = document.getElementById(inputid);
 
 // Execute a function when the user presses a key on the keyboard
 input.addEventListener("keypress", function(event) {
@@ -98,3 +100,4 @@ if (event.key === "Enter") {
     document.getElementById(btnid).click();
 }
 }); 
+

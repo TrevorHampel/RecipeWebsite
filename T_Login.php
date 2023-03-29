@@ -9,13 +9,11 @@ class T_Login
     function checkLogin($username, $password)
     {
         $Database = new Database();
-
         $sql = "SELECT * 
         FROM user 
         WHERE user_name LIKE '" . $username . "'
         AND password LIKE '" . $password . "'";
         $returnArray = $Database->selectAssc($sql);
-
         if (empty($returnArray)) {
             return "false";
         } else {
@@ -52,5 +50,4 @@ class T_Login
     {
         $_SESSION["UserID"] = $UserID;
     }
-    
 }

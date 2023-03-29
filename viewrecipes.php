@@ -1,5 +1,10 @@
 <?php
-include("includes/include.php"); 
+// include_once("includes/include.php");
+include_once "Session.php";
+include_once "T_RandomRecipe.php";
+include_once "DatabaseObjects/M_recipe.php";
+// include_once "DatabaseObjects/M_recipe_ingredient_link.php";
+// include_once "DatabaseObjects/M_ingredient.php";
 
 ?>
 <!doctype html>
@@ -14,31 +19,19 @@ include("includes/include.php");
 
 <body>
     <?php
-    $recipesArray = getRecipeFromAPI(-1); // a random recipe as of 2022.10.22 - 6:04pm ref the include file
-
-    $imgThumb = $recipesArray[0]['strMealThumb'];
-    $id = $recipesArray[0]['idMeal'];
-    $meal = $recipesArray[0]['strMeal'];
-    $category = $recipesArray[0]['strCategory'];
-    $area = $recipesArray[0]['strArea'];
-    $instructions = $recipesArray[0]['strInstructions'];
+    $randId = T_RandomRecipe::getRandomRecipeID();
+    $recipe = new M_recipe($randId);
+    $imgThumb = $recipe->image;
+    $id = $recipe->recipe_id;
+    $meal = $recipe->recipe_name;
+    $category = $recipe->recipe_type;
+    $area = $recipe->recipe_area;
+    $instructions = $recipe->recipe_instructions;
     $UserID = $_SESSION['UserID'];
     $ingredients = [];
-    $video = $recipesArray[0]['strYoutube'];
-    $source = $recipesArray[0]['strSource'];
+    $video = $recipe->youtube_url;
+    $source = $recipe->source_url;
 
-    foreach ($recipesArray as $r) {
-
-        for ($i = 1; $i < 21; $i++) {
-            $strIng = 'strIngredient' . $i;
-            $strMeas = 'strMeasure' . $i;
-
-            if ($r[$strIng] == "") {
-                break;
-            }
-            $ingredients += [$r[$strIng] => $r[$strMeas]];
-        }
-    }
     ?>
 
     <div class="loginLogo row">
@@ -54,69 +47,71 @@ include("includes/include.php");
     </h1>
 
     <!-- surrond all -->
-    <div class="recipe">
-        <!-- img segment start  -->
-        <div class="row noedge">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-10">
-                <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
-            </div>
-        </div>
+    <div class=" recipe">
+                <!-- img segment start  -->
+                <div class="row noedge">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10">
+                        <h2 class="centerText">MEAL: <?php echo " " . $meal ?></h2>
+                    </div>
+                </div>
 
-        <div class="row noedge">
-            <div class="col">
-                <img src="<?php echo $imgThumb ?>">
-            </div>
-            <!-- ingredients segment start  -->
-            <div class="col">
-                <h3>INGREDIENTS:</h2>
+                <div class="row noedge">
+                    <div class="col">
+                        <img src="<?php echo $imgThumb ?>">
+                    </div>
+                    <!-- ingredients segment start  -->
+                    <div class="col">
+                        <h3>INGREDIENTS:</h2>
+                            <?php
+                            $i = 1;
+                            foreach($recipe->recipe_ingredient_link as $row)
+                            {
+                                echo '<div class="row checkbox">';
+                                echo '<div class="col-1">';
+                                echo '<input type="checkbox"
+                                name="' . $row->ingredient_id->ingredient_value . '" 
+                                value="' . $row->ingredient_id->ingredient_value . '">';
+                                echo '</div>';
+                                echo '<div class="col-11">';
+                                echo "<p>" .
+                                    $row->ingredient_id->ingredient_value . " : " .
+                                    $row->measurement_id->measurement_value . " " . $row->measurement_id->measurement_unit_id->measurement_unit_value .
+                                    "</p>";
+                                echo '</div>';
+                                echo '</div>';
+                                $i++;
+                            }
+
+                            ?>
+                    </div>
+                    <!-- end ingredients segment  -->
+                </div>
+                <!-- end img segment  -->
+
+                <div>
                     <?php
-                    $i = 1;
-                    foreach ($ingredients as $ing) {
-                        echo '<div class="row checkbox">';
-                        echo '<div class="col-1">';
-                        echo '<input type="checkbox"
-                                name="' . $recipesArray[0]["strIngredient$i"] . '" 
-                                value="' . $recipesArray[0]["strIngredient$i"] . '">';
-                        echo '</div>';
-                        echo '<div class="col-11">';
-                        echo "<p>" .
-                            $recipesArray[0]["strIngredient$i"] . " : " .
-                            $recipesArray[0]["strMeasure$i"] .
-                            "</p>";
-                        echo '</div>';
-                        echo '</div>';
-                        $i++;
-                    }
+                    echo '<a href="' . $source . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
+                    echo '<a href="' . $video . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
+                    echo "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $id . ", $UserID)'>Add to Favorites</button></a>";
                     ?>
-            </div>
-            <!-- end ingredients segment  -->
-        </div>
-        <!-- end img segment  -->
+                </div>
 
-        <div>
-            <?php
-                echo '<a href="' . $source . '"><button type="button" class="btn btn-primary btn-md m-3">Recipe Source</button></a>';
-                echo '<a href="' . $video . '"><button type="button" class="btn btn-danger btn-md m-3">Recipe Video</button></a>';
-                echo "<a><button type='button' class='btn btn-primary btn-md m-3' onclick='addToFavoritesList(" . $id . ", $UserID)'>Add to Favorites</button></a>";
-            ?>
-        </div>
+                <!-- instructions segment start  -->
+                <div>
+                    <h2>INSTRUCTIONS:</h2>
+                    <p> <?php echo "" . $instructions ?></p>
+                </div>
+                <!-- end instructions segment  -->
 
-        <!-- instructions segment start  -->
-        <div>
-            <h2>INSTRUCTIONS:</h2>
-            <p> <?php echo "" . $instructions ?></p>
-        </div>
-        <!-- end instructions segment  -->
+                </div>
 
-    </div>
-
-    <!-- TODO WORK ON STYLING -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="javascripts/favorites.js"></script>
+                <!-- TODO WORK ON STYLING -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script src="javascripts/favorites.js"></script>
 </body>
 
 </html>

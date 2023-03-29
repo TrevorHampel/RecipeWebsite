@@ -66,6 +66,7 @@ if(!isset($_SESSION["UserID"])){
             //         $print_var .= '<h3 class="card-title">' . $recipe->getName() . '</h3>';
             //         $print_var .= '<p class="card-text">Recipe type: ' . $recipe->getCategory() . '</p>';
 
+
             //         $print_var .= '<img class="card-img-top border rounded img-fluid" src="' . $recipe->getThumbnail() . '" alt="' . $recipe->getName() . '"></a>';
             // $print_var .= '</div>';
         
@@ -83,6 +84,7 @@ if(!isset($_SESSION["UserID"])){
         $numberOfCards = sizeof($recipe_array);
         echo "<h1 id='number_of_cards' style='color:red;' hidden>".strval($numberOfCards)."<h1>";
         // echo $print_var;
+
         ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -13,7 +13,6 @@ if(!isset($_SESSION["UserID"])){
     header("Location: Login.php");
 }
 
-
 $databaseObj = new Database();
 $sql = "SELECT * FROM recipe_types";
 $typeList = $databaseObj->selectAssc($sql);
