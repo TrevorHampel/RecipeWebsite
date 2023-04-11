@@ -24,52 +24,8 @@ if(!isset($_SESSION["UserID"])){
         // $u = $_SESSION["UserID"];
             // echo "ID: " . $u . " :::";
         
-        function printFavoriteRecipes(){
 
-            $Database = new Database();
-            $Database2 = new Database();
-            
-            $sqlFavoritesIDs = "SELECT * FROM `user_favorites` WHERE user_id = ". $_SESSION["UserID"] . ";";
-            $sqlUserName = "SELECT `first_name` FROM `user` WHERE user_id = ". $_SESSION["UserID"] . ";";
-                // echo "Valid Sql Statement" . $sql; // query validated
-    
-            $returnArray = $Database->selectAssc($sqlFavoritesIDs); // <<<<< this is an array of all the numbers of the user's favorites >>>>>
-            $userName = $Database2->selectAssc($sqlUserName);
 
-            // var_dump($returnArray);
-            // var_dump($userName);
-
-            // echo "Here are: " . $userName[0]['first_name'] . "'s Favorite Recipes";
-
-            echo ' 
-            <div class="row noedge">
-            <h3 class="centerText">'.$userName[0]['first_name'].'\'s Favorites</h3>
-            </div> 
-            ';
-
-            $btnCounter = 0;
-
-            foreach($returnArray as $r){
-                // echo "GETTING SOMETHING " . $r["recipe_id"] . "<br>";
-    
-                // retrieving the recipe number
-                // echo "GETTING RECIPE NUMBER: " . $r["recipe_id"] . "<br>";
-    
-                // call the print recipe card //
-                include_once 'T_RecipeHelper.php';
-                $recipe = new T_RecipeHelper();
-                echo $recipe->printRecipeCard($r["recipe_id"], $btnCounter);
-                
-    
-                // $recipeNumber =  $r["recipe_id"];
-                // $favoriteRecipes = getRecipe($recipeNumber);
-                echo "<br>";
-                $btnCounter++;
-            }
-            $numberOfCards = sizeof($returnArray);
-            echo "<h1 id='number_of_cards' style='color:red;' hidden>".strval($numberOfCards)."<h1>";
-
-        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         function printLargeImageLogo(){
@@ -98,7 +54,48 @@ if(!isset($_SESSION["UserID"])){
     <!-- surrond all -->
     <div class="recipe">
         <?php
-        printFavoriteRecipes();
+                    $Database = new Database();
+                    
+                    $sqlFavoritesIDs = "SELECT * FROM `user_favorites` WHERE user_id = ". $_SESSION["UserID"] . ";";
+                    $sqlUserName = "SELECT `first_name` FROM `user` WHERE user_id = ". $_SESSION["UserID"] . ";";
+                        // echo "Valid Sql Statement" . $sql; // query validated
+            
+                    $returnArray = $Database->selectAssc($sqlFavoritesIDs); // <<<<< this is an array of all the numbers of the user's favorites >>>>>
+                    $userName = $Database->selectAssc($sqlUserName);
+        
+                    // var_dump($returnArray);
+                    // var_dump($userName);
+        
+                    // echo "Here are: " . $userName[0]['first_name'] . "'s Favorite Recipes";
+        
+                    echo ' 
+                    <div class="row noedge">
+                    <h3 class="centerText">'.$userName[0]['first_name'].'\'s Favorites</h3>
+                    </div> 
+                    ';
+        
+                    $btnCounter = 0;
+        
+                    foreach($returnArray as $r){
+                        // echo "GETTING SOMETHING " . $r["recipe_id"] . "<br>";
+            
+                        // retrieving the recipe number
+                        // echo "GETTING RECIPE NUMBER: " . $r["recipe_id"] . "<br>";
+            
+                        // call the print recipe card //
+                        include_once 'T_RecipeHelper.php';
+                        $recipe = new T_RecipeHelper();
+                        echo $recipe->printRecipeCard($r["recipe_id"], $btnCounter, true);
+                        
+            
+                        // $recipeNumber =  $r["recipe_id"];
+                        // $favoriteRecipes = getRecipe($recipeNumber);
+                        echo "<br>";
+                        $btnCounter++;
+                    }
+                    $numberOfCards = sizeof($returnArray);
+                    echo "<h1 id='number_of_cards' style='color:red;' hidden>".strval($numberOfCards)."<h1>";
+        
         ?>
     </div>
 

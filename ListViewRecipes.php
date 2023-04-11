@@ -1,5 +1,6 @@
 <?php 
 include("includes/include.php"); 
+include("T_RandomRecipe.php"); 
 // redirect the user to the login page if there user id is not in session
 if(!isset($_SESSION["UserID"])){
     header("Location: Login.php");
@@ -49,16 +50,18 @@ if(!isset($_SESSION["UserID"])){
     
         <?php
         $UserId = $_SESSION['UserID'];
-        $recipe_array = parseRecipe(getRecipeFromAPI(0));
+        $randIdArray = T_RandomRecipe::getTenRandomRecipeID();
         $print_var = '<div class="card w-50 m-5 p-2 border rounded list">';
         $btnCounter = 0;
         include_once 'T_RecipeHelper.php';
         $recipeObject = new T_RecipeHelper();
         $favOrNot = false;
-        echo "<div class='recipe'>";
-        foreach ($recipe_array as $recipe) 
+        $text =  "<div class='recipe'>";
+
+
+        foreach ($randIdArray as $recipe) 
         {
-            echo $recipeObject->printRecipeCard($recipe->getId(), $btnCounter, $favOrNot);
+            $text .= $recipeObject->printRecipeCard($recipe['recipe_id'], $btnCounter, $favOrNot);
             $btnCounter++;
             // Commented out because it was printing the recipes again the old way after printRecipeCard already printed them
             // $print_var .= '<div class="row center">';
@@ -76,12 +79,16 @@ if(!isset($_SESSION["UserID"])){
 
             // $print_var .= '<hr class="row bar">';
         }
-        echo "</div>";
+        $text .=   "</div>";
+        
+        ob_start();
+var_dump($text); // output txt here
+error_log(ob_get_clean()."\n",3,'C:/xampp/htdocs/RecipeWebsite/output.txt'); // your path to the output file should go here
         // Remove last <hr>
         $print_var = substr($print_var, 0, -20);
-
+        echo $text;
         // $print_var .= '</div>';
-        $numberOfCards = sizeof($recipe_array);
+        $numberOfCards = sizeof($randIdArray);
         echo "<h1 id='number_of_cards' style='color:red;' hidden>".strval($numberOfCards)."<h1>";
         // echo $print_var;
 
