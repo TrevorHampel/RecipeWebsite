@@ -71,33 +71,41 @@ function getRecipeFromLetter($letter)
  * @param array $recipes
  * @return array
  */
-function parseRecipe($recipes)
+function parseRecipe($recipes = array())
 {
     //$recipe_array[] = new Recipe();
 
     $ingredients = [];
-    foreach ($recipes as $r) {
-        $Recipe = new Recipe();
-        $Recipe->setId($r['idMeal']);
-        $Recipe->setName($r['strMeal']);
-        $Recipe->setCategory($r['strCategory']);
-        $Recipe->setThumbnail($r['strMealThumb']);
-        $Recipe->setInstructions($r['strInstructions']);
-        $Recipe->setRecipeVideo($r['strYoutube']);
-        $Recipe->setRecipeSource($r['strSource']);
+    if(is_array($recipes))
+    {
+        foreach ($recipes as $r) {
+            $Recipe = new Recipe();
+            $Recipe->setId($r['idMeal']);
+            $Recipe->setName($r['strMeal']);
+            $Recipe->setCategory($r['strCategory']);
+            $Recipe->setThumbnail($r['strMealThumb']);
+            $Recipe->setInstructions($r['strInstructions']);
+            $Recipe->setRecipeVideo($r['strYoutube']);
+            $Recipe->setRecipeSource($r['strSource']);
 
-        for ($i = 1; $i < 21; $i++) {
-            $strIng = 'strIngredient' . $i;
-            $strMeas = 'strMeasure' . $i;
+            for ($i = 1; $i < 21; $i++) {
+                $strIng = 'strIngredient' . $i;
+                $strMeas = 'strMeasure' . $i;
 
-            if ($r[$strIng] == "") {
-                break;
+                if ($r[$strIng] == "") {
+                    break;
+                }
+                $ingredients += [$r[$strIng] => $r[$strMeas]];
             }
-            $ingredients += [$r[$strIng] => $r[$strMeas]];
+            $Recipe->setIngredients($ingredients);
+            $recipe_array[] = $Recipe;
         }
-        $Recipe->setIngredients($ingredients);
-        $recipe_array[] = $Recipe;
     }
+    else
+    {
+        $recipe_array = array();
+    }
+
     return $recipe_array;
 }
 

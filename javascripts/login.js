@@ -74,7 +74,6 @@ function CreateAccount(){
 
 // The following code let's the user press enter to login or create an account after entering their password on the login page or the signup page
 // check which page it is
-$( document ).ready(function() {
     console.log( "ready!" );
     if (document.getElementById("inputPassword1") != null)
     {
@@ -100,4 +99,3 @@ if (event.key === "Enter") {
     document.getElementById(btnid).click();
 }
 }); 
-
