@@ -2,6 +2,8 @@
 
 include_once "Database.php";
 include_once "Session.php";
+include_once "T_UserRecipe.php";
+include_once "DatabaseObjects/M_recipe.php";
 $Database = new Database();
 
 class T_RecipeHelper {
@@ -9,9 +11,7 @@ class T_RecipeHelper {
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         function printRecipeCard($recipeNumber, $btnCounter, $favOrNot){
-
-            $txt = '<hr class="row bar">';
-            $recipesArray = new Recipe();
+        $recipesArray = getRecipe($recipeNumber); // getRecipe returns a recipe ||| $Recipe = new Recipe(); get recipe is returning an array
 
             $recipesArray = getRecipe($recipeNumber); // getRecipe returns a recipe ||| $Recipe = new Recipe(); get recipe is returning an array
             if(isset($recipesArray) && !empty($recipesArray))
@@ -19,6 +19,28 @@ class T_RecipeHelper {
                 foreach ($recipesArray as $r) {
                     // PORTION THAT CONSIST OF THE OUTER SEGMENT OF THE CARDS //
                     
+                    <h2 class="centerText recipe-title" id="btn'.$btnCounter.'" style="display:block;" onclick="showhidecards(this.id)">'.$r->getName().'
+                    <img src="'.$r->getThumbnail().'" style="border-radius:15%; display:inline-block; width: 100px; height: 100px;">
+                </div>
+                <div class="col-md-1">
+                    <button onclick="removeFromFavorites(' . $recipeNumber. ' ,' . $_SESSION["UserID"]. ')" class="favoritesButton">Remove</button>
+                </div>
+            </div> 
+            ';
+
+            // ECHO THE IMAGE //
+            $txt .= '
+            <div id="card'.$btnCounter.'" hidden>
+            <div class="row noedge">
+            <div class="col">
+            <img src="'.$r->getThumbnail().'">
+            </div>
+            ';
+
+            $ingredients = $r->getIngredients();
+            
+            // <<< INGREDIENTS PRINTING SEGEMENT >>> //
+            // ECHO LIST OF INGREDIENTS //
                     // ECHO NAME OF RECIPE //
                     $txt .= ' 
                     <div class="row noedge">
@@ -87,6 +109,25 @@ class T_RecipeHelper {
                         $txt .= '</div>';
                     }
 
+        foreach($M_Recipe->recipe_ingredient_link as $row)
+{
+            $txt .= '<div class="row checkbox">';
+            $txt .= '<div class="col-1">';
+            $txt .= '
+                <input type="checkbox" 
+                    name="'.$row->ingredient_id->ingredient_value.'" 
+                    value="'.$row->measurement_id->measurement_value. " " . $row->measurement_id->measurement_unit_id->measurement_unit_value .'">
+                        
+            ';
+            $txt .= '</div>';
+            $txt .= '<div class="col-11">';
+                $txt .= 
+                        "<p>" .
+                        $row->ingredient_id->ingredient_value . " : " 
+                        .$row->measurement_id->measurement_value. " " . $row->measurement_id->measurement_unit_id->measurement_unit_value .
+                        "</p>";
+                $txt .= '</div>';
+            $txt .= '</div>';
 
                     $txt .='
                     </div>
@@ -111,4 +152,7 @@ class T_RecipeHelper {
 
         }
 
+        return $txt;
+
+    }
 }
