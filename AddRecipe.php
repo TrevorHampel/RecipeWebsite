@@ -34,6 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $source = validateInput($_POST["recipe-source"]);
     $youtube = validateInput($_POST["recipe-video"]);
     $instructions = validateInput($_POST["textarea"]);
+    $instructions = preg_replace('/&lt;p&gt;/', '', $instructions);
+    $instructions = preg_replace('/&lt;p&gt;/', '', $instructions);
+
     $type = validateInput($_POST["recipe-type"]);
     $area = validateInput($_POST["recipe-area"]);
     $Database = new Database();
@@ -50,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recipeObj->recipe_area = $area;
     $recipeObj->recipe_type = $type;
     $recipeObj->user_id = $_SESSION["UserID"];
-    $recipeObj->insert_obj();
+    $recipeid = $recipeObj->insert_obj();
     
 
     for ($i = 1; $i < 21; $i++) {
@@ -87,6 +90,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $insertID = $Database->insert($sql);
     }
+    $sql = "INSERT INTO user_favorites (`user_id`, `recipe_id`) VALUES (".$_SESSION["UserID"].", ".$recipeObj->recipe_id.")";
+
+    $insertID = $Database->insert($sql);
 
     echo "<script>
             alert('Your Recipe, $recipeObj->recipe_name has been successfully added!');</script>";
@@ -106,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <?php include_once("includes/nav.php"); ?>
-    <form method="post">
+    <form method="post" id='myform'>
         <div class='container border rounded'>
             <div class='row'>
                 <div class="col-12 pt-3">
@@ -129,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <label for="recipe-type">Recipe Type</label>
                         </div>
                         <div class="col-7">
-                            <select multiple type="text" name="recipe-type" class="form-control" id="recipe-type" required>
+                            <select type="text" name="recipe-type" class="form-control" id="recipe-type" required>
                                 <?php
                                 foreach ($typeList as $type) {
                                     echo "<option value='" . $type["recipe_type"] . "'>" . $type["recipe_type"] . "</option>";
@@ -144,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <label for="recipe-area">Recipe Area</label>
                         </div>
                         <div class="col-7">
-                            <select multiple type="text" name="recipe-area" class="form-control" id="recipe-area" required>
+                            <select type="text" name="recipe-area" class="form-control" id="recipe-area" required>
                                 <option>Middle Eastern</option>
                                 <option>Mediterranean</option>
                                 <option>African</option>
@@ -155,10 +161,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <!-- Recipe Image -->
                     <div class="row form-group p-3">
                         <div class="col-3">
-                            <label for="recipe-image">Recipe Image</label>
+                            <label for="recipe-image">Recipe Image (URL)</label>
                         </div>
                         <div class="col-7">
-                            <input type="file" class="form-control-file" name="recipe-image" id="recipe-image" required>
+                            <input type="text" class="form-control-file" name="recipe-image" id="recipe-image" required>
                         </div>
                     </div>
                     <!-- Recipe Source -->
