@@ -42,7 +42,7 @@ class T_RecipeHelper
                 }
                 else {
                     $txt .= '
-                        <a><button type="button" class="btn btn-primary btn-md m-3" onclick="addToFavoritesList(' . $recipeNumber . ', $UserId)">Add to Favorites</button></a>
+                        <a><button type="button" class="btn btn-primary btn-md m-3" onclick="addToFavoritesList(' . $recipeNumber . ', '.$_SESSION["UserID"].')">Add to Favorites</button></a>
                     ';
                 }
                 $txt .= '
