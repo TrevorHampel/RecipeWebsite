@@ -18,6 +18,7 @@
                 $navbar .= '<li class="nav-item"><a class="nav-link" href="SearchCategory.php">Categories</a></li>';
                 $navbar .= '<li class="nav-item"><a class="nav-link" href="favorites.php">Favorites</a></li>';
                 $navbar .= '<li class="nav-item"><a class="nav-link" href="AddRecipe.php">Add a New Recipe</a></li>';
+                $navbar .= '<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>';
             }
             echo $navbar;
             ?>

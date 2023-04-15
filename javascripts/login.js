@@ -74,7 +74,6 @@ function CreateAccount(){
 
 // The following code let's the user press enter to login or create an account after entering their password on the login page or the signup page
 // check which page it is
-$( document ).ready(function() {
     console.log( "ready!" );
     if (document.getElementById("inputPassword1") != null)
     {
@@ -90,14 +89,13 @@ $( document ).ready(function() {
     // assign the input variable to the correct input field
     var input = document.getElementById(inputid);
 
-    // Execute a function when the user presses a key on the keyboard
-    input.addEventListener("keypress", function(event) {
-    // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter") {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        document.getElementById(btnid).click();
-    }
-    }); 
-});
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+// If the user presses the "Enter" key on the keyboard
+if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById(btnid).click();
+}
+}); 

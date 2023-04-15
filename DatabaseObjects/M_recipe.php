@@ -19,6 +19,7 @@ class M_recipe extends DatabaseObject{
     public ?string $youtube_url = null;
     public ?string $date_created = null;
     public ?string $recipe_instructions = null;
+    public ?int $user_id = null;
 
     public function __construct($primaryKey = null)
     {
