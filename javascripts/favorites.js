@@ -9,6 +9,8 @@ function addToFavoritesList(recipeID, userID){
         if(result === "false"){
             
             alert("You have already favorited this recipe");
+        } else {
+            alert("Recipe Added to Favorites");
         }
     });
 }
@@ -21,6 +23,7 @@ function removeFromFavorites(recipeID, userID){
         userID: userID
     }, 
     function(result){
+        alert("Recipe Deleted");
         location.reload();
     });
 }

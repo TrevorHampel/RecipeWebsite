@@ -9,7 +9,7 @@ include_once "DatabaseObjects/M_recipe_tag.php";
 include_once "Database.php";
 include_once "Session.php";
 // redirect the user to the login page if there user id is not in session
-if(!isset($_SESSION["UserID"])){
+if (!isset($_SESSION["UserID"])) {
     header("Location: Login.php");
 }
 
@@ -49,12 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recipeObj->youtube_url = $youtube;
     $date = new \DateTime('now');
     $recipeObj->date_created = $date->format('Y/m/d H:i:s');
-    $recipeObj->recipe_instructions = $instructions;
+    $recipeObj->recipe_instructions = Strip_tags($instructions);
     $recipeObj->recipe_area = $area;
     $recipeObj->recipe_type = $type;
     $recipeObj->user_id = $_SESSION["UserID"];
     $recipeid = $recipeObj->insert_obj();
-    
+
 
     for ($i = 1; $i < 21; $i++) {
         $strM = "measure-" . $i;
@@ -90,12 +90,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $insertID = $Database->insert($sql);
     }
-    $sql = "INSERT INTO user_favorites (`user_id`, `recipe_id`) VALUES (".$_SESSION["UserID"].", ".$recipeObj->recipe_id.")";
+    $sql = "INSERT INTO user_favorites (`user_id`, `recipe_id`) VALUES (" . $_SESSION["UserID"] . ", " . $recipeObj->recipe_id . ")";
 
     $insertID = $Database->insert($sql);
 
     echo "<script>
             alert('Your Recipe, $recipeObj->recipe_name has been successfully added!');</script>";
+    header('Location: viewrecipes.php');
 }
 
 
@@ -198,22 +199,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="row form-group p-3">
                         <div class="col-3">
                             <label class="my-3" for="ingredient-list">Ingredients</label>
-                            <a class="btn btn-primary" type="button" data-toggle="collapse" href="#ingredient-list" role="button" aria-expanded="false" style="width: 150px">
-                                Add Ingredients
-                            </a>
+
                         </div>
 
-                        <div class="col-7 border rounded collapse" id="ingredient-list">
-                            <?php
-                            $listVar = "";
-                            for ($i = 1; $i < 21; $i++) {
-                                $listVar .= '<label for="ingredient-' . $i . '">Ingredient ' . $i . ':</label>
-                                            <input class="mt-3 form-control" type="text" name="measure-' . $i . '" placeholder="Measurement" />
-                                            <input class="my-3 form-control" type="text" name="ingredient-' . $i . '" placeholder="Ingredient" />';
-                            }
-                            echo $listVar;
-                            ?>
-
+                        <div class="col-7 border rounded p-3" id="ingredient-list">
+                            <button type="button" name="add" id="add" class="btn btn-success mb-3">Add Ingredient</button><br />
+                            <label for="ingredient-1">Ingredient 1</label>
+                            <input class="mt-3 form-control" type="text" id="measure-1" name="measure-1" placeholder="Measurement" />
+                            <input class="mt-3 form-control" type="text" id="ingredient-1" name="ingredient-1" placeholder="Ingredient" />
                         </div>
 
                     </div>
@@ -229,6 +222,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </form>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -236,6 +230,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script>
         tinymce.init({
             selector: 'textarea'
+        });
+
+        $(document).ready(function() {
+            var i = 1;
+            $('#add').click(function() {
+                if (i == 20) {
+                    alert("Maximum number of Ingredients is 20!");
+                    return;
+                }
+                i++;
+                $('#ingredient-list').append('<label id="label-' + i + '" for="ingredient-' + i + '">Ingredient ' + i + '</label><input class="mt-3 form-control" id="measure-' + i + '" type="text" name="measure-' + i + '" placeholder="Measurement" /><input class="mt-3 form-control" type="text" id="ingredient-' + i + '" name="ingredient-' + i + '" placeholder="Ingredient" /><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove mt-3">Remove</button><br/>')
+            });
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#measure-' + i).remove();
+                $('#ingredient-' + i).remove();
+                $('#label-' + i).remove();
+                $('#' + i).remove();
+                i--;
+            });
         });
     </script>
 </body>
