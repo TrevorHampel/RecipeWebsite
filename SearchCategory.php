@@ -182,11 +182,32 @@ function printRecipeGrid2($catName)
     }
     ?>
 
-    <div class="d-flex align-items-center justify-content-center">
+    <div class="recipe">
         <?php
         if (isset($_POST['search'])) {
             if (!empty($_POST['categories'])) {
-                printRecipeGrid($_POST['categories']);
+                // printRecipeGrid($_POST['categories']);
+                $Database = new Database();
+                $UserId = $_SESSION['UserID'];
+                $sqlRecipeIDs = "SELECT * FROM recipe WHERE recipe_type = '". $_POST['categories'] . "';";
+                $returnArray = $Database->selectAssc($sqlRecipeIDs); // <<<<< this is an array of all the numbers of the user selected category >>>>>
+
+                $btnCounter = 0;
+
+                foreach($returnArray as $r){
+                    // call the print recipe card //
+                    include_once 'T_RecipeHelper.php';
+                    $recipe = new T_RecipeHelper();
+                    echo $recipe->printRecipeCard($r["recipe_id"], $btnCounter, false);
+                    
+        
+                    // $recipeNumber =  $r["recipe_id"];
+                    // $favoriteRecipes = getRecipe($recipeNumber);
+                    echo "<br>";
+                    $btnCounter++;
+                }
+                $numberOfCards = sizeof($returnArray);
+                echo "<h1 id='number_of_cards' style='color:red;' hidden>".strval($numberOfCards)."<h1>";
             }
         }
         //printCategories();
