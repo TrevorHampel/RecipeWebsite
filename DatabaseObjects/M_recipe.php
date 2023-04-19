@@ -8,6 +8,7 @@ include_once("M_recipe_ingredient_link.php");
 include_once("M_recipe_tag_link.php");
 
 
+
 class M_recipe extends DatabaseObject{
 
     public ?int $recipe_id = null;
